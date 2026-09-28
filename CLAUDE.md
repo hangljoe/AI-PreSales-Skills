@@ -10,7 +10,7 @@ This file provides guidance to Claude Code when working in this repository.
 
 ## Project Overview
 
-This is **AI PreSales Skills by The PreSales Handbook**. It ships as a single Claude plugin with the id **`presales`** (display name: *AI PreSales Skills*), so commands are `/presales:<phase>:<name>`. It is vendor-neutral: skills ask the user for their product, capabilities and competitors instead of assuming any vendor's portfolio. The methodology follows *The PreSales Handbook* by Dr. Johannes Hangl (condensed in `references/PreSales_Handbook_Reference.md`; citations use the V78 edition's numbering; the full book is at www.presales-handbook.com).
+This is **AI PreSales Skills by The PreSales Handbook**. It ships as a single Claude plugin with the id **`presales`** (display name: *AI PreSales Skills*), so commands are `/presales:<phase>:<name>`. It is vendor-neutral: skills ask the user for their product, capabilities and competitors instead of assuming any vendor's portfolio. The methodology follows *The PreSales Handbook* by Dr. Johannes Hangl (condensed in `references/PreSales_Handbook_Reference.md`; chapter citations follow the book's current print edition; the full book is at www.presales-handbook.com).
 
 - Plugin manifest: `.claude-plugin/plugin.json` (marketplace manifest: `.claude-plugin/marketplace.json`, marketplace name `presales-handbook`)
 - Skills live in `skills/<name>/SKILL.md`

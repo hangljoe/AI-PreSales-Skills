@@ -11,7 +11,7 @@ Update it when you add, remove, or significantly change a skill or command.
 PROJECT_NAME=AI PreSales Skills by The PreSales Handbook
 DESCRIPTION=Vendor-neutral Claude skills and slash commands for PreSales professionals,
              shipped as the "presales" Claude plugin. Follows The PreSales Handbook
-             (condensed in references/PreSales_Handbook_Reference.md, V78 numbering): discovery → qualification → demo → value
+             (condensed in references/PreSales_Handbook_Reference.md; chapter numbers follow the current print edition): discovery → qualification → demo → value
              → RFX → closing → handover.
 INSTALL=/plugin marketplace add hangljoe/AI-PreSales-Skills
         /plugin install presales@presales-handbook
