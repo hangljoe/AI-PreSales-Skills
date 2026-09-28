@@ -7,3 +7,6 @@ Run the **second-brain** skill in **Big Rocks** mode.
 Create BIG-ROCKS.md if I don't have one (3–5 rocks, each with a why and a checkable success
 criterion), or walk the existing rocks with keep / done / drop / new framing, using the weekly
 rollups as evidence of what actually moved. Surgical edits only — my wording stays.
+
+At quarter-end, once the rocks review is done, hand off to `/presales:brain:learn` to score the
+learning plan for the closing quarter and set the next one.

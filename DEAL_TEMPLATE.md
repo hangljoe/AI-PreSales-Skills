@@ -45,19 +45,25 @@ Use my project documents as context. Never invent facts about this account.
 ├── 01a_buying-journey.md          ← where the buyer is in their journey + our actions per stage
 ├── 02_discovery-notes.md          ← call summaries (shared schema: references/call-summary-schema.md)
 ├── 02a_meddpicc-score.md          ← MEDDPICC /40 score history (feeds ORC, exec summary, close plan)
+├── 02b_stakeholder-map.md         ← client map: decision board, personas, sentiment, gaps
 ├── 03_mutual-action-plan.md       ← Mutual Action Plan (MAP): joint steps, owners, dates to a decision
 ├── 04_pain-to-value.md            ← pain → capability → value table
 ├── 04a_roi-case.md                ← ROI / value business case
 ├── 04b_requirement-fit.md         ← requirement-level fit table (feeds the TFQ)
 ├── 05_demo-storyboard.md          ← Tell-Show-Tell storyboard (the script is built from it)
+├── 05a_picture-pitch.md           ← standalone Picture Pitch image sequence and script
 ├── 06_poc-evaluation-plan.md      ← use cases, criteria, owners, timeline
 ├── 06a_poc-readout.md             ← PoC check-ins, scorecard, findings
+├── 06b_poc-to-prod.md             ← PoC-to-production transition, SOW inputs
 ├── 07_osd-draft.md                ← Opportunity Scoping Document (working document)
+├── 07a_solution-architecture.md   ← customer-facing architecture, integrations, sizing, migration
 ├── 08_competitive-read.md         ← competitor intel (confidence-tagged)
 ├── 08a_status-quo-plan.md         ← "do nothing" risk and counter-plan
 ├── 09_handover-package.md         ← drafted at technical win, finalised at signature
 ├── 10_close-plan.md               ← chosen close, script, stage, fallback
-└── 11_nurture-plan.md             ← post-close check-ins, feedback, references
+├── 11_nurture-plan.md             ← post-close check-ins, feedback, references
+├── 12_expansion-plan.md           ← renewal / expansion discovery: adoption, whitespace, risk
+└── 13_value-realized.md           ← promised vs measured value after go-live, reference-ready verdict
 ```
 
 ## How to keep it fresh
@@ -76,19 +82,25 @@ Use my project documents as context. Never invent facts about this account.
 /presales:account:journey [account]    → 01a_buying-journey.md
 /presales:discovery:summary            → 02_discovery-notes.md
 /presales:discovery:qualify            → 02a_meddpicc-score.md
+/presales:account:stakeholders         → 02b_stakeholder-map.md
 /presales:account:map                  → 03_mutual-action-plan.md
 /presales:value:pain-to-value          → 04_pain-to-value.md
 /presales:value:roi-case               → 04a_roi-case.md
 (say "map their problems to our capabilities") → 04b_requirement-fit.md
 /presales:demo:storyboard [product]    → 05_demo-storyboard.md
+/presales:demo:picture-pitch           → 05a_picture-pitch.md
 /presales:deal:poc-plan                → 06_poc-evaluation-plan.md
 /presales:deal:poc-readout             → 06a_poc-readout.md
+/presales:deal:poc-to-prod             → 06b_poc-to-prod.md
 /presales:handover:osd-draft [account] → 07_osd-draft.md
+/presales:handover:architecture        → 07a_solution-architecture.md
 (say "battlecard for [Competitor]")    → 08_competitive-read.md
 (say "they might do nothing")          → 08a_status-quo-plan.md
 /presales:handover:doc [deal]          → 09_handover-package.md
 /presales:deal:close-plan              → 10_close-plan.md
 /presales:handover:nurture             → 11_nurture-plan.md
+/presales:account:expand               → 12_expansion-plan.md
+/presales:value:realized               → 13_value-realized.md
 ```
 
 ## Lifecycle commands (run at each stage)

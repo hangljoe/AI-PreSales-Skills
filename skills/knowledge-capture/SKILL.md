@@ -1,6 +1,6 @@
 ---
 name: knowledge-capture
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Turns a PreSales win into a reusable team asset: a won deal, a demo flow, an RFP answer or an objection that landed becomes a standard-template entry with categories and tags, a version note, an owner, a review date and a feedback loop. Saves to your own knowledge folder, optionally formatted for a wiki such as Confluence or Notion; writes are confirm-gated. Use on \"capture this for the team\", \"add this to our knowledge base\", \"make this reusable\", \"save this RFP answer\". Siblings: rag-markdown (convert a source file), win-loss-analyzer (debrief the deal first). SKIP for customer-facing collateral."
 triggers:
@@ -76,7 +76,8 @@ without the original SC (ch. 19.1 training benefit). Keep language plain and fre
 - **RFP answer** → the requirement in generic form, the approved answer, proof points, when it
   needs tailoring.
 - **Objection response** → the objection, the likely root cause, the response, a proof point,
-  the follow-up question.
+  the follow-up question. Strip the customer's name and any identifying detail from the
+  objection wording itself, not only from the response.
 - **Discovery pattern** → when to use it, the questions, what good answers sound like.
 
 ---
@@ -100,6 +101,8 @@ review_by: <YYYY-MM-DD, default +6 months; +3 for RFP answers and competitive co
 access: <team | presales-only | restricted>
 source: <anonymised deal reference or document>
 customer_named: <no | yes — permission from <who>, <date>>
+objection_type: <required for asset_type: objection response — Latent | Expressed | Valid | Smoke screen (ch. 15)>
+counter_that_landed: <required for asset_type: objection response — the response that actually worked, in the words used>
 ---
 
 # <title>
@@ -159,4 +162,5 @@ matters here (ch. 19.4). Name the contributor. Remind the owner of the `review_b
 - The deal just closed and the lessons are not clear yet → `win-loss-analyzer` first
 - Asset is competitive intel → also update `competitive-battlecard`
 - An objection response worth drilling → `/presales:deal:objection-drill`
+- `/presales:deal:objection-drill` found a counter that worked → capture the one that landed
 - Turn the entry into a customer-facing case study → `docx-generator` (with customer approval)

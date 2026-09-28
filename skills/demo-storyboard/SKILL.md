@@ -1,6 +1,6 @@
 ---
 name: demo-storyboard
-version: "1.6"
+version: "1.7"
 last_updated: 2026-09-28
 description: "Builds a Tell-Show-Tell demo storyboard for any B2B product: first-person Limbic persona narration, Pain-Capability-Value (PCV) logic, one value module per confirmed customer pain, Picture Pitch image-sequence opening, run order with roles and breaks, and Summary Value Close. Stops at the storyboard. Reads product anchors and discovery from your deal folder or asks. Use on \"demo prep\", \"demo storyboard\", \"structure the demo\", \"how should I demo this\", \"build a demo flow\". Siblings: /presales:demo:script (verbatim script from the storyboard), demo-dryrun-coach (rehearse it), video-demo-creator (recorded videos). SKIP for rehearsing an existing storyboard."
 triggers:
@@ -205,6 +205,12 @@ On a scale of 1-10, how well did that address what you described as your biggest
 → If 8+: "What would need to be true for this to become a priority for you?"
 Next step offer: [specific — POC, OSD session, exec briefing] — ask for commitment, not "we'll follow up"
 ```
+
+**Demo environment and data checklist.** Confirm before the session, not during it:
+- [ ] Demo data is sanitised — no live production data, even from your own reference customers
+- [ ] Persona names in the environment match the Limbic persona from Step 2 (same name throughout, not a generic seed user)
+- [ ] No real customer data anywhere in the environment — screens, sample files, integrations or logs
+- [ ] A fallback recording of the full run order is ready in case the live environment fails
 
 ---
 

@@ -181,18 +181,18 @@ Follows the flow of *The PreSales Handbook*. Real deals loop back and skip phase
 | # | Phase (handbook ch.) | When you're here | Go-to tools |
 |---|----------------------|------------------|-------------|
 | 1 | Sales discovery (ch. 5) | Is there a real deal? | `discovery-sales` skill · `/presales:discovery:sales` · `/presales:account:brief` · `/presales:discovery:questions` · `/presales:account:journey` (buying-journey stage, ch. 3) |
-| 2 | Qualify (ch. 4, 6) | Qualify early, qualify hard | `/presales:discovery:qualify` · `champion-health` · `/presales:account:map` |
+| 2 | Qualify (ch. 4, 6) | Qualify early, qualify hard | `/presales:discovery:qualify` · `champion-health` · `/presales:account:map` · `/presales:account:stakeholders` |
 | 3 | Functional & technical discovery (ch. 7) | Deep-dive into needs and landscape | `discovery-ftd` skill · `/presales:discovery:prep` · `/presales:discovery:summary` · `/presales:discovery:golden-hours` · `discovery-transformer` · `critical-business-issue-finder` · `workshop-agenda-builder` |
 | 4 | Discovery summary / OSD (ch. 8) | Scoping the solution | `osd-scoper` → `osd-architect` · `/presales:handover:osd-draft` · `capability-mapper` · `integration-complexity` |
 | 5 | TFQ + ORC (ch. 9) | Invest SC time? Qualify in or out | `/presales:discovery:tfq` (`tfq` skill) · `/presales:discovery:orc` |
-| 6 | Value & ROI (ch. 10) | Quantifying the case | `/presales:value:pain-to-value` · `/presales:value:roi-case` · `business-case-stress-tester` |
-| 7 | Demo and demo automation (ch. 11–12) | Telling the story | `/presales:demo:storyboard` · `/presales:demo:script` · `demo-dryrun-coach` · `/presales:demo:pre-invite` · `/presales:demo:post-followup` · `video-demo-creator` |
-| 8 | PoC (ch. 13) | Proving it in their world | `/presales:deal:poc-plan` · `presales-coach` (PoC health) · `/presales:deal:poc-readout` (check-ins and readout) |
-| 9 | RFX (ch. 14) | Responding to a tender | `rfx-navigator-presales` · `/presales:rfp:analyze` · `/presales:rfp:respond` · `/presales:rfp:present` |
+| 6 | Value & ROI (ch. 10) | Quantifying the case | `/presales:value:pain-to-value` · `/presales:value:roi-case` · `business-case-stress-tester` · `/presales:value:realized` |
+| 7 | Demo and demo automation (ch. 11–12) | Telling the story | `/presales:demo:storyboard` · `/presales:demo:script` · `demo-dryrun-coach` · `/presales:demo:pre-invite` · `/presales:demo:post-followup` · `video-demo-creator` · `/presales:demo:picture-pitch` |
+| 8 | PoC (ch. 13) | Proving it in their world | `/presales:deal:poc-plan` · `presales-coach` (PoC health) · `/presales:deal:poc-readout` (check-ins and readout) · `/presales:deal:poc-to-prod` |
+| 9 | RFX (ch. 14) | Responding to a tender | `rfx-navigator-presales` · `/presales:rfp:analyze` · `/presales:rfp:respond` · `/presales:rfp:present` · `/presales:rfp:security` · `security-questionnaire` |
 | 10 | Objections (ch. 15) | Pushback and concerns | `tactical-empathy-coach` · `/presales:deal:objection-drill` · `competitive-battlecard` (ch. 20) · `pricing-positioning` |
 | 11 | Closing (ch. 16) | Proposal, price, negotiation, sign-off | `/presales:deal:proposal` · `/presales:deal:close-plan` · `pricing-positioning` · `negotiation-prep` · `exec-briefing-prep` · `/presales:deal:champion-enable` · `/presales:deal:exec-summary` |
 | 12 | Win / loss (ch. 17) | Learning from the decision | `win-loss-analyzer` |
-| 13 | Handover and nurture (ch. 16) | Handing over to delivery, then staying close | `/presales:handover:osd-draft` · `/presales:handover:doc` · `/presales:handover:nurture` |
+| 13 | Handover and nurture (ch. 16) | Handing over to delivery, then staying close | `/presales:handover:osd-draft` · `/presales:handover:doc` · `/presales:handover:nurture` · `/presales:handover:architecture` · `solution-architecture` · `/presales:account:expand` |
 | ⚡ | Any phase | Stuck, conflicted, or complex | `presales-coach` → `/presales:deal:strategic-think` → `toc-bbit-expert` |
 | ⚔ | Any phase | A competitor is in the deal | `competitive-battlecard` |
 | ⏸ | Any phase (ch. 20) | The status quo is the real competitor | `do-nothing-buster` |

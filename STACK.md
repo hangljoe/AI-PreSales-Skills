@@ -26,8 +26,8 @@ Never assume a specific vendor's portfolio.
 ## Skills (`skills/`)
 
 Skills are invoked by natural language. Each skill has a `SKILL.md` in `skills/<name>/`.
-39 skills on disk: 37 user-facing skills below, the internal `brand` registry, and the
-leader-only `deal-prequal` (see **Leader-only tools**).
+42 skills on disk: 39 user-facing skills below, the internal `brand` registry, and the
+leader-only `deal-prequal` and `presales-leader` (see **Leader-only tools**).
 
 | Skill | What it does | Key trigger phrases |
 |-------|-------------|---------------------|
@@ -68,6 +68,8 @@ leader-only `deal-prequal` (see **Leader-only tools**).
 | `knowledge-capture` | Turns a win, demo, RFP answer or objection into a reusable asset (ch. 19) in the user's own knowledge folder; wiki writes confirm-gated. | "capture this for the team" |
 | `second-brain` | Personal daily/weekly operating loop: morning brief, journal, big rocks, writing voice. Backs `/presales:brain:*`. | "set up my second brain" |
 | `rag-markdown` | Any source → one clean, RAG-ready Markdown file. | "RAG ready markdown" |
+| `security-questionnaire` | Answers SIG / CAIQ / ISO 27001 / SOC 2 and vendor-risk questionnaires from your own trust library (never in the plugin); approved answers reused verbatim, unknowns become questions for security, coverage table, submission-ready document. | "security questionnaire", "SIG", "CAIQ", "vendor risk assessment" |
+| `solution-architecture` | Customer-facing solution architecture document (handbook 8.2 §6/§7, 9.2): target architecture, integration touchpoints, sizing, data-migration assessment, security inputs; diagrams via `diagram`, Word via `docx-generator`. | "solution architecture", "architecture document", "migration assessment" |
 
 **Internal skill (not user-invoked):** `brand` is the shared brand registry (colours, fonts,
 logos, per-format settings) read by `pptx-generator`, `docx-generator`, `osd-architect`,
@@ -86,6 +88,7 @@ logos, per-format settings) read by `pptx-generator`, `docx-generator`, `osd-arc
 |------|-------------|---------------|
 | `deal-prequal` | Readiness sweep across one or many deals before the TFQ: checks whether the MEDDPICC foundation justifies SC time, reads deal momentum, returns a 3-band readiness call (🟢 Ready / 🟡 A few gaps / 🔵 Too early) plus ready-to-send AE follow-ups. Hands 🟢 deals to the TFQ. | `/presales:leader:prequal [deals]` |
 | `presales-metrics` (leader mode) | Team KPI scorecard: distribution across SCs framed as 1:1 questions, never a ranking. | `/presales:leader:metrics [export] [period]` |
+| `presales-leader` | Leader operating skill (handbook ch. 22): five modes — pipeline review, SC one-on-one, capacity math, new-SC onboarding (30-60-90), SC hiring kit; RACI and templates in its references. | `/presales:leader:pipeline-review` · `/presales:leader:one-on-one` · `/presales:leader:capacity` · `/presales:leader:onboarding` · `/presales:leader:hiring` |
 
 ---
 
@@ -134,7 +137,7 @@ scores 🔴 Unknown.
 
 ## Commands (`commands/`)
 
-Invoked as `/presales:<phase>:<name>`. 42 commands.
+Invoked as `/presales:<phase>:<name>`. 54 commands.
 
 | Command | What it does |
 |---------|-------------|
@@ -142,6 +145,8 @@ Invoked as `/presales:<phase>:<name>`. 42 commands.
 | `/presales:account:brief` | One-page company brief: firmographics, operational footprint, signals, hypotheses |
 | `/presales:account:journey` | Buying-journey stage, our actions per stage, early-engagement check (ch. 3) → `01a_buying-journey.md` |
 | `/presales:account:map` | Mutual Action Plan (MAP), the mandatory post-call deliverable |
+| `/presales:account:stakeholders` | Client map (ch. 3.2): decision-board departments, persona, influence, sentiment, what each needs to hear, gaps → `02b_stakeholder-map.md` |
+| `/presales:account:expand` | Renewal / expansion discovery for an existing customer: adoption, realised vs promised value, whitespace, renewal risk → `12_expansion-plan.md` |
 | `/presales:discovery:prep` | Discovery call prep sheet: research, persona hypotheses, question plan |
 | `/presales:discovery:questions` | Question card only (discovery-ftd card mode): SPIN / MEDDPICC questions by persona and product |
 | `/presales:discovery:sales` | Sales Discovery (MEDDPICC) conversation and score |
@@ -154,8 +159,10 @@ Invoked as `/presales:<phase>:<name>`. 42 commands.
 | `/presales:demo:storyboard` | Tell-Show-Tell + PCV (Pain-Capability-Value) storyboard from discovery pains |
 | `/presales:demo:script` | Verbatim demo script from a storyboard |
 | `/presales:demo:post-followup` | Post-demo follow-up email within 24 hours |
+| `/presales:demo:picture-pitch` | Standalone Picture Pitch (ch. 11.5.1): 5–10 images, one line each, from the persona's world → `05a_picture-pitch.md` |
 | `/presales:value:pain-to-value` | Pains → your capabilities → value outcomes, confidence-tagged |
 | `/presales:value:roi-case` | ROI business case with 3+ value drivers and a risk factor |
+| `/presales:value:realized` | Post-implementation value check against the ROI case: promised vs measured per driver, adoption blockers, reference-ready verdict → `13_value-realized.md` |
 | `/presales:deal:poc-plan` | PoC gate (13.1) and plan: use cases, success criteria, data handling, owners, timeline |
 | `/presales:deal:poc-readout` | PoC check-ins, scorecard, findings readout (ch. 13.5–13.8) → `06a_poc-readout.md` |
 | `/presales:deal:objection-drill` | Objection handling with tactical empathy |
@@ -164,12 +171,15 @@ Invoked as `/presales:<phase>:<name>`. 42 commands.
 | `/presales:deal:proposal` | Formal commercial proposal |
 | `/presales:deal:close-plan` | Recommends and scripts one of the four closes (ch. 16.3), stage and fallback → `10_close-plan.md` |
 | `/presales:deal:strategic-think` | TOC + BBiT thinking for a stuck or complex deal |
+| `/presales:deal:poc-to-prod` | PoC / trial-to-production transition (ch. 13.7, kit): keep vs rebuild, environment and data reuse, gap closure, SOW inputs → `06b_poc-to-prod.md` |
 | `/presales:rfp:analyze` | RFX go/no-go analysis (CRM optional) |
 | `/presales:rfp:respond` | Requirement-by-requirement response with coverage tracking |
 | `/presales:rfp:present` | RFX response presentation deck |
+| `/presales:rfp:security` | Security / compliance questionnaire response from your trust library (wrapper for `security-questionnaire`) |
 | `/presales:handover:osd-draft` | Draft the Opportunity Scoping Document via `osd-architect` |
 | `/presales:handover:doc` | PreSales → Professional Services handover package and handover-call agenda |
 | `/presales:handover:nurture` | Post-close plan: check-ins, feedback, references, expansion (ch. 16.4) → `11_nurture-plan.md` |
+| `/presales:handover:architecture` | Customer-facing solution architecture document (wrapper for `solution-architecture`) → `07a_solution-architecture.md` |
 | `/presales:brain:setup` | Guided second-brain setup |
 | `/presales:brain:start` | Morning brief |
 | `/presales:brain:end` | End-of-day journal entry |
@@ -248,7 +258,7 @@ Run `/presales:guide` for the full phase-by-phase map.
 
 - The repo root is the plugin root; the plugin id is `presales`.
 - Skills: `skills/<name>/SKILL.md`. Commands: `commands/<phase>/<name>.md` → `/presales:<phase>:<name>`.
-- Per-skill material lives in `skills/<name>/references/`; the shared library (the condensed handbook reference, cheat sheets, BBiT study notes, playbook) lives in `references/`. Handbook citations use V78 numbering.
+- Per-skill material lives in `skills/<name>/references/`; the shared library (the condensed handbook reference, cheat sheets, BBiT study notes, playbook, and the READMEs for your own RFP answer library and security trust library) lives in `references/`. Handbook citations use V78 numbering.
 - Cross-skill and shared-library paths use `${CLAUDE_PLUGIN_ROOT}/...`.
 - Call summaries share one schema: `references/call-summary-schema.md`, used by `/presales:discovery:summary` (every meeting type) and `discovery-transformer`.
 - Brand values come from `skills/brand/brands/<brand>/brand.json`. Default brand: `presales-handbook`.

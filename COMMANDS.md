@@ -61,6 +61,8 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:deal:champion-enable [account] [champion name/title] brief` | Quick champion brief — talking points, objection responses, proof points |
 | `/presales:account:journey [account]` | Buying-journey stage, your actions per stage, early-engagement check |
 | `/presales:account:map [account]` | Mutual Action Plan (MAP) — the mandatory post-call deliverable |
+| `/presales:account:stakeholders [account]` | Client map — decision board, personas, sentiment, gaps → 02b |
+| `/presales:account:expand [account]` | Renewal / expansion discovery for an existing customer → 12 |
 
 ### Demo Preparation & Follow-Up
 
@@ -70,6 +72,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:demo:storyboard [product]` | Full Tell-Show-Tell storyboard using the PCV (Pain-Capability-Value) structure |
 | `/presales:demo:script [storyboard or deal context]` | Word-for-word demo script from a storyboard |
 | `/presales:demo:post-followup [account]` | Post-demo follow-up email — recap, resonance, next step |
+| `/presales:demo:picture-pitch [account] [persona]` | Standalone Picture Pitch image sequence → 05a |
 
 ### Value & Commercial
 
@@ -77,6 +80,7 @@ Invoked as `/presales:<phase>:<name>`.
 |---------|---------|
 | `/presales:value:pain-to-value [discovery notes or pain statements]` | Map customer pains to your product's capabilities and measurable value |
 | `/presales:value:roi-case [deal]` | ROI business case — 3+ value drivers, Risk Factor, hard vs. soft value |
+| `/presales:value:realized [account]` | Post-implementation value check vs the ROI case → 13 |
 
 ### Deal Execution
 
@@ -90,6 +94,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:deal:poc-readout [deal]` | PoC check-ins, scorecard against success criteria, findings readout |
 | `/presales:deal:close-plan [deal]` | Pick and script one of the four closes, set the stage, plan a fallback |
 | `/presales:deal:strategic-think [problem]` | TOC + BBiT structured thinking for complex or stuck deals |
+| `/presales:deal:poc-to-prod [deal]` | PoC-to-production transition and SOW inputs → 06b |
 
 ### RFP / RFI Response
 
@@ -98,6 +103,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:rfp:analyze [account] [RFP]` | Go/No-Go Analyzer — should we bid? 5-dimension weighted scoring |
 | `/presales:rfp:respond [account] [RFP]` | Response Writer — maps requirements to capabilities, drafts compliant responses |
 | `/presales:rfp:present [account]` | Response Presentation — polished deck for shortlist panel |
+| `/presales:rfp:security [questionnaire]` | Security / compliance questionnaire from your trust library |
 
 ### Delivery Handover
 
@@ -106,6 +112,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:handover:osd-draft [deal]` | Draft the Opportunity Scoping Document (OSD) |
 | `/presales:handover:doc [deal]` | Complete PreSales → Professional Services handover package |
 | `/presales:handover:nurture [account]` | Post-close plan — check-ins, feedback, references, expansion |
+| `/presales:handover:architecture [account]` | Solution architecture document → 07a |
 
 ---
 
@@ -196,6 +203,8 @@ Skills activate automatically when you say the right phrase. No slash needed.
 | "capture this for the team" | `knowledge-capture` |
 | "set up my second brain" | `second-brain` |
 | "RAG ready markdown" | `rag-markdown` |
+| "security questionnaire" / "SIG" / "CAIQ" | `security-questionnaire` |
+| "solution architecture" / "migration assessment" | `solution-architecture` |
 
 ---
 
@@ -237,6 +246,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 /presales:rfp:analyze [account] [RFP]     ← should we bid?
 /presales:rfp:respond [account] [RFP]     ← draft response
 /presales:rfp:present [account]           ← shortlist presentation deck
+/presales:rfp:security [questionnaire]    ← security / compliance questionnaire
 ```
 
 ### Closing and handing over
@@ -244,6 +254,8 @@ Skills activate automatically when you say the right phrase. No slash needed.
 /presales:deal:champion-enable [account] [champion] [brief|kit] ← enable your champion
 /presales:deal:proposal [deal]            ← formal commercial proposal
 /presales:handover:osd-draft [deal]       ← draft the OSD
+/presales:deal:poc-to-prod [deal]         ← PoC-to-production transition
+/presales:handover:architecture [account] ← solution architecture document
 /presales:handover:doc [deal]             ← full handover package
 say "debrief this win" or "why did we lose" ← win/loss debrief
 ```

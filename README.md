@@ -11,7 +11,7 @@ discovery call, score MEDDPICC, build a Tell-Show-Tell demo storyboard and write
 can also draft the RFP response and hand the deal over to delivery. It works for any B2B or SaaS
 product. You tell it what you sell, and it applies the handbook's methodology to your deal.
 
-**What's inside:** 39 skills · 42 slash commands · a condensed PreSales Handbook reference built in
+**What's inside:** 42 skills · 54 slash commands · a condensed PreSales Handbook reference built in
 
 ---
 
@@ -182,6 +182,7 @@ Each stage follows a chapter of The PreSales Handbook (V78 numbering).
 | Close | 16 · Closing | `/presales:deal:proposal` → `/presales:deal:close-plan` · *"negotiation prep"* |
 | Learn from the outcome | 17 · Lessons Learned | *"debrief this win"* / *"why did we lose"* → *"capture this for the team"* |
 | Hand over to delivery | 8 · OSD | `/presales:handover:doc` → `/presales:handover:nurture` |
+| Grow the account | 2.11 · 3.1 | `/presales:value:realized` → `/presales:account:expand` |
 | Grow yourself and your team | 18, 19, 23 · Staying updated, knowledge sharing, metrics | `/presales:brain:learn` · *"capture this for the team"* · *"build my scorecard"* |
 
 ---
@@ -204,6 +205,8 @@ command.
 | `/presales:account:brief` | One-page company brief: firmographics, operational footprint, signals and hypotheses. |
 | `/presales:account:journey` | Places the buyer on the buying journey, maps your actions per stage and flags whether you engaged early enough. |
 | `/presales:account:map` | Builds the Mutual Action Plan (MAP), the mandatory post-call deliverable. |
+| `/presales:account:stakeholders` | Builds the client map: who sits on the decision board, their persona and sentiment, what each needs to hear, and who is missing. |
+| `/presales:account:expand` | Renewal and expansion discovery for an existing customer: adoption, realised value, whitespace, renewal risk. |
 
 ### Discovery & qualification
 
@@ -226,6 +229,7 @@ command.
 | `/presales:demo:storyboard` | Tell-Show-Tell + PCV (Pain-Capability-Value) demo storyboard built from discovery pains. |
 | `/presales:demo:script` | Turns a storyboard into a word-for-word, print-ready demo script. |
 | `/presales:demo:post-followup` | Follow-up email within 24 hours that recaps what resonated and locks in the next step. |
+| `/presales:demo:picture-pitch` | The standalone Picture Pitch: 5–10 images from the persona's world with one spoken line each, before any product. |
 
 ### Value
 
@@ -233,6 +237,7 @@ command.
 |---------|--------------|
 | `/presales:value:pain-to-value` | Maps customer pains to your product's capabilities and measurable outcomes, with confidence tags. |
 | `/presales:value:roi-case` | Value and ROI business case with three or more value drivers and an explicit risk factor. |
+| `/presales:value:realized` | Checks realised value against the ROI case after go-live and says whether the customer is reference-ready. |
 
 ### Deal & closing
 
@@ -246,6 +251,7 @@ command.
 | `/presales:deal:proposal` | Formal commercial proposal: cover letter, solution narrative, outcomes, investment and next step. |
 | `/presales:deal:close-plan` | Picks one of the handbook's four closes for your deal, scripts it for SC and AE, and plans a fallback. |
 | `/presales:deal:strategic-think` | Applies Theory of Constraints and Black Belt in Thinking to a stuck or complex deal. |
+| `/presales:deal:poc-to-prod` | Plans the PoC-to-production transition: what stays, what is rebuilt, gaps, SOW inputs, timeline. |
 
 ### RFX
 
@@ -254,6 +260,7 @@ command.
 | `/presales:rfp:analyze` | Go/no-go analysis: scores fit, relationship and win probability before you commit resources. |
 | `/presales:rfp:respond` | Maps every requirement to a capability, drafts compliant answers and tracks coverage. |
 | `/presales:rfp:present` | Builds the response presentation deck to go with the written response. |
+| `/presales:rfp:security` | Answers a security or compliance questionnaire from your own trust library; unknowns become questions, never guesses. |
 
 ### Handover
 
@@ -262,6 +269,7 @@ command.
 | `/presales:handover:osd-draft` | Drafts the Opportunity Scoping Document (OSD), structured as in handbook chapter 8. |
 | `/presales:handover:doc` | The PreSales-to-Professional-Services handover package, drafted at technical win and finalised at signature, plus a handover-call agenda. |
 | `/presales:handover:nurture` | Post-close plan: check-ins, feedback, references and expansion signals. |
+| `/presales:handover:architecture` | Customer-facing solution architecture document: components, integrations, sizing, data migration. |
 
 ### Second brain (your personal operating loop)
 
@@ -301,6 +309,7 @@ Skills switch on when you say something like the phrase in the right-hand column
 | `capability-mapper` | Maps customer problems to your own product's capabilities as a heat map with ranked recommendations. | "map their problems to our capabilities" |
 | `integration-complexity` | Rates the complexity and risk of connecting the prospect's systems to your platform. | "assess the integration complexity" |
 | `workshop-agenda-builder` | Time-boxed customer workshop or executive briefing agenda with facilitator notes. | "build a workshop agenda" |
+| `solution-architecture` | Customer-facing solution architecture document: target architecture, integrations, sizing, data-migration assessment. | "solution architecture" |
 
 ### Demo
 
@@ -336,6 +345,7 @@ Skills switch on when you say something like the phrase in the right-hand column
 | Skill | What it does | Say something like… |
 |-------|--------------|---------------------|
 | `rfx-navigator-presales` | Entry point when an RFI, RFP, RFQ or tender lands: identifies the type, scans fit and routes to the right command. | "we got an RFP" |
+| `security-questionnaire` | Answers SIG, CAIQ, ISO 27001, SOC 2 and vendor-risk questionnaires from your own trust library. | "security questionnaire" |
 
 ### Communication & content
 
@@ -372,6 +382,7 @@ For PreSales leaders (handbook ch. 22). Not routed by `/presales:guide`; ask for
 |------|-------------|---------------|
 | `deal-prequal` | For PreSales leaders: a readiness sweep across one or many deals before the TFQ. | `/presales:leader:prequal [deals]` |
 | `presales-metrics` (leader mode) | Team KPI scorecard: distribution across SCs framed as 1:1 questions, never a ranking. | `/presales:leader:metrics [export] [period]` |
+| `presales-leader` | Five leader modes: pipeline review, one-on-one, capacity, onboarding, hiring. | `/presales:leader:pipeline-review` · `one-on-one` · `capacity` · `onboarding` · `hiring` |
 
 ---
 

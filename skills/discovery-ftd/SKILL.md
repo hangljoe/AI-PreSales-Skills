@@ -1,6 +1,6 @@
 ---
 name: discovery-ftd
-version: "2.5"
+version: "2.6"
 last_updated: 2026-09-28
 description: "Functional & Technical Discovery (FTD, handbook ch. 7) for any B2B product: research, handbook 7.4 stages with SPIN-sequenced questions built from your capability list, delivered as a 25-minute call guide, a question card, a branded Word questionnaire or the post-call summary. Use on \"FTD\", \"what should I ask\", \"discovery call guide\", \"pre-discovery questionnaire\". Siblings: /presales:discovery:prep (the pre-call entry point: brief, hypotheses, then this guide), discovery-sales (commercial MEDDPICC: is the deal real), discovery-transformer (.vtt transcript after the call). SKIP for scoring a deal (/presales:discovery:qualify) or the TFQ gate."
 triggers:
@@ -143,6 +143,8 @@ a 25-minute first call uses 2–3 opening questions, not all of them.
 active listening signals, use of silence, the 5 Whys for root cause, and empathy
 mapping for senior stakeholders. If the prospect requests an early demo, follow the
 "Demo in Discovery" guidance — do not skip the discovery process.
+
+**Give-Get mode (handbook 7.9).** If the prospect insists on seeing the product before any discovery, don't refuse outright: pair a **15-minute discovery** with a **Look & Feel outline** — a crisp pitch and broad visual vision (5–10 minutes maximum), then a short Look & Feel trailer (navigation, dashboards, one simple use case, never a full demo), deferring deep questions to after discovery. Spend the 15 minutes on the opening-framework questions above, then hand the outline to `/presales:demo:storyboard` if they want more.
 
 ---
 

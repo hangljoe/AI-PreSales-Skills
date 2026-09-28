@@ -1,6 +1,6 @@
 ---
 name: presales-coach
-version: "1.3"
+version: "1.4"
 last_updated: 2026-09-28
 description: "Situational deal coach and the entry point for a stuck deal: names the one constraint (MEDDPICC gap, selling-journey phase, PoC health), gives three SC actions and routes to the next tool. Use on \"I'm stuck on a deal\", \"deal is going cold\", \"coach me on this deal\", \"what's my next move\", \"is my PoC at risk\". Siblings: /presales:deal:strategic-think (full TOC/BBiT analysis once the constraint is named), /presales:guide (browse the whole kit). SKIP for structuring call notes or the post-call plan (/presales:discovery:summary, /presales:discovery:golden-hours)."
 triggers:
@@ -77,6 +77,7 @@ Account name + the selling-journey phase (handbook ch. 3.3). Plain names are eno
 - **PoC** — proof of concept or structured evaluation
 - **Proposal** — pricing, proposal, value case
 - **Close** — negotiation, closing, handover
+- **Existing customer / renewal** (kit; handbook 2.11, 3.1) — post-go-live: adoption, realised value, whitespace, renewal risk
 - *(RFX can start at any point. If the deal is in an RFX, say so.)*
 
 The CRM stage name or number is optional. If the SC gives one, map it to the phase above and use the phase name in the output.
@@ -105,6 +106,7 @@ PreSales actions by phase (handbook ch. 3.3, condensed):
 - **PoC**: agreed success criteria, a joint plan, regular check-ins, evaluation against the criteria (ch. 13). See 2E.
 - **Proposal**: flag functional and technical factors that drive pricing; draft the functional and technical sections; validate the feasibility of every promise.
 - **Close**: clarify technical points during negotiation; help find alternatives or compromises; validate final technical agreements; hand over to Professional Services and onboarding.
+- **Existing customer / renewal** (kit; handbook 2.11, 3.1): check adoption against what was sold, confirm realised value, surface whitespace, and flag renewal risk before the conversation goes commercial.
 
 ### 2B — MEDDPICC gap analysis
 
@@ -172,7 +174,7 @@ Produce this output. Be direct. This is coaching, not a summary.
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PRESALES COACH  |  [Account]  |  Phase: [Discovery / Qualification / Demo / PoC / Proposal / Close]
+PRESALES COACH  |  [Account]  |  Phase: [Discovery / Qualification / Demo / PoC / Proposal / Close / Existing customer / renewal]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 SITUATION
@@ -219,6 +221,7 @@ Use this to populate the ROUTE TO field. For the full map of every skill and com
 | Qualification (no champion, no EB access, no metrics) | `/presales:discovery:qualify`, then `champion-health` |
 | Demo (storyboard, dry run, no response after the demo) | `/presales:demo:storyboard` |
 | Value and close (business case, objections, no decision date) | `/presales:value:roi-case` → `/presales:deal:close-plan` |
+| Existing customer / renewal (adoption, whitespace, renewal risk) | `/presales:account:expand` |
 | Stuck deal with no obvious cause | `/presales:deal:strategic-think` |
 
 ---

@@ -5,6 +5,25 @@ Format: [Keep a Changelog](https://keepachangelog.com) | Versioning: [Semantic V
 
 ---
 
+## [2.5.0] — 2026-09-28
+
+### Added
+- `security-questionnaire` skill + `/presales:rfp:security`: SIG / CAIQ / ISO 27001 / SOC 2 answers from your own trust library (`references/trust-library/README.md` explains where it lives; never in the plugin).
+- `/presales:account:stakeholders`: the client map (handbook 3.2) → `02b_stakeholder-map.md`.
+- `presales-leader` skill + `/presales:leader:{pipeline-review,one-on-one,capacity,onboarding,hiring}` (handbook ch. 22); leader-only, not routed by `/presales:guide`.
+- `/presales:account:expand`: renewal and expansion discovery → `12_expansion-plan.md`.
+- `solution-architecture` skill + `/presales:handover:architecture` → `07a_solution-architecture.md`.
+- `/presales:value:realized`: post-implementation value check → `13_value-realized.md`.
+- `/presales:deal:poc-to-prod`: PoC-to-production transition and SOW inputs → `06b_poc-to-prod.md`.
+- `/presales:demo:picture-pitch`: the standalone Picture Pitch (11.5.1) → `05a_picture-pitch.md`.
+
+### Changed
+- `knowledge-capture`: objection responses record the handbook ch. 15 objection type (Latent, Expressed, Valid, Smoke screen) and the counter that landed.
+- `demo-storyboard`: demo-environment and data checklist in the run order. `discovery-ftd`: Give-Get mode (7.9) for "demo first" prospects. `/presales:brain:start-week` surfaces the three deals that need attention; `/presales:brain:end-week` prompts for knowledge capture; `/presales:brain:rocks` gains a quarter-end hand-off to `learn`; `presales-coach` recognises the existing-customer / renewal phase.
+- Counts: 42 skills, 54 commands.
+
+---
+
 ## [2.4.0] — 2026-09-28
 
 ### Added
