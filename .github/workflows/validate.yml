@@ -1,0 +1,28 @@
+name: Validate plugin
+
+# Runs on every push and pull request. Checks that the plugin manifests are
+# valid JSON and that every skill's frontmatter will load in Claude
+# (description length, no block scalars, LF line endings).
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Validate plugin manifests
+        run: |
+          python3 -c "import json; json.load(open('.claude-plugin/plugin.json'))"
+          python3 -c "import json; json.load(open('.claude-plugin/marketplace.json'))"
+          echo "Manifests valid"
+
+      - name: Audit skill frontmatter
+        run: python3 scripts/desc_budget.py

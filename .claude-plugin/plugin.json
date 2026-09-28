@@ -1,0 +1,24 @@
+{
+  "name": "presales",
+  "displayName": "AI PreSales Skills",
+  "version": "2.2.0",
+  "description": "AI PreSales Skills by The PreSales Handbook — a vendor-neutral co-pilot for Solution Consultants covering discovery, qualification, demo, value, deal, RFX, handover, and your daily operating loop",
+  "author": {
+    "name": "Dr. Johannes Hangl — The PreSales Handbook",
+    "url": "https://www.presales-handbook.com"
+  },
+  "homepage": "https://www.presales-handbook.com",
+  "repository": "https://github.com/hangljoe/AI-PreSales-Skills",
+  "license": "MIT",
+  "keywords": [
+    "presales",
+    "solution-consulting",
+    "sales-engineering",
+    "discovery",
+    "demo",
+    "meddpicc",
+    "rfp",
+    "value-selling",
+    "presales-handbook"
+  ]
+}

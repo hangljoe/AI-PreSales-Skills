@@ -1,0 +1,18 @@
+# Skills and commands are parsed by strict YAML-frontmatter parsers on claude.ai —
+# CRLF line endings make a skill silently invisible there. Force LF everywhere.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text eol=lf
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.pdf binary
+*.zip binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary

@@ -1,0 +1,8 @@
+[project]
+name = "diagram-render"
+version = "0.1.0"
+description = "Render Excalidraw JSON files to PNG via Playwright headless Chromium"
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.40",
+]

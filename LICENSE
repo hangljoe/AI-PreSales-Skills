@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 Dr. Johannes Hangl — The PreSales Handbook
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Exception: The PreSales Handbook content
+
+The MIT License above covers the skills, commands, scripts and plugin files.
+It does NOT cover the text of The PreSales Handbook and the other reference
+material written by Dr. Johannes Hangl in the `references/` folder
+(PreSales_Handbook_Reference.md, Pre-Sales_Playbook_V3.md, the cheat sheets,
+1000_Years_PreSales_Interviews.md, PreSales_Articles_Summary.md and
+Video_Recording_Best_Practice_Guide_V3.md, including the copy inside
+skills/video-demo-creator/references/).
+
+That material is Copyright (c) Dr. Johannes Hangl. All rights reserved.
+It is included so the skills can use it inside Claude. You may read and use it
+for your own work with this plugin. You may not republish, sell or redistribute
+it separately without written permission. The PreSales Handbook logo and name
+are trademarks of Dr. Johannes Hangl.
+
+Summaries of third-party books and methods (Extreme_Ownership.md, the BBiT/
+folder, the TOC notes, ncn-guide.md, done-statements-guide.md and the
+toc-bbit-expert references) are short study notes in our own words. The
+underlying ideas remain the work of their original authors: "Extreme
+Ownership" by Jocko Willink and Leif Babin; the Theory of Constraints thinking
+processes by Eliyahu M. Goldratt; and the Black Belt in Thinking programme
+(blackbeltinthinking.com).
+
+More at https://www.presales-handbook.com

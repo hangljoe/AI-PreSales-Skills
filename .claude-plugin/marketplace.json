@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "presales-handbook",
+  "description": "AI PreSales Skills by The PreSales Handbook — skills and commands for PreSales professionals",
+  "owner": {
+    "name": "Dr. Johannes Hangl — The PreSales Handbook",
+    "url": "https://www.presales-handbook.com"
+  },
+  "plugins": [
+    {
+      "name": "presales",
+      "source": "./",
+      "displayName": "AI PreSales Skills",
+      "description": "Vendor-neutral PreSales co-pilot following The PreSales Handbook — discovery, qualification, demo, value, deal, RFX, and handover workflows",
+      "author": {
+        "name": "Dr. Johannes Hangl — The PreSales Handbook",
+        "url": "https://www.presales-handbook.com"
+      },
+      "category": "productivity",
+      "keywords": [
+        "presales",
+        "solution-consulting",
+        "sales-engineering",
+        "discovery",
+        "demo",
+        "meddpicc",
+        "rfp",
+        "value-selling",
+        "presales-handbook"
+      ]
+    }
+  ]
+}

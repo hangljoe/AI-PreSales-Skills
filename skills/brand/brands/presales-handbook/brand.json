@@ -1,0 +1,132 @@
+{
+  "name": "presales-handbook",
+  "display_name": "The PreSales Handbook",
+  "website": "www.presales-handbook.com",
+  "source": "Example brand shipped with the toolkit — The PreSales Handbook (www.presales-handbook.com). Copy this folder to add your own company brand; keep the key structure, change the values.",
+
+  "colors": {
+    "primary":              "112D4E",
+    "accent":               "FACF39",
+    "logo_gradient_start":  "FBB040",
+    "logo_gradient_end":    "F9ED32",
+    "text":                 "322F2F",
+    "text_secondary":       "4A4A4A",
+    "text_muted":           "7E8890",
+    "background":           "FFFFFF",
+    "background_subtle":    "F7F5F4",
+    "background_surface":   "E7E4E2",
+    "border":               "E7E4E2",
+    "muted":                "7E8890"
+  },
+
+  "semantic": {
+    "primary_text":        "322F2F",
+    "accent":              "112D4E",
+    "accent_dark":         "112D4E",
+    "highlight":           "FACF39",
+    "hero_bg":             "112D4E",
+    "link":                "112D4E",
+    "table_header_bg":     "112D4E",
+    "table_header_text":   "FFFFFF",
+    "callout_bg":          "F7F5F4",
+    "callout_text":        "322F2F",
+    "callout_border":      "112D4E"
+  },
+
+  "fonts": {
+    "heading":  "Montserrat",
+    "body":     "Open Sans",
+    "fallback": "Arial",
+    "mono":     "Courier New",
+    "note":     "Montserrat and Open Sans are free Google Fonts (fonts.google.com). If they are not installed, Word and PowerPoint substitute Arial — the document still works, it just looks plainer.",
+    "weights": {
+      "regular":  400,
+      "semibold": 600,
+      "bold":     700
+    },
+    "weight_usage": {
+      "regular":  "Body text.",
+      "semibold": "Subheads, labels, statistics.",
+      "bold":     "Headlines and key numbers."
+    }
+  },
+
+  "font_sizes": {
+    "display_pt":  60,
+    "heading1_pt": 40,
+    "heading2_pt": 28,
+    "heading3_pt": 20,
+    "heading4_pt": 16,
+    "body_pt":     11,
+    "caption_pt":   9,
+    "footer_pt":    9,
+    "eyebrow_pt":  10
+  },
+
+  "typography": {
+    "h1_weight": 700, "h2_weight": 700,
+    "h3_weight": 600, "h4_weight": 600,
+    "body_weight": 400,
+    "label_weight": 600,
+    "eyebrow_transform":      "uppercase",
+    "eyebrow_letter_spacing": "0.1em",
+    "body_line_height": 1.5,
+    "heading_line_height": 1.15
+  },
+
+  "design_tokens": {
+    "radius_card":  10,
+    "radius_inner":  6,
+    "radius_small":  4,
+    "shadow_card": "0 4px 12px rgba(17,45,78,0.10)",
+    "gradient_logo_only": true
+  },
+
+  "assets": {
+    "logo_dark":           "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-dark.svg",
+    "logo_white":          "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-white.svg",
+    "logo_dark_png":       "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-dark.png",
+    "logo_white_png":      "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-white.png",
+    "logo_wordmark_png":   "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-dark-wordmark.png",
+    "logo_colour":         "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-colour.svg",
+    "logo_colour_png":     "${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/presales-handbook/assets/logo-colour-wordmark.png",
+    "note": "logo-dark.* = yellow icon + navy name for light backgrounds (logo-dark.png is the square icon; logo-dark-wordmark.png is icon + name). logo-colour.* = the original all-colour logo with a yellow name, low contrast on white. logo-white.* = white-on-transparent version for navy/dark backgrounds."
+  },
+
+  "formats": {
+    "pptx": {
+      "background":           "FFFFFF",
+      "title_slide_bg":       "112D4E",
+      "section_slide_bg":     "112D4E",
+      "footer_text":          "The PreSales Handbook — www.presales-handbook.com",
+      "slide_width_inches":   13.333,
+      "slide_height_inches":  7.5
+    },
+    "docx": {
+      "mode":            "scratch",
+      "page_width_cm":   21.0,
+      "page_height_cm":  29.7,
+      "margin_top_cm":   2.54,
+      "margin_bottom_cm":2.54,
+      "margin_left_cm":  2.2,
+      "margin_right_cm": 2.2,
+      "heading1_pt": 20,
+      "heading2_pt": 16,
+      "heading3_pt": 13,
+      "footer_text": "The PreSales Handbook — www.presales-handbook.com",
+      "note": "No Word template ships with this brand — documents are built in scratch mode from these values plus the logo in the header. To use your own company letterhead instead, add a \"template\" key with the path to your .docx and the docx-generator will open it as the base."
+    },
+    "html": {
+      "font_stack":  "'Open Sans', Arial, system-ui, sans-serif",
+      "heading_font_stack": "'Montserrat', Arial, system-ui, sans-serif"
+    },
+    "excalidraw": {
+      "stroke_color":     "112D4E",
+      "background_color": "F7F5F4",
+      "text_color":       "322F2F",
+      "font_family":       2,
+      "roughness":         0,
+      "stroke_width":      2
+    }
+  }
+}
