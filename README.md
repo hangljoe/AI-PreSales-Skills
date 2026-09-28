@@ -198,7 +198,7 @@ command.
 |---------|--------------|
 | `/presales:guide` | Interactive router. Describe your situation and it sends you to the right skill or command, or shows the full phase map. |
 
-### Account & champion
+### Account & stakeholders
 
 | Command | What it does |
 |---------|--------------|
@@ -382,7 +382,7 @@ For PreSales leaders (handbook ch. 22). Not routed by `/presales:guide`; ask for
 |------|-------------|---------------|
 | `deal-prequal` | For PreSales leaders: a readiness sweep across one or many deals before the TFQ. | `/presales:leader:prequal [deals]` |
 | `presales-metrics` (leader mode) | Team KPI scorecard: distribution across SCs framed as 1:1 questions, never a ranking. | `/presales:leader:metrics [export] [period]` |
-| `presales-leader` | Five leader modes: pipeline review, one-on-one, capacity, onboarding, hiring. | `/presales:leader:pipeline-review` · `one-on-one` · `capacity` · `onboarding` · `hiring` |
+| `presales-leader` | Five leader modes: pipeline review, one-on-one, capacity, onboarding, hiring. | `/presales:leader:pipeline-review` · `/presales:leader:one-on-one` · `/presales:leader:capacity` · `/presales:leader:onboarding` · `/presales:leader:hiring` |
 
 ---
 
@@ -407,7 +407,7 @@ company brand* section.
 
 ### Add a skill
 
-Say *"write a skill"*, or follow the format in [`CLAUDE.md`](CLAUDE.md). Put a new skill in
+Follow the format in [`CLAUDE.md`](CLAUDE.md). Put a new skill in
 `skills/<name>/SKILL.md` and a new command in `commands/<phase>/<name>.md`, which becomes
 `/presales:<phase>:<name>`. Before you push, run:
 

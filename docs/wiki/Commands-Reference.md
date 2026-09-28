@@ -14,7 +14,7 @@ For which command to run at which stage of a deal, see [[The-Deal-Journey]]. For
 
 ## Brain (your personal operating loop)
 
-These commands write to your personal second-brain folder, not the deal folder; see [[Getting-Started]] for setup.
+These commands write to your personal second-brain folder, not the deal folder; run `/presales:brain:setup` once to create it.
 
 | Command | Arguments | What it does | Deal-folder file |
 |---|---|---|---|

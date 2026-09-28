@@ -49,7 +49,7 @@ while it keeps working in Claude Code, which is why it can look like it "disappe
   edited outside the normal workflow.
 
 If a skill you added yourself doesn't trigger, check both of those first. If a shipped skill
-doesn't trigger, use the matching `/presales:` command directly — every skill has one — or ask for
+doesn't trigger, use the matching `/presales:` command directly — many skills have one — or ask for
 it by name; that always works even when the natural-language trigger doesn't.
 
 ## How do I update?

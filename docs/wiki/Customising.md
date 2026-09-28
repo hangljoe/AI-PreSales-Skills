@@ -68,7 +68,7 @@ local folder or a synced cloud-drive folder (OneDrive, Google Drive, Dropbox). S
 
 ## Add a skill
 
-Say "write a skill," or follow this shape directly:
+Follow this shape directly:
 
 1. Create `skills/<name>/SKILL.md` with frontmatter (`name`, `version`, `last_updated`, a
    single-line double-quoted `description`, `triggers`), then the skill body: Connected Tools,

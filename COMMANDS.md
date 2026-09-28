@@ -114,6 +114,18 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:handover:nurture [account]` | Post-close plan — check-ins, feedback, references, expansion |
 | `/presales:handover:architecture [account]` | Solution architecture document → 07a |
 
+### Leader-only (PreSales leaders, handbook ch. 22 — not routed by `/presales:guide`)
+
+| Command | Purpose |
+|---------|---------|
+| `/presales:leader:prequal [deals]` | Readiness sweep across one or many deals before the TFQ (wraps `deal-prequal`) |
+| `/presales:leader:metrics [export] [period]` | Team KPI scorecard, distribution framed as 1:1 questions, never a ranking (wraps `presales-metrics`) |
+| `/presales:leader:pipeline-review [period]` | Weekly deal review agenda: deals by stage, SC hours, verdicts, three decisions |
+| `/presales:leader:one-on-one [SC]` | SC 1:1 from the scorecard and what the SC shares: wins, blockers, one goal, one ask |
+| `/presales:leader:capacity` | Capacity math: hours, close rate, deal size → deliverable revenue, headcount, quota coverage |
+| `/presales:leader:onboarding [new SC]` | 30-60-90 plan for a new SC with shadow / reverse-shadow and the first solo demo gate |
+| `/presales:leader:hiring [role]` | SC interview kit: scorecard, demo role-play brief, rubric, debrief template |
+
 ---
 
 ## Skills — Natural Language Triggers
@@ -133,6 +145,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 | "discovery prep" / "what should I ask" / "call prep" / "FTD" | `discovery-ftd` |
 | "find the CBIs" / "what's the real pain" / "critical business issue" | `critical-business-issue-finder` |
 | "assess the integration complexity" / "tech stack assessment" / "integration risk" | `integration-complexity` |
+| "sales discovery" / "is this deal real" | `discovery-sales` |
 
 ### Demo & Communication
 
@@ -186,6 +199,13 @@ Skills activate automatically when you say the right phrase. No slash needed.
 | "write a LinkedIn post" / "turn this into a post" | `linkedin-post` |
 
 ---
+
+### Leader-only skills
+
+| Skill | How to invoke |
+|-------|---------------|
+| `deal-prequal` | `/presales:leader:prequal` — no natural-language trigger |
+| `presales-leader` | `/presales:leader:pipeline-review` · `one-on-one` · `capacity` · `onboarding` · `hiring` |
 
 ## Utilities
 

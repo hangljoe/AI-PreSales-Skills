@@ -137,7 +137,7 @@ scores 🔴 Unknown.
 
 ## Commands (`commands/`)
 
-Invoked as `/presales:<phase>:<name>`. 54 commands.
+Invoked as `/presales:<phase>:<name>`. 54 commands: the 47 below plus the 7 leader commands listed under **Leader-only tools**.
 
 | Command | What it does |
 |---------|-------------|
