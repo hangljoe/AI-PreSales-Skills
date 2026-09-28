@@ -21,6 +21,7 @@ Format: [Keep a Changelog](https://keepachangelog.com) | Versioning: [Semantic V
 - `knowledge-capture`: objection responses record the handbook ch. 15 objection type (Latent, Expressed, Valid, Smoke screen) and the counter that landed.
 - `demo-storyboard`: demo-environment and data checklist in the run order. `discovery-ftd`: Give-Get mode (7.9) for "demo first" prospects. `/presales:brain:start-week` surfaces the three deals that need attention; `/presales:brain:end-week` prompts for knowledge capture; `/presales:brain:rocks` gains a quarter-end hand-off to `learn`; `presales-coach` recognises the existing-customer / renewal phase.
 - Counts: 42 skills, 54 commands.
+- `docs/wiki/`: the user manual as twelve GitHub-wiki pages (Home, Getting Started, The Deal Journey, Deal Folder, Commands and Skills references, Leader Tools, Connected Tools, Customising, FAQ, Changelog), published to the repository wiki.
 
 ---
 

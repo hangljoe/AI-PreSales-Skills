@@ -445,5 +445,6 @@ automatically and cite handbook chapters by their V78 numbers. For the full book
 [www.presales-handbook.com](https://www.presales-handbook.com).
 
 Changes are listed in [`CHANGELOG.md`](CHANGELOG.md).
+The user manual lives in the [project wiki](https://github.com/hangljoe/AI-PreSales-Skills/wiki); its source is `docs/wiki/`.
 
 **Licence.** The skills, commands and scripts are MIT-licensed, so fork them and make them yours. The PreSales Handbook reference and the author's other material in `references/` stay © Dr. Johannes Hangl. See [`LICENSE`](LICENSE) for details.

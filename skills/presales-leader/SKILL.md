@@ -133,9 +133,9 @@ team's real number differs.
 
 Show the chain: per-SC deliverable revenue = (hours available ÷ hours per deal) × close rate × average deal size, as a **range** across the hours-per-deal range; **headcount needed = team revenue target ÷ per-SC deliverable revenue** (low and high); **quota coverage = per-SC deliverable revenue ÷ quota per SC**, flagged below 1 (the handbook example lands at 0.7–1.4). The headcount inherits the weakest input's confidence tag.
 
-
 Tag every input: 🟢 given by the leader, 🟡 defaulted (state the default), 🔴 unknown — and flag any
 🔴 input as something to confirm before trusting the result.
+
 ### Step 3 — Output
 
 Capacity report in `references/templates.md` — see "Capacity". Always give a headcount range,
