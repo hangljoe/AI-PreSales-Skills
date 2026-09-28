@@ -258,7 +258,7 @@ Run `/presales:guide` for the full phase-by-phase map.
 
 - The repo root is the plugin root; the plugin id is `presales`.
 - Skills: `skills/<name>/SKILL.md`. Commands: `commands/<phase>/<name>.md` → `/presales:<phase>:<name>`.
-- Per-skill material lives in `skills/<name>/references/`; the shared library (the condensed handbook reference, cheat sheets, BBiT study notes, playbook, and the READMEs for your own RFP answer library and security trust library) lives in `references/`. The book: https://www.presales-handbook.com (site source: https://github.com/hangljoe/presales-handbook.com). Handbook citations use V78 numbering.
+- Per-skill material lives in `skills/<name>/references/`; the shared library (the condensed handbook reference, cheat sheets, BBiT study notes, playbook, and the READMEs for your own RFP answer library and security trust library) lives in `references/`. The book: https://www.presales-handbook.com (site source: https://github.com/hangljoe/presales-handbook.com). Handbook citations use the book's chapter numbering.
 - Cross-skill and shared-library paths use `${CLAUDE_PLUGIN_ROOT}/...`.
 - Call summaries share one schema: `references/call-summary-schema.md`, used by `/presales:discovery:summary` (every meeting type) and `discovery-transformer`.
 - Brand values come from `skills/brand/brands/<brand>/brand.json`. Default brand: `presales-handbook`.
