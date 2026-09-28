@@ -29,5 +29,5 @@ Output as a clean one-page brief, printable. End with:
 ## Next step
 
 Hand the brief to `/presales:discovery:prep` to turn it into a discovery call prep sheet
-(hypotheses by persona and a question plan). If a deal folder exists, save the brief there first
-so prep can read it.
+(hypotheses by persona and a question plan). Save as `01_account-brief.md` in the deal folder
+(or `./output/` if there is none) so `/presales:discovery:prep` can read it.

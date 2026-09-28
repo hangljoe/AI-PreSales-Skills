@@ -210,6 +210,8 @@ Turn the plan into concrete steps. Each step follows: **Current State → Action
 
 ## Extreme Ownership: Personal Accountability Layer
 
+Read `${CLAUDE_PLUGIN_ROOT}/references/Extreme_Ownership.md` (study note) before answering.
+
 Before closing, apply Extreme Ownership to this situation:
 
 | Question | Your answer |

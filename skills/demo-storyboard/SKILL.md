@@ -1,12 +1,12 @@
 ---
 name: demo-storyboard
-version: "1.3"
+version: "1.4"
 last_updated: 2026-09-28
 description: "Builds a Tell-Show-Tell demo storyboard for any B2B product: first-person Limbic persona narration, Pain-Capability-Value (PCV) logic, one value module per confirmed customer pain, Picture Pitch image-sequence opening, run order with roles and breaks, and Summary Value Close. Stops at the storyboard. Reads product anchors and discovery from your deal folder or asks. Use on \"demo prep\", \"demo storyboard\", \"structure the demo\", \"how should I demo this\", \"build a demo flow\". Siblings: /presales:demo:script (verbatim script from the storyboard), demo-dryrun-coach (rehearse it), video-demo-creator (recorded videos). SKIP for rehearsing an existing storyboard."
 triggers:
   - "demo prep"
   - "build a demo flow"
-  - "Tell-Show-Tell"
+  - "Tell-Show-Tell storyboard"
   - "structure the demo"
   - "how should I demo this"
   - "demo storyboard"

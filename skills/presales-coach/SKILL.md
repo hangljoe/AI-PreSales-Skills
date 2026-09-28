@@ -1,12 +1,12 @@
 ---
 name: presales-coach
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
-description: "Situational deal coach and the entry point for a stuck deal: names the one constraint (MEDDPICC gap, selling-journey phase, PoC health), gives three SC actions and routes to the next tool. Use on \"I'm stuck on a deal\", \"deal is going cold\", \"coach me\", \"what's my next move\", \"is my PoC at risk\". Siblings: /presales:deal:strategic-think (full TOC/BBiT analysis once the constraint is named), /presales:guide (browse the whole kit). SKIP for structuring call notes or the post-call plan (meeting-notes-structurer, /presales:discovery:golden-hours)."
+description: "Situational deal coach and the entry point for a stuck deal: names the one constraint (MEDDPICC gap, selling-journey phase, PoC health), gives three SC actions and routes to the next tool. Use on \"I'm stuck on a deal\", \"deal is going cold\", \"coach me on this deal\", \"what's my next move\", \"is my PoC at risk\". Siblings: /presales:deal:strategic-think (full TOC/BBiT analysis once the constraint is named), /presales:guide (browse the whole kit). SKIP for structuring call notes or the post-call plan (meeting-notes-structurer, /presales:discovery:golden-hours)."
 triggers:
   - "I'm stuck on a deal"
   - "deal is going cold"
-  - "coach me"
+  - "coach me on this deal"
   - "what's my next move"
   - "I need help with a deal"
   - "deal feels stuck"
@@ -44,6 +44,8 @@ When this skill activates, read these files to ground your coaching:
 | `${CLAUDE_PLUGIN_ROOT}/references/1000_Years_PreSales_Interviews.md` | Practitioner wisdom — use for reframing and coaching insights |
 | `${CLAUDE_PLUGIN_ROOT}/references/Cheat_Sheet_Sales_Discovery.md` | MEDDIC/MEDDPICC frameworks — use for the MEDDPICC gap analysis |
 | `${CLAUDE_PLUGIN_ROOT}/references/Cheat_Sheet_Functional_and_Technical_Discovery.md` | 9-step FTD — use for discovery-phase coaching |
+| `${CLAUDE_PLUGIN_ROOT}/references/Cheat_Sheet_Demo.md` | Demo do's and don'ts — use for demo-phase coaching |
+| `${CLAUDE_PLUGIN_ROOT}/references/PreSales_Articles_Summary.md` | Optional: practitioner articles by the handbook author — use for reframing when the deal question is broader than one phase |
 | `${CLAUDE_PLUGIN_ROOT}/references/Pre-Sales_Playbook_V3.md` | Optional: a sample stage playbook with do's and don'ts. Its stage numbers are one company's model; translate them to the phase names below, never show them to the user as the standard |
 
 ---

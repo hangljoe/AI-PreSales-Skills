@@ -168,7 +168,7 @@ Each stage follows a chapter of The PreSales Handbook (V78 numbering).
 | Research the account | 3 · Buying journey | `/presales:account:brief` → `/presales:account:journey` |
 | Sales discovery | 5 · Sales Discovery | `/presales:discovery:prep` → `/presales:discovery:sales` |
 | Qualify hard | 6 · Qualify Early, Qualify Hard | `/presales:discovery:qualify` |
-| Functional & technical discovery | 7 · FTD | *"discovery prep"* → `/presales:discovery:summary` |
+| Functional & technical discovery | 7 · FTD | *"FTD"* → `/presales:discovery:prep` → `/presales:discovery:summary` |
 | Scope the opportunity | 8 · Opportunity Scoping Document | *"scope from discovery"* → `/presales:handover:osd-draft` |
 | Decide whether to invest | 9 · TFQ | `/presales:discovery:tfq` · `/presales:value:orc` |
 | Build the value case | 10 · ROI and Value | `/presales:value:pain-to-value` → `/presales:value:roi-case` |
@@ -287,7 +287,7 @@ Skills switch on when you say something like the phrase in the right-hand column
 | Skill | What it does | Say something like… |
 |-------|--------------|---------------------|
 | `discovery-sales` | Commercial discovery anchored on MEDDPICC. Decides whether the deal is real. | "sales discovery" |
-| `discovery-ftd` | Functional & Technical Discovery for any B2B product: research, opening framework, product-specific questions and a branded questionnaire or summary. | "discovery prep" |
+| `discovery-ftd` | Functional & Technical Discovery for any B2B product: research, opening framework, product-specific questions and a branded questionnaire or summary. | "FTD" |
 | `discovery-transformer` | Turns a meeting transcript (`.vtt`) into clean Markdown, files it in your deal folder and builds a Discovery Summary. | "discovery transformer" |
 | `meeting-notes-structurer` | Turns raw meeting notes into a summary with MEDDPICC updates, next steps and a follow-up email. | "structure these notes" |
 | `critical-business-issue-finder` | Finds the 2–4 critical business issues driving the deal, separated from symptoms and feature requests. | "find the CBIs" |

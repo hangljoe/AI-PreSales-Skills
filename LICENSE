@@ -26,11 +26,11 @@ Exception: The PreSales Handbook content
 
 The MIT License above covers the skills, commands, scripts and plugin files.
 It does NOT cover the text of The PreSales Handbook and the other reference
-material written by Dr. Johannes Hangl in the `references/` folder
-(PreSales_Handbook_Reference.md, Pre-Sales_Playbook_V3.md, the cheat sheets,
-1000_Years_PreSales_Interviews.md, PreSales_Articles_Summary.md and
-Video_Recording_Best_Practice_Guide_V3.md, including the copy inside
-skills/video-demo-creator/references/).
+material written by Dr. Johannes Hangl, wherever it sits in the tree: the
+`references/` folder (PreSales_Handbook_Reference.md, Pre-Sales_Playbook_V3.md,
+the cheat sheets, 1000_Years_PreSales_Interviews.md, PreSales_Articles_Summary.md)
+and skills/video-demo-creator/references/Video_Recording_Best_Practice_Guide_V3.md.
+For that file the exception below overrides the MIT grant.
 
 That material is Copyright (c) Dr. Johannes Hangl. All rights reserved.
 It is included so the skills can use it inside Claude. You may read and use it

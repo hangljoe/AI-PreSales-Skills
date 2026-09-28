@@ -1,10 +1,9 @@
 ---
 name: discovery-ftd
-version: "2.2"
+version: "2.3"
 last_updated: 2026-09-28
 description: "Functional & Technical Discovery (FTD, handbook ch. 7) for any B2B product: research, handbook 7.4 stages with SPIN-sequenced questions built from your capability list, delivered as a 25-minute call guide, a question card, a branded Word questionnaire or the post-call summary. Use on \"FTD\", \"what should I ask\", \"discovery call guide\", \"pre-discovery questionnaire\". Siblings: /presales:discovery:prep (the pre-call entry point: brief, hypotheses, then this guide), discovery-sales (commercial MEDDPICC: is the deal real), discovery-transformer (.vtt transcript after the call). SKIP for scoring a deal (/presales:discovery:qualify) or the TFQ gate."
 triggers:
-  - "discovery prep"
   - "run discovery"
   - "discovery session"
   - "FTD"
@@ -14,9 +13,7 @@ triggers:
   - "discovery document"
   - "what should I ask"
   - "discovery questions"
-  - "prepare for discovery"
   - "pre-discovery"
-  - "post-discovery"
 ---
 
 # Functional Technical Discovery (FTD)

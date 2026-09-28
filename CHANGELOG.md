@@ -5,6 +5,25 @@ Format: [Keep a Changelog](https://keepachangelog.com) | Versioning: [Semantic V
 
 ---
 
+## [2.2.1] — 2026-09-28
+
+### Fixed
+- `/presales:discovery:prep` and `/presales:discovery:questions` now receive their positional arguments (`$1`–`$3`; `$0` was never substituted).
+- `STACK.md` skills table: the `champion-health` row had lost its trigger cell to the `do-nothing-buster` row.
+- Deal-folder targets: `/presales:account:brief`, `/presales:account:map`, `/presales:handover:osd-draft` and `/presales:discovery:qualify` now name the file they write; `qualify` reads the deal folder first and saves to the new `02a_meddpicc-score.md`. `DEAL_TEMPLATE.md` and `/presales:discovery:golden-hours` state both discovery-output naming schemes (rolling `02_discovery-notes.md` and the transformer's dated file).
+- Triggers: removed the duplicate "status quo is our competitor" from `competitive-battlecard`; narrowed bare phrases in `demo-dryrun-coach`, `osd-architect`, `presales-coach`, `demo-storyboard`; `discovery-ftd` no longer claims "discovery prep" (the command owns it). README and STACK trigger mirrors updated.
+
+### Changed
+- `video-demo-creator`: tool table lists plain vendor names; the Descript referral link is kept under a labelled affiliate note.
+- `references/Cheat_Sheet_Demo.md` and `references/PreSales_Articles_Summary.md` are now loaded by `presales-coach`; `references/Extreme_Ownership.md` by `/presales:deal:strategic-think`.
+- `LICENSE`: the video recording guide is named at its skill-local path and the all-rights-reserved exception is scoped by path, not folder.
+- Skill versions bumped: competitive-battlecard 1.4, demo-dryrun-coach 1.3, demo-storyboard 1.4, discovery-ftd 2.3, osd-architect 2.2, presales-coach 1.2, video-demo-creator 1.3.
+
+### Removed
+- `references/Video_Recording_Best_Practice_Guide_V3.md` (byte-identical duplicate of the copy inside `skills/video-demo-creator/references/`).
+
+---
+
 ## [2.2.0] — 2026-09-28
 
 ### Changed

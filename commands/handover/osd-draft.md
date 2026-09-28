@@ -26,3 +26,6 @@ The skill produces a full OSD following chapter 8.2 of *The PreSales Handbook* (
 Every claim is tagged 🟢 Confirmed / 🟡 Inferred / 🔴 Unknown, and every assumption is listed explicitly.
 
 If a discovery summary is not available, the skill will ask for it before generating.
+
+Save the working OSD as `07_osd-draft.md` in the deal folder (or `./output/`); the osd-architect
+skill's branded Word file is the customer-facing copy and keeps its own name.

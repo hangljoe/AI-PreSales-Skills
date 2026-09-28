@@ -12,11 +12,11 @@ qualification extension of the handbook's BANT (ch. 5–6); the handbook itself 
 ## Intake
 
 If a deal folder exists, read it first and say which files you used:
-`02_discovery-notes.md`, `03_mutual-action-plan.md`, `04_pain-to-value.md`, `06_poc-evaluation-plan.md`
+`02_discovery-notes.md`, `02a_meddpicc-score.md`, `03_mutual-action-plan.md`, `04_pain-to-value.md`, `06_poc-evaluation-plan.md`
 (and a PoC readout, if one exists), `08_competitive-read.md`. Otherwise ask for, in one message:
 
 1. Your product and what is being proposed (scope, rough value, target close date)
-2. MEDDPICC status — or the latest `/presales:discovery:qualify` output
+2. MEDDPICC status — `02a_meddpicc-score.md` in the deal folder, or the latest `/presales:discovery:qualify` output
 3. MAP status — which milestones are done, late, or not started
 4. Open objections — voiced ones, and ones you suspect but nobody has said out loud
 5. Who is in the room for the close, and whether the Economic Buyer has seen the value case

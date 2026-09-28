@@ -4,9 +4,9 @@ argument-hint: "[account] [persona] [product]"
 ---
 
 Build a discovery call prep sheet for:
-- Account: $0
-- Persona: $1
-- Product(s) in scope: $2
+- Account: $1
+- Persona: $2
+- Product(s) in scope: $3
 
 If any of these are missing, ask before proceeding. This is the kit's single pre-call entry point.
 It follows *The PreSales Handbook* 7.2 step 1 (preparation: research the client, its competitors
@@ -17,22 +17,22 @@ call, use `/presales:discovery:sales`.
 ## Step 1 — Account brief (research once)
 
 If the deal folder has a recent `01_account-brief.md`, read it. Otherwise run `/presales:account:brief`
-for $0 to pull firmographics, business footprint and signals. Confidence-tag every fact.
+for $1 to pull firmographics, business footprint and signals. Confidence-tag every fact.
 This brief is the only research pass. Step 3 reuses it and does not search again.
 
 ## Step 2 — Hypotheses for this persona
 
-From the brief and the persona ($1), write 3–5 hypotheses:
+From the brief and the persona ($2), write 3–5 hypotheses:
 - What is this person most likely worried about?
 - What metrics do they own?
-- How do they relate to the business process that $2 supports?
+- How do they relate to the business process that $3 supports?
 - Which issue could be a Critical Business Issue, and what compelling event would make it urgent?
 Tag each 🟡 Inferred (🟢 Confirmed only if prior call notes support it).
 
 ## Step 3 — Call guide via discovery-ftd
 
 Run the `discovery-ftd` skill, Output A (internal call guide), with:
-- Account: $0 · Persona: $1 · Product: $2
+- Account: $1 · Persona: $2 · Product: $3
 - **Prospect Brief: the Step 1 brief and the Step 2 hypotheses.** FTD skips its own research
   (its Step 2) and only fills gaps the brief marks 🔴.
 - Session length: 25 minutes for a first call (handbook 7.2), unless the user says otherwise.

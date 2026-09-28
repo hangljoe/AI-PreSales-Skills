@@ -10,7 +10,7 @@ If a deal folder exists, read it first (discovery summary, pain-to-value map, qu
 
 **Pull, don't re-derive:**
 - **Critical Business Issue:** take it from the `critical-business-issue-finder` skill output. If none exists, run it on the discovery notes first rather than guessing.
-- **MEDDPICC score (/40):** take it from `/presales:discovery:qualify`. If the deal hasn't been scored, run that first or show the row as "not scored". Never invent a number.
+- **MEDDPICC score (/40):** take it from `02a_meddpicc-score.md` in the deal folder, or from `/presales:discovery:qualify`. If the deal hasn't been scored, run that first or show the row as "not scored". Never invent a number.
 
 **Rendering:** for a branded Word version, pass the finished content to `docx-generator` (content comes from this command, rendering happens there).
 

@@ -5,9 +5,9 @@
 **Dr. Johannes Hangl — The PreSales Handbook** ([www.presales-handbook.com](https://www.presales-handbook.com))
 
 **Tools:**
-- Descript: https://www.descript.com/
-- Consensus (goConsensus): https://app.goconsensus.com/ (one option; alternatives: Loom, a shared folder)
-- Synthesia: https://app.synthesia.io/
+- Descript: descript.com
+- Consensus (goConsensus): goconsensus.com (one option; alternatives: Loom, a shared folder)
+- Synthesia: synthesia.io
 
 ---
 

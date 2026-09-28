@@ -15,7 +15,8 @@ rest within 24.
 This command consumes an existing call summary. It does not rebuild one.
 
 - **Discovery call:** use the summary in the shared schema (`${CLAUDE_PLUGIN_ROOT}/references/call-summary-schema.md`),
-  pasted or read from the deal folder (`02_discovery-notes.md` or `*_discovery-summary.md`).
+  pasted or read from the deal folder (`02_discovery-notes.md`, the rolling file, or a dated
+  `YYYY-MM-DD_<Account>_discovery-summary.md` written by `discovery-transformer`).
 - **Demo or other meeting:** use the `meeting-notes-structurer` output.
 - **Only raw notes or a transcript?** Run `/presales:discovery:summary` first (or `discovery-transformer`
   for a `.vtt` file), then continue here.

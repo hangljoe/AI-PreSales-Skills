@@ -1,6 +1,6 @@
 ---
 name: video-demo-creator
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Guides the full lifecycle of a recorded presales demo video: level selection (L1 teaser to L5 live recording), video brief, hook, Tell-Show-Tell script, recording checklist, editing, 13-point validation and publishing, plus click-through (interactive) demo briefs. Tool-neutral (e.g. Descript, Synthesia, Loom). Use on \"create a demo video\", \"help me record a demo\", \"demo video script\", \"video brief\", \"plan a demo video\", \"click-through demo\". Siblings: /presales:demo:storyboard (live demo storyboard), /presales:demo:script (verbatim live demo script). SKIP for live customer demos."
 triggers:
@@ -457,9 +457,11 @@ Examples only — any recorder, editor or sharing tool works.
 
 | Tool | Purpose | Access |
 |------|---------|--------|
-| **Descript** | Screen recording, script-based editing, AI filler removal, export | https://descript.cello.so/ukNKAhow9fy |
-| **goConsensus** (Consensus; one option — alternatives: Loom, a shared folder) | Publish videos, build guided buyer stories, track engagement | https://app.goconsensus.com/ |
-| **Synthesia** | AI avatar videos for TELL 1 and TELL 2 segments | https://app.synthesia.io/ |
+| **Descript** | Screen recording, script-based editing, AI filler removal, export | descript.com |
+| **goConsensus** (Consensus; one option — alternatives: Loom, a shared folder) | Publish videos, build guided buyer stories, track engagement | goconsensus.com |
+| **Synthesia** | AI avatar videos for TELL 1 and TELL 2 segments | synthesia.io |
+
+*Affiliate note: https://descript.cello.so/ukNKAhow9fy is The PreSales Handbook's referral link for Descript. Any recorder or editor works; the kit does not depend on Descript.*
 
 ---
 

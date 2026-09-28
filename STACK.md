@@ -32,7 +32,7 @@ leader-only `deal-prequal` (see **Leader-only tools**).
 | Skill | What it does | Key trigger phrases |
 |-------|-------------|---------------------|
 | `discovery-sales` | Commercial Sales Discovery anchored on MEDDPICC (handbook ch. 5). Decides whether the deal is real; hands scoring to `/presales:discovery:qualify`. | "sales discovery" |
-| `discovery-ftd` | Functional & Technical Discovery (ch. 7) for any B2B product: research, FTD opening framework, product questions built from the SC's product scope, branded questionnaire or post-call summary. | "discovery prep", "FTD", "what should I ask" |
+| `discovery-ftd` | Functional & Technical Discovery (ch. 7) for any B2B product: research, FTD opening framework, product questions built from the SC's product scope, branded questionnaire or post-call summary. | "FTD", "discovery questionnaire", "what should I ask" |
 | `discovery-transformer` | Meeting `.vtt` transcript → clean Markdown, filed in the local deal folder, plus a Discovery Summary with coverage check, MEDDPICC and follow-up email. | "discovery transformer", "process this transcript" |
 | `meeting-notes-structurer` | Raw meeting notes → summary, MEDDPICC updates, next steps, follow-up email. | "structure these notes" |
 | `critical-business-issue-finder` | Surfaces the 2–4 Critical Business Issues, separated from symptoms and feature requests. | "find the CBIs", "what's the real pain" |
@@ -49,9 +49,9 @@ leader-only `deal-prequal` (see **Leader-only tools**).
 | `pricing-positioning` | Value before price; handles "too expensive" without discounting. | "pricing conversation" |
 | `negotiation-prep` | Negotiation brief: positions, walk-away, trade levers, concession sequence. | "negotiation prep" |
 | `exec-briefing-prep` | C-level meeting prep: agenda, persona talking points, hard-question coaching. | "exec briefing prep", "EBC prep" |
-| `presales-coach` | Situational coach and stuck-deal entry point: diagnoses the deal constraint by phase, runs a PoC health check (ch. 13.5–13.6), gives three concrete SC actions and the next tool; escalates to `/presales:deal:strategic-think`. | "I'm stuck on a deal", "coach me", "is the PoC on track" |
-| `champion-health` | Separates friendly contacts from real advocates (ch. 4). The gate before `/presales:deal:champion-enable`. |
-| `do-nothing-buster` | Diagnoses no-decision risk against the nine status-quo causes (ch. 20.1) and builds a counter-plan → `08a_status-quo-plan.md`. | "they might do nothing", "status quo is our competitor" | "how strong is my champion" |
+| `presales-coach` | Situational coach and stuck-deal entry point: diagnoses the deal constraint by phase, runs a PoC health check (ch. 13.5–13.6), gives three concrete SC actions and the next tool; escalates to `/presales:deal:strategic-think`. | "I'm stuck on a deal", "coach me on this deal", "is the PoC on track" |
+| `champion-health` | Separates friendly contacts from real advocates (ch. 4). The gate before `/presales:deal:champion-enable`. | "how strong is my champion" |
+| `do-nothing-buster` | Diagnoses no-decision risk against the nine status-quo causes (ch. 20.1) and builds a counter-plan → `08a_status-quo-plan.md`. | "they might do nothing", "status quo is our competitor" |
 | `tactical-empathy-coach` | Objection and difficult-conversation coaching: labels, mirrors, calibrated questions (ch. 15). | "objection coaching" |
 | `competitive-battlecard` | Honest positioning card against any named competitor or an in-house build, any industry, with SWOT (ch. 20); hands status-quo risk to `do-nothing-buster`. | "competitive battlecard", "how do we beat" |
 | `toc-bbit-expert` | Theory of Constraints + Black Belt in Thinking coach: UDE → CRT → Cloud → FRT → PRT → TT with diagrams. | "think like a BBiT expert" |

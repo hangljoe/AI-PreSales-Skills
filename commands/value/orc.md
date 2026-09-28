@@ -45,7 +45,7 @@ Share the agenda and OSD with attendees a few days in advance.
 
 #### 2. MEDDPICC health check (10 min — SC + AE)
 
-Current MEDDPICC scores (from `/presales:discovery:qualify`):
+Current MEDDPICC scores (from `02a_meddpicc-score.md` in the deal folder, or `/presales:discovery:qualify`):
 
 | Element | Score | Gap | Who owns the fix |
 |---------|-------|-----|-----------------|

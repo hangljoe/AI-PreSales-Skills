@@ -1,6 +1,6 @@
 ---
 name: competitive-battlecard
-version: "1.3"
+version: "1.4"
 last_updated: 2026-09-28
 description: "Rapid, honest competitive positioning card (handbook ch. 20) against a named competitor, the status quo or an in-house build, in any B2B category: where you genuinely win, their real strengths, answers to their attacks, a SWOT, discovery questions, proof moments and a deal strategy. Use on \"battlecard for\", \"how do we beat\", \"positioning vs\", \"competitor is in the deal\", \"they want to build it themselves\". Siblings: do-nothing-buster (full diagnosis of a no-decision risk), pricing-positioning (competitor undercuts on price), demo-storyboard (build the demo around the proof moments). SKIP for research on a company that is not a competitor (/presales:account:brief)."
 triggers:
@@ -16,7 +16,6 @@ triggers:
   - "compete against"
   - "competing with"
   - "they want to build it themselves"
-  - "status quo is our competitor"
 ---
 
 # Competitive Battlecard

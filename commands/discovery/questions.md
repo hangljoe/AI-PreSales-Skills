@@ -5,9 +5,9 @@ argument-hint: "[persona] [product] [framework]"
 
 Generate a discovery question card.
 
-- Persona: $0
-- Product(s): $1
-- Framework: $2 (default: SPIN)
+- Persona: $1
+- Product(s): $2
+- Framework: $3 (default: SPIN)
 
 Run the **discovery-ftd** skill in **question-card mode** (its Output D) with these parameters.
 The skill owns the question logic: handbook 7.4 stages, SPIN sequencing (7.5), and a short

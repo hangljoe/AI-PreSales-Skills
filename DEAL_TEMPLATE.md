@@ -44,6 +44,7 @@ Use my project documents as context. Never invent facts about this account.
 ├── 01_account-brief.md            ← firmographics, operational footprint, signals
 ├── 01a_buying-journey.md          ← where the buyer is in their journey + our actions per stage
 ├── 02_discovery-notes.md          ← call summaries (shared schema: references/call-summary-schema.md)
+├── 02a_meddpicc-score.md          ← MEDDPICC /40 score history (feeds ORC, exec summary, close plan)
 ├── 03_mutual-action-plan.md       ← Mutual Action Plan (MAP): joint steps, owners, dates to a decision
 ├── 04_pain-to-value.md            ← pain → capability → value table
 ├── 04a_roi-case.md                ← ROI / value business case
@@ -62,6 +63,7 @@ Use my project documents as context. Never invent facts about this account.
 ## How to keep it fresh
 
 - After each customer call: run `/presales:discovery:summary` and save to `02_discovery-notes.md`
+- Transcript processed with `discovery-transformer`? It writes `YYYY-MM-DD_<Account>_discovery-summary.md` next to `02_discovery-notes.md`; `02_discovery-notes.md` stays the rolling file, the dated file is the per-call original
 - Before each demo: run `/presales:demo:storyboard` (and `/presales:demo:script` for the verbatim script) and update `05_demo-storyboard.md`
 - After each significant call: update `03_mutual-action-plan.md` with `/presales:account:map`
 - Do NOT copy CRM data (stage, close date, ARR) into project files — fetch from your CRM (e.g. Salesforce, HubSpot) via its connector, if connected
@@ -73,6 +75,7 @@ Use my project documents as context. Never invent facts about this account.
 /presales:account:brief [account]      → 01_account-brief.md
 /presales:account:journey [account]    → 01a_buying-journey.md
 /presales:discovery:summary            → 02_discovery-notes.md
+/presales:discovery:qualify            → 02a_meddpicc-score.md
 /presales:account:map                  → 03_mutual-action-plan.md
 /presales:value:pain-to-value          → 04_pain-to-value.md
 /presales:value:roi-case               → 04a_roi-case.md

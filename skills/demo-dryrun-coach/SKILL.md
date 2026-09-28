@@ -1,6 +1,6 @@
 ---
 name: demo-dryrun-coach
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Coaches an SC through a demo dry-run before a major customer session: checks an existing storyboard or script for Tell-Show-Tell compliance and first-person narration, maps every module to a confirmed pain, audits timing, flags likely objections and gives a ready / not-ready verdict. Use on \"dry run my demo\", \"demo rehearsal\", \"review my storyboard\", \"coach me through the demo\", \"practice this demo\". Siblings: demo-storyboard and /presales:demo:storyboard (build the storyboard first), /presales:demo:script (verbatim script). SKIP for building the storyboard itself."
 triggers:
@@ -10,7 +10,6 @@ triggers:
   - "review my demo plan"
   - "demo dry run"
   - "demo rehearsal"
-  - "dry-run"
   - "run through my demo"
   - "review my storyboard"
   - "get feedback on my demo"
