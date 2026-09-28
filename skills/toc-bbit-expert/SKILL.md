@@ -1,6 +1,6 @@
 ---
 name: toc-bbit-expert
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Deep Theory of Constraints + Black Belt in Thinking (BBiT) coach: UDEs → Current Reality Tree → Evaporation Cloud → injections → Future Reality, Prerequisite and Transition Trees, with Excalidraw diagrams; also Done Statements, NCNs, ABC/PMCB behaviour change and CLR logic checks. Use on \"think like a BBiT expert\", \"build a current reality tree\", \"evaporation cloud\", \"necessary condition network\", \"write a done statement\". Siblings: /presales:deal:strategic-think (fast single-pass deal analysis), presales-coach (first stop for a stuck deal). SKIP for everyday deal advice or next-step questions."
 triggers:
@@ -36,6 +36,12 @@ This skill makes you think like a real BBiT expert: rigorous, patient, relentles
 **Grounded in:**
 - *TOC + BBiT Cheat Sheet* (Dr. Johannes Hangl) — canonical reference, read before every analysis
 - *BBiT study notes* — 12 short modules, one per tool (TOC thinking processes by Eliyahu M. Goldratt; method as taught in the Black Belt in Thinking programme)
+
+---
+
+## Connected Tools
+
+No connected tools — this skill works from pasted context only.
 
 ---
 
@@ -291,3 +297,23 @@ The step-by-step guide for each phase lives in this skill's `references/` folder
 | Assemble the final summary output | `references/output-templates.md` |
 | Build any diagram (Cloud, CRT, FRT, TT, NCN, Druid) | `references/visual-diagram-guide.md` |
 | Quality-check before delivering | `references/quality-checklists.md` |
+
+---
+
+## Handoff
+
+- The situation is a specific, fast-moving deal rather than a system-level constraint → `/presales:deal:strategic-think` for a single-pass version instead.
+- A deal-level MEDDPICC gap surfaced during framing → `presales-coach` for the diagnosis, or `/presales:value:orc` for the review agenda.
+- Injections and NCN nodes are ready to execute → hand the Done Statements to the plan owner; diagrams generated via the `diagram` skill slot into `pptx-generator` or `docx-generator`.
+
+---
+
+## Quality checklist
+
+- [ ] Phase 0 System Framing answered in full (system, goal, signal, constraint type) before any UDE work started
+- [ ] Every UDE passed the four UDE rules (observable, specific, effect-not-cause, neutral) before being accepted
+- [ ] Cause-and-effect links used vertical arrows and survived the if-then test; prerequisite links used horizontal arrows — the two logic types never mixed in one diagram
+- [ ] Injections worded as states, never actions
+- [ ] The relevant procedural guide (`references/phase-*.md`) was read on demand for each phase reached, not loaded all up front
+- [ ] `references/quality-checklists.md` run before delivering the final output
+- [ ] Diagrams offered at the phase gates where they apply, saved to `output/toc/` with the documented file naming

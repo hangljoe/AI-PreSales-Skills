@@ -76,7 +76,7 @@ Ask: "Where is the deal stuck or what's the next milestone?"
 - No urgency, status quo or "no decision" is the real competitor → `do-nothing-buster` skill (say "they might do nothing")
 - Need to map their problems to your capabilities → `capability-mapper` skill
 - Planning a customer workshop or EBC → `workshop-agenda-builder` skill
-- Champion is weak, unclear or needs material → `champion-health` skill first; for a confirmed champion, `/presales:account:champion` (quick brief) or `/presales:deal:champion-enable` (full kit for the Economic Buyer sell)
+- Champion is weak, unclear or needs material → `champion-health` skill first; for a confirmed champion, `/presales:deal:champion-enable` in brief mode (quick brief) or kit mode (full Economic Buyer enablement)
 - Competitor in the deal → `competitive-battlecard` skill (say "battlecard for [competitor]")
 - Need to build the value case → `/presales:value:pain-to-value` + `/presales:value:roi-case`
 - CFO or finance pushing back on the numbers → `business-case-stress-tester` skill
@@ -182,7 +182,7 @@ Follows the flow of *The PreSales Handbook*. Real deals loop back and skip phase
 |---|----------------------|------------------|-------------|
 | 1 | Sales discovery (ch. 5) | Is there a real deal? | `discovery-sales` skill · `/presales:discovery:sales` · `/presales:account:brief` · `/presales:discovery:questions` · `/presales:account:journey` (buying-journey stage, ch. 3) |
 | 2 | Qualify (ch. 4, 6) | Qualify early, qualify hard | `/presales:discovery:qualify` · `champion-health` · `/presales:account:map` |
-| 3 | Functional & technical discovery (ch. 7) | Deep-dive into needs and landscape | `discovery-ftd` skill · `/presales:discovery:prep` · `/presales:discovery:summary` · `/presales:discovery:golden-hours` · `discovery-transformer` · `critical-business-issue-finder` · `meeting-notes-structurer` · `workshop-agenda-builder` |
+| 3 | Functional & technical discovery (ch. 7) | Deep-dive into needs and landscape | `discovery-ftd` skill · `/presales:discovery:prep` · `/presales:discovery:summary` · `/presales:discovery:golden-hours` · `discovery-transformer` · `critical-business-issue-finder` · `workshop-agenda-builder` |
 | 4 | Discovery summary / OSD (ch. 8) | Scoping the solution | `osd-scoper` → `osd-architect` · `/presales:handover:osd-draft` · `capability-mapper` · `integration-complexity` |
 | 5 | TFQ + ORC (ch. 9) | Invest SC time? Qualify in or out | `/presales:discovery:tfq` (`tfq` skill) · `/presales:value:orc` |
 | 6 | Value & ROI (ch. 10) | Quantifying the case | `/presales:value:pain-to-value` · `/presales:value:roi-case` · `business-case-stress-tester` |

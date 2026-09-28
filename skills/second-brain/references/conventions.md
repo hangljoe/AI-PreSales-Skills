@@ -177,7 +177,7 @@ products, solution areas, or industries the user works on, in the user's own wor
 weight the newsletter/mail sweep. Setup asks for them as free text. Empty/skipped → no filtering
 happens, nothing is suppressed)
 · **Training target** (optional — minutes/week. Setup recommends the handbook's 70/30
-deals/learning split (§2.6) as a dedicated weekly learning block (§18.3), but only writes a
+deals/learning split (ch. 2.6) as a dedicated weekly learning block (ch. 18.3), but only writes a
 value the user explicitly confirms; empty/skipped → no target is set and no training
 nudge is ever generated, same "opt-in only" semantics as Focus areas) · **Automation** (optional
 — one line per automated mode: `<mode>: <trigger_id> · <cron> · confirmed <date>`, written only

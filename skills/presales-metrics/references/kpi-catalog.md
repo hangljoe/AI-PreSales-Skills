@@ -45,7 +45,7 @@ benchmark. If the user has none, use their own trailing average as the baseline.
 | KPI | Formula |
 |-----|---------|
 | Sales–PreSales alignment | joint account/deal syncs per month (or per active opp) |
-| Training and development hours | learning hours per SC per month (ties to the 70/30 rule, §2.6 and §18.4) |
+| Training and development hours | learning hours per SC per month (ties to the 70/30 rule, ch. 2.6 and ch. 18.4) |
 | Tool and software utilisation | active use of each PreSales tool ÷ licences, or sessions per SC |
 
 ## Efficiency (ch. 23)

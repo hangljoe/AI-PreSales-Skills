@@ -1,8 +1,8 @@
 ---
 name: rag-markdown
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
-description: "Converts any source (this conversation, pasted text, PDF, PowerPoint, Word, Excel, or a web page) into one clean Markdown file built for RAG ingestion: strict heading hierarchy as chunk boundaries, self-contained sections, YAML frontmatter, normalised tables, described images. Use on \"make this RAG-ready\", \"convert this PDF to markdown for the knowledge base\", \"prep this for our AI search\", \"turn this into a knowledge-base doc\". Siblings: discovery-transformer (meeting .vtt transcripts), meeting-notes-structurer (call notes into a summary), knowledge-capture (turn a win, demo flow or answer into a reusable team asset). SKIP for summarising a meeting or rendering Word/PowerPoint files."
+description: "Converts any source (this conversation, pasted text, PDF, PowerPoint, Word, Excel, or a web page) into one clean Markdown file built for RAG ingestion: strict heading hierarchy as chunk boundaries, self-contained sections, YAML frontmatter, normalised tables, described images. Use on \"make this RAG-ready\", \"convert this PDF to markdown for the knowledge base\", \"prep this for our AI search\", \"turn this into a knowledge-base doc\". Siblings: discovery-transformer (meeting .vtt transcripts), /presales:discovery:summary (call notes into a summary), knowledge-capture (turn a win, demo flow or answer into a reusable team asset). SKIP for summarising a meeting or rendering Word/PowerPoint files."
 triggers:
   - "RAG ready markdown"
   - "convert to markdown for RAG"

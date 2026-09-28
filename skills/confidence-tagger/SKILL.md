@@ -1,6 +1,6 @@
 ---
 name: confidence-tagger
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Applies this kit's confidence-tagging standard to any presales output: every claim labelled 🟢 Confirmed (sourced), 🟡 Inferred (reasoned) or 🔴 Unknown (gap), plus a gap list and an optional clean customer copy. Final pass before material leaves the team. Use on \"tag this\", \"add confidence tags\", \"what do we actually know\", \"flag the assumptions\". Siblings: humanize (tone and AI tells, not facts), business-case-stress-tester (challenging ROI numbers). SKIP for writing new content."
 triggers:
@@ -17,6 +17,12 @@ triggers:
 
 Applies this kit's confidence-tagging standard to any presales output. (The standard is the kit's own convention; the PreSales Handbook does not define one.)
 Reference spec: `${CLAUDE_PLUGIN_ROOT}/skills/confidence-tagger/references/confidence-tagging.md`
+
+---
+
+## Connected Tools
+
+No connected tools — this skill works from pasted context only.
 
 ---
 
@@ -108,6 +114,15 @@ If a section is entirely unverifiable (e.g., a speculative competitive claim), f
 - Never add new claims in the clean copy.
 
 End the clean copy with a short note to the user (not part of the customer text) listing what was removed or rephrased, so they can check nothing important went missing.
+
+---
+
+## Handoff
+
+Confidence-tagger is a final pass, not a starting point — hand the tagged output back to whichever
+skill or command produced the material (account brief, OSD, ROI case, battlecard, proposal) so the
+🔴 gaps get filled before it ships. If the clean copy is customer-facing, run `humanize` first next
+time (tag after the rewrite, never before).
 
 ---
 

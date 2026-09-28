@@ -26,15 +26,14 @@ Never assume a specific vendor's portfolio.
 ## Skills (`skills/`)
 
 Skills are invoked by natural language. Each skill has a `SKILL.md` in `skills/<name>/`.
-43 skills on disk: 41 user-facing skills below, the internal `brand` registry, and the
+42 skills on disk: 40 user-facing skills below, the internal `brand` registry, and the
 leader-only `deal-prequal` (see **Leader-only tools**).
 
 | Skill | What it does | Key trigger phrases |
 |-------|-------------|---------------------|
 | `discovery-sales` | Commercial Sales Discovery anchored on MEDDPICC (handbook ch. 5). Decides whether the deal is real; hands scoring to `/presales:discovery:qualify`. | "sales discovery" |
 | `discovery-ftd` | Functional & Technical Discovery (ch. 7) for any B2B product: research, FTD opening framework, product questions built from the SC's product scope, branded questionnaire or post-call summary. | "FTD", "discovery questionnaire", "what should I ask" |
-| `discovery-transformer` | Meeting `.vtt` transcript → clean Markdown, filed in the local deal folder, plus a Discovery Summary with coverage check, MEDDPICC and follow-up email. | "discovery transformer", "process this transcript" |
-| `meeting-notes-structurer` | Raw meeting notes → summary, MEDDPICC updates, next steps, follow-up email. | "structure these notes" |
+| `discovery-transformer` | Meeting `.vtt` transcript → clean Markdown, filed in the local deal folder, plus a Discovery Summary with coverage check, MEDDPICC and follow-up email. | "discovery transformer", "process this transcript", "structure these notes" |
 | `critical-business-issue-finder` | Surfaces the 2–4 Critical Business Issues, separated from symptoms and feature requests. | "find the CBIs", "what's the real pain" |
 | `tfq` | Technical & Functional Qualification (ch. 9): gated Invest / Conditional / Pause decision with HTML dashboard. | "run the TFQ" |
 | `osd-scoper` | Discovery output → the OSD's 11-section scope (module decisions, enrichment, prioritised gaps). Living document; re-run after each session. | "scope from discovery" |
@@ -137,13 +136,12 @@ scores 🔴 Unknown.
 
 ## Commands (`commands/`)
 
-Invoked as `/presales:<phase>:<name>`. 41 commands.
+Invoked as `/presales:<phase>:<name>`. 40 commands.
 
 | Command | What it does |
 |---------|-------------|
 | `/presales:guide` | Interactive router: find the right skill or command, or browse the phase map |
 | `/presales:account:brief` | One-page company brief: firmographics, operational footprint, signals, hypotheses |
-| `/presales:account:champion` | Quick champion brief: talking points, objection responses, proof points |
 | `/presales:account:journey` | Buying-journey stage, our actions per stage, early-engagement check (ch. 3) → `01a_buying-journey.md` |
 | `/presales:account:map` | Mutual Action Plan (MAP), the mandatory post-call deliverable |
 | `/presales:discovery:prep` | Discovery call prep sheet: research, persona hypotheses, question plan |
@@ -163,7 +161,7 @@ Invoked as `/presales:<phase>:<name>`. 41 commands.
 | `/presales:deal:poc-plan` | PoC gate (13.1) and plan: use cases, success criteria, data handling, owners, timeline |
 | `/presales:deal:poc-readout` | PoC check-ins, scorecard, findings readout (ch. 13.5–13.8) → `06a_poc-readout.md` |
 | `/presales:deal:objection-drill` | Objection handling with tactical empathy |
-| `/presales:deal:champion-enable` | Full champion enablement kit for the Economic Buyer sell |
+| `/presales:deal:champion-enable` | Champion brief (brief mode) or full Economic Buyer enablement kit (kit mode) for the Economic Buyer sell |
 | `/presales:deal:exec-summary` | One-page deal summary for leadership |
 | `/presales:deal:proposal` | Formal commercial proposal |
 | `/presales:deal:close-plan` | Recommends and scripts one of the four closes (ch. 16.3), stage and fallback → `10_close-plan.md` |
@@ -193,8 +191,8 @@ Skills and commands use these when connected and always work without them.
 
 | Tool | What it gives you | Used by |
 |------|------------------|---------|
-| **CRM** (e.g. Salesforce, HubSpot) | Account data, opportunity stage, contacts, MEDDPICC fields, deal history | qualify, account:brief, meeting-notes-structurer, win-loss-analyzer, negotiation-prep, proposal, champion-enable, post-followup, rfp:analyze |
-| **Knowledge base** (e.g. Confluence, Notion, SharePoint) | Product docs, competitive intel, approved pricing, reference ROI data; a place to save outputs | field-comms-writer, meeting-notes-structurer, win-loss-analyzer, competitive-battlecard, pricing-positioning, handover:doc |
+| **CRM** (e.g. Salesforce, HubSpot) | Account data, opportunity stage, contacts, MEDDPICC fields, deal history | qualify, account:brief, /presales:discovery:summary, win-loss-analyzer, negotiation-prep, proposal, champion-enable, post-followup, rfp:analyze |
+| **Knowledge base** (e.g. Confluence, Notion, SharePoint) | Product docs, competitive intel, approved pricing, reference ROI data; a place to save outputs | field-comms-writer, /presales:discovery:summary, win-loss-analyzer, competitive-battlecard, pricing-positioning, handover:doc |
 | **Mail & calendar** (e.g. Outlook, Teams, Gmail) | Meetings, threads and tasks for the daily brief | second-brain, `/presales:brain:*` |
 
 ---
@@ -254,7 +252,7 @@ Run `/presales:guide` for the full phase-by-phase map.
 - Skills: `skills/<name>/SKILL.md`. Commands: `commands/<phase>/<name>.md` → `/presales:<phase>:<name>`.
 - Per-skill material lives in `skills/<name>/references/`; the shared library (the condensed handbook reference, cheat sheets, BBiT study notes, playbook) lives in `references/`. Handbook citations use V78 numbering.
 - Cross-skill and shared-library paths use `${CLAUDE_PLUGIN_ROOT}/...`.
-- Discovery call summaries share one schema: `references/call-summary-schema.md` (used by `/presales:discovery:summary`, `discovery-ftd` and `discovery-transformer`). `meeting-notes-structurer` covers non-discovery meetings.
+- Call summaries share one schema: `references/call-summary-schema.md`, used by `/presales:discovery:summary` (every meeting type) and `discovery-transformer`.
 - Brand values come from `skills/brand/brands/<brand>/brand.json`. Default brand: `presales-handbook`.
 - `toc-bbit-expert` is the deep BBiT tool; `/presales:deal:strategic-think` is the fast deal overlay.
 - Connected tools are always optional; every skill degrades gracefully to asking the user.

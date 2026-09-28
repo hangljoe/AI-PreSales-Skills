@@ -1,6 +1,6 @@
 ---
 name: docx-generator
-version: "2.2"
+version: "2.3"
 last_updated: 2026-09-28
 description: "Renders on-brand Word documents (.docx) with python-docx via uv, in the presales-handbook example brand or your own brand, in scratch mode or on your Word letterhead template. Use on \"create a Word document\", \"turn this into a Word doc\", \"branded Word version\", \"write a formal letter\". Siblings: /presales:deal:proposal, /presales:deal:exec-summary, /presales:handover:doc, /presales:value:roi-case (they own the content; this skill renders it), pptx-generator (slides). SKIP for PDFs, slide decks, or plain Markdown notes."
 triggers:
@@ -16,6 +16,19 @@ triggers:
 Renders professional, on-brand Word documents (.docx) with python-docx. Uses the **presales-handbook** example brand by default.
 
 **Content from the command, rendering here.** Proposals, executive summaries, handovers and ROI cases get their words from `/presales:deal:proposal`, `/presales:deal:exec-summary`, `/presales:handover:doc` and `/presales:value:roi-case`. This skill lays that content out in Word. It does not re-write it.
+
+---
+
+## Connected Tools
+
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Pulls the account name, opportunity stage, and close date to pre-fill cover-page and letter fields |
+| **Knowledge base (e.g. Confluence, Notion)** | Stores the finished document in the deal folder or knowledge base after generation |
+
+No connections? Paste the content and account details manually — same output quality.
+
+---
 
 **Where things live:**
 
@@ -156,3 +169,16 @@ Tell the user the path, the mode (scratch or template file), any font caveat, an
 confidence-tag check before it goes out (`confidence-tagger`), or a matching deck via `pptx-generator`.
 
 **Technical reference:** `python-docx==1.1.2` only (the plugin-wide pin), always via `uv run --with python-docx==1.1.2 python`. A4 default from `formats.docx`. File naming `{doctype}-{account-slug}-{YYYYMMDD}.docx`, e.g. `proposal-acme-20260928.docx`.
+
+---
+
+## Quality checklist
+
+- [ ] Brand, document type and audience confirmed (or inferred and stated) before generating (Step 0)
+- [ ] Content owner's output used verbatim — content came from the owning command, not invented here (Step 0)
+- [ ] Mode (scratch or template) matches `formats.docx.template` presence, and a missing template stopped the run rather than silently falling back (Step 1)
+- [ ] Plan block printed before any code, including the output path (Step 2)
+- [ ] Every batch after the first reopened the same file with `dh.open_document`, never called `new_document` twice (Step 3)
+- [ ] Final batch ran `dh.finalize`, not a bare `doc.save` (Step 3)
+- [ ] Step 4's per-batch validation checklist passed for every batch
+- [ ] Handoff message names the path, the mode, any font caveat, and one next step

@@ -1,6 +1,6 @@
 ---
 name: diagram
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Creates Excalidraw diagram files (.excalidraw) that make a visual argument — workflows, solution architectures, deal and stakeholder flows, integration landscapes, concepts. Use on \"diagram this\", \"architecture diagram\", \"draw a flow\", \"make a diagram of\", \"visualize this process\". Siblings: toc-bbit-expert (draws its own Cloud/CRT/FRT diagrams), pptx-generator (slides). SKIP for data charts and plots (bar, line, pie, dashboards) — that is data visualisation, not Excalidraw."
 triggers:
@@ -17,6 +17,10 @@ triggers:
 # Excalidraw Diagram Creator
 
 Generate `.excalidraw` JSON files that **argue visually**, not just display information.
+
+## Connected Tools
+
+No connected tools — this skill works from pasted context only.
 
 ## Customization
 
@@ -237,7 +241,21 @@ The PNG lands next to the `.excalidraw` file. Use the **Read tool** on it to vie
 
 ---
 
-## Quality Checklist
+## Handoff
+
+Tell the user where the files are and how to open them:
+
+- **Edit:** go to https://excalidraw.com → menu → **Open** → pick `output/diagrams/<topic>.excalidraw`. Changes save back via **Save to…**. Excalidraw's VS Code and Obsidian plugins open the file directly, too.
+- **Share:** the rendered `<topic>.png` (if it was rendered) drops straight into email, chat, or a slide.
+
+**Next** (advisory):
+- `pptx-generator` — put the PNG on a slide in a customer deck.
+- `osd-architect` or `docx-generator` — embed the PNG in the OSD / solution design or another Word deliverable.
+- `toc-bbit-expert` — for Theory-of-Constraints trees (Cloud, CRT, FRT); it has its own diagram grammar.
+
+---
+
+## Quality checklist
 
 ### Conceptual
 - [ ] **Isomorphism**: Does each visual structure mirror its concept's behavior?
@@ -261,17 +279,3 @@ The PNG lands next to the `.excalidraw` file. Use the **Read tool** on it to vie
 - [ ] `roughness: 0` for professional diagrams
 - [ ] `opacity: 100` for all elements
 - [ ] <30% of text elements inside containers
-
----
-
-## Deliver & Hand Off
-
-Tell the user where the files are and how to open them:
-
-- **Edit:** go to https://excalidraw.com → menu → **Open** → pick `output/diagrams/<topic>.excalidraw`. Changes save back via **Save to…**. Excalidraw's VS Code and Obsidian plugins open the file directly, too.
-- **Share:** the rendered `<topic>.png` (if it was rendered) drops straight into email, chat, or a slide.
-
-**Next** (advisory):
-- `pptx-generator` — put the PNG on a slide in a customer deck.
-- `osd-architect` or `docx-generator` — embed the PNG in the OSD / solution design or another Word deliverable.
-- `toc-bbit-expert` — for Theory-of-Constraints trees (Cloud, CRT, FRT); it has its own diagram grammar.

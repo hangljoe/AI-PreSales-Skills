@@ -5,6 +5,26 @@ Format: [Keep a Changelog](https://keepachangelog.com) | Versioning: [Semantic V
 
 ---
 
+## [2.3.0] — 2026-09-28
+
+### Changed
+- **One call-summary path.** `/presales:discovery:summary` now handles every meeting type: the full schema for discovery calls; for demos, workshops, technical reviews and commercial calls, sections 1 (attendees), 3 (pains), 4 (MEDDPICC delta), 7 (next steps) and 8 (follow-up email handoff) plus *What resonated* and *Red flags*; for internal meetings, sections 1, 4 and 7 plus *Red flags* only. `discovery-ftd` Output C and every other pointer route to the command; `docx-generator` renders the Word version.
+- **One champion path.** `/presales:deal:champion-enable` has a **brief** mode (Developing champions, health 13–19; a pre-gate output) and a **kit** mode (Strong, or Developing with access to power and actively selling ≥ 3). `champion-health` routes to it.
+- `do-nothing-buster` is the sole owner of the status-quo card; `competitive-battlecard` hands off instead of building it.
+- `critical-business-issue-finder` stops at the CBIs; capability mapping belongs to `/presales:value:pain-to-value`.
+- Deal-folder resolution, source priority and OSD writing discipline live once in `skills/osd-architect/references/shared/deal-folder-discipline.md`, cited by `osd-scoper` and `osd-architect`.
+- `presales-coach`: the 27-row routing table is replaced by a five-phase entry table plus `/presales:guide`.
+- Trimmed: `video-demo-creator` (prompt blocks and vendor tutorial removed — the skill writes the artefacts itself), `pptx-generator` (batch combining moved to `lib/combine_batches.py`), `demo-storyboard`, `discovery-ftd`.
+- Most user-facing skills now carry `## Connected Tools`, `## Quality checklist` and `## Handoff`; `capability-mapper` and `workshop-agenda-builder` list kit siblings under `## Works with`.
+- Handbook citations use `ch. n.n` everywhere (was `§n.n` in the brain skills, presales-metrics, journey and learn).
+- Skill versions bumped on every touched skill.
+
+### Removed
+- `meeting-notes-structurer` skill (absorbed by `/presales:discovery:summary`).
+- `/presales:account:champion` command (absorbed by `/presales:deal:champion-enable` brief mode).
+
+---
+
 ## [2.2.1] — 2026-09-28
 
 ### Fixed

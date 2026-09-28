@@ -1,6 +1,6 @@
 ---
 name: discovery-sales
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Commercial Sales Discovery (handbook ch. 5–6) for any B2B deal, anchored on MEDDPICC (the kit's extension of the handbook's BANT): decides whether the deal is real and worth pursuing (economic buyer, decision and paper process, implicated pain, champion, competition, metrics) and hands numeric scoring to /presales:discovery:qualify. Use on \"sales discovery\", \"qualify this deal commercially\", \"is this deal real\", \"MEDDPICC discovery\". Siblings: discovery-ftd (functional and technical deep-dive: how the solution fits), /presales:discovery:qualify (score the MEDDPICC gaps), tfq (the SC-investment gate). SKIP for building technical question sets or product scope."
 triggers:
@@ -157,6 +157,13 @@ The /40 score, eligibility flag, and prioritised actions come from `/presales:di
 Attach or summarise its output beneath the brief.
 
 Confidence-tag every assertion: 🟢 Confirmed from CRM/call · 🟡 Inferred · 🔴 Unknown.
+
+---
+
+## Handoff
+
+- **Score the MEDDPICC gaps → `/presales:discovery:qualify`** — turns this conversation into the /40 score and commit-forecast eligibility.
+- **Champion confirmed but strength unclear → `champion-health`** — diagnose champion risk before relying on them to sell internally.
 
 ---
 

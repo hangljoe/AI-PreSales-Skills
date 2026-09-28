@@ -1,6 +1,6 @@
 ---
 name: humanize
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Strips AI tells from customer-facing prose you paste or point to: emails, proposal sections, deck copy, LinkedIn posts. Catches em-dash overuse, stock AI words (delve, seamless, leverage…), rule-of-three stacking and \"not just X, but Y\". Use on \"humanize this email\", \"this proposal sounds like AI\", \"de-AI this text\", \"remove the em dashes\", \"make it sound natural\". Siblings: confidence-tagger (claim accuracy; run it after this), field-comms-writer (drafts the email from scratch). SKIP for non-English text or for checking facts."
 triggers:
@@ -35,6 +35,10 @@ run humanize **first** — it rewrites prose, and `confidence-tagger` inserts in
 🟢/🟡/🔴 tags on the final wording and does not rewrite, so tagging before a rewrite
 would strip the tags. Sequence: **humanize → confidence-tagger → your own brand
 check (if you have one)** before anything customer-facing ships.
+
+## Connected Tools
+
+No connected tools — this skill works from pasted or file-provided text only.
 
 ## Scope guardrails
 
@@ -123,3 +127,14 @@ PMC10382961), and tell lists vary by model and domain. Treat the output as
   minor and pervasive ones worth fixing before it goes to the customer.
 - Rulebook feels stale (new model, new house style) → update
   `references/ai-tells.md`, bump its "last reviewed" date, re-run the self-test.
+
+## Quality checklist
+
+- [ ] Target text identified and scope confirmed (prose, in scope per the guardrails; names, numbers, quotes, URLs, legal clauses untouched)
+- [ ] Pasted text saved to a scratch file before scanning, never scanned from memory
+- [ ] Deterministic scan run from `references/ai-tells.md`'s current one-liners, with hard-wrapped text unwrapped first
+- [ ] Every hit listed as `line — matched token`, including a zero-hits result
+- [ ] Judgment rulebook applied: sentence-length variety, rule-of-three cut, hedge stacks collapsed, essay-style endings removed
+- [ ] Step-2 greps re-run on the rewrite: zero unexplained hits, every surviving hit has a recorded keep-rationale
+- [ ] Rhythm read-through done; no run of near-identical sentence shapes left unbroken
+- [ ] Before → after table delivered with one row per change plus one row per surviving hit

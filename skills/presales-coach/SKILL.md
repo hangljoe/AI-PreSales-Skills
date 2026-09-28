@@ -1,8 +1,8 @@
 ---
 name: presales-coach
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
-description: "Situational deal coach and the entry point for a stuck deal: names the one constraint (MEDDPICC gap, selling-journey phase, PoC health), gives three SC actions and routes to the next tool. Use on \"I'm stuck on a deal\", \"deal is going cold\", \"coach me on this deal\", \"what's my next move\", \"is my PoC at risk\". Siblings: /presales:deal:strategic-think (full TOC/BBiT analysis once the constraint is named), /presales:guide (browse the whole kit). SKIP for structuring call notes or the post-call plan (meeting-notes-structurer, /presales:discovery:golden-hours)."
+description: "Situational deal coach and the entry point for a stuck deal: names the one constraint (MEDDPICC gap, selling-journey phase, PoC health), gives three SC actions and routes to the next tool. Use on \"I'm stuck on a deal\", \"deal is going cold\", \"coach me on this deal\", \"what's my next move\", \"is my PoC at risk\". Siblings: /presales:deal:strategic-think (full TOC/BBiT analysis once the constraint is named), /presales:guide (browse the whole kit). SKIP for structuring call notes or the post-call plan (/presales:discovery:summary, /presales:discovery:golden-hours)."
 triggers:
   - "I'm stuck on a deal"
   - "deal is going cold"
@@ -210,37 +210,23 @@ CRM UPDATE (e.g. Salesforce, HubSpot)
 
 ## Routing guide — which skill or command next
 
-Use this to populate the ROUTE TO field.
+Use this to populate the ROUTE TO field. For the full map of every skill and command, run
+`/presales:guide`; the five entry points below cover most coaching outcomes.
 
-| Situation | Route to |
-|-----------|----------|
-| No champion or weak champion | `"how strong is my champion"` → champion-health skill |
-| Don't know the full stakeholder map | Build it inline (see 2B), then `"how strong is my champion"` → champion-health skill |
-| Just finished a discovery call | `/presales:discovery:summary`, then `/presales:discovery:golden-hours` |
-| Preparing for next discovery session | `/presales:discovery:prep` |
-| Need to understand the real pains | `"find the CBIs"` → critical-business-issue-finder skill |
-| Demo coming up | `/presales:demo:storyboard` |
-| Demo done, no response | `/presales:demo:post-followup` |
-| Objection you can't answer | `"handle this objection"` → tactical-empathy-coach skill |
-| Competitor in the deal, unsure where we stand | `"how do we beat [competitor]"` → competitive-battlecard skill |
-| Deal stalled — need strategic clarity | `/presales:deal:strategic-think` (fast TOC/BBiT pass) |
-| Deep conflict or recurring problem across deals | `"think like a BBiT expert"` → toc-bbit-expert skill (full CRT → Cloud → FRT → PRT) |
-| PoC requested or needs a plan | `/presales:deal:poc-plan` |
-| PoC or evaluation at risk | Handled here — run 2E, then `/presales:deal:poc-plan` if the plan needs rebuilding |
-| PoC in flight — check-in or final readout | `/presales:deal:poc-readout` |
-| Need to enable champion to sell internally | `/presales:deal:champion-enable` |
-| Need a joint plan to a decision date | `/presales:account:map` (Mutual Action Plan) |
-| No urgency, status quo, or no-decision risk | `"they might do nothing"` → do-nothing-buster skill |
-| Which buying-journey stage is the buyer in, or did we engage too late? | `/presales:account:journey` |
-| Ready to close — choose and script the close | `/presales:deal:close-plan` |
-| Negotiation pressure or price challenge | `"negotiation prep"` → negotiation-prep skill |
-| Preparing for C-suite or EB meeting | `"exec briefing prep"` → exec-briefing-prep skill |
-| Need to build the business case | `/presales:value:roi-case` |
-| Opportunity Review Call (ORC) needed | `/presales:value:orc` |
-| RFP / RFI just arrived | `"we got an RFP"` → rfx-navigator-presales skill |
-| Technical win, preparing the handover | `/presales:handover:osd-draft`, then `/presales:handover:doc` |
-| Lost a deal — debrief needed | `"why did we lose"` → win-loss-analyzer skill |
-| Account research before first call | `/presales:account:brief` |
+| Phase the constraint sits in | Start here |
+|---|---|
+| Discovery (pains unclear, no CBIs, thin notes) | `/presales:discovery:prep` |
+| Qualification (no champion, no EB access, no metrics) | `/presales:discovery:qualify`, then `champion-health` |
+| Demo (storyboard, dry run, no response after the demo) | `/presales:demo:storyboard` |
+| Value and close (business case, objections, no decision date) | `/presales:value:roi-case` → `/presales:deal:close-plan` |
+| Stuck deal with no obvious cause | `/presales:deal:strategic-think` |
+
+---
+
+## Handoff
+
+- The tool named in this session's ROUTE TO field (Step 3) — the routing guide above picks it.
+- Constraint runs deeper than one tool fixes → `/presales:deal:strategic-think` for a full TOC/BBiT pass.
 
 ---
 

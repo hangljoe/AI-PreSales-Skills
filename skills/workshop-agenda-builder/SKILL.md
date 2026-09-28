@@ -1,6 +1,6 @@
 ---
 name: workshop-agenda-builder
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Builds a time-boxed customer workshop or EBC (Executive Briefing Center visit) agenda from a modular section library (Visioning, Value Drivers, Fishbone, Capability Review, Prioritisation, Next Steps), half day to 3 days, with facilitator briefs, materials and a pre-workshop checklist. Use on \"build a workshop agenda\", \"plan an EBC\", \"customer workshop\", \"agenda for customer day\". Siblings: exec-briefing-prep (a single C-level meeting), /presales:demo:storyboard (a demo session). SKIP for internal team meetings."
 triggers:
@@ -263,12 +263,30 @@ OUR TEAM
 
 ## Connected Tools
 
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Pulls account industry and deal stage to calibrate objectives in Step 1 |
+| **Knowledge base (e.g. Confluence, Notion)** | Supplies prior workshop outputs, account briefs, or a capability framework instead of asking the user to paste them |
+
+No connections? Paste the context.
+
+---
+
+## Works with
+
 | Tool | What it adds |
 |------|-------------|
 | **capability-mapper** | Run capability-mapper before the workshop — use its heat map output to populate the Capability Review section |
 | **exec-briefing-prep** | Use for C-suite one-on-ones — structured facilitation is less appropriate for 1:1 EB meetings |
 | **demo-storyboard** | If the workshop includes a demo slot, use demo-storyboard to plan the Tell-Show-Tell for that slot |
 | **/presales:account:brief** | Outside-in section is stronger with a pre-built account brief and industry signals for the customer |
+
+---
+
+## Handoff
+
+- **C-suite one-on-one → `exec-briefing-prep`** — if a dedicated executive session is needed beyond the workshop.
+- **Demo slot in the agenda → `/presales:demo:storyboard`** — build the Tell-Show-Tell for that block.
 
 ---
 

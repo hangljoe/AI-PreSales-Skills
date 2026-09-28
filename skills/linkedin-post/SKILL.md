@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Writes LinkedIn posts from your own PreSales experience (handbook ch. 21, personal branding): short intake on topic, audience, goal and your VOICE.md, a confidentiality check on customer names and numbers, then a post in your voice. Use on \"write a LinkedIn post\", \"LinkedIn post about\", \"turn this win into a post\", \"repurpose this for LinkedIn\". Siblings: humanize (strip AI tells from an existing draft), field-comms-writer (1:1 customer emails). SKIP for long-form articles and marketing campaigns."
 triggers:
@@ -19,6 +19,17 @@ triggers:
 Create LinkedIn posts that sound like you, not like a template.
 
 Grounded in *The PreSales Handbook* ch. 21 (Personal Branding for the PreSales Professional): your online presence is part of your personal brand. Share trends, takeaways from events and success stories to show expertise and give back to the community, not to broadcast. Read ch. 21 in `${CLAUDE_PLUGIN_ROOT}/references/PreSales_Handbook_Reference.md` if the user wants the reasoning behind a post; the full book is available at www.presales-handbook.com.
+
+---
+
+## Connected Tools
+
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Pulls the opportunity or account context behind a win story, subject to the Step 2 confidentiality check |
+| **Knowledge base (e.g. Confluence, Notion)** | Sources past posts or a stored style guide if `VOICE.md` isn't in the second-brain folder |
+
+No connections? Paste the source material and answer the Step 1 intake questions manually.
 
 ---
 
@@ -212,3 +223,23 @@ When turning a discovery call summary, demo debrief, or win/loss into a post:
 - Make the post a teaser with no standalone value
 - Include any external links in the post body
 - Carry over customer names, numbers or quotes from the source without the Step 2 check
+
+---
+
+## Handoff
+
+- Draft reads templated or has em dashes → run `humanize` on it before posting.
+- Repurposing a discovery, demo or win/loss writeup → confirm the source has already cleared the
+  Step 2 confidentiality check, then draft from it here.
+- Building a `VOICE.md` for future posts → `/presales:brain:voice`.
+
+---
+
+## Quality checklist
+
+- [ ] Step 1 intake answered (topic, audience, goal, voice source) and `VOICE.md` used if present
+- [ ] Step 2 confidentiality check run; every customer name, quote, deal number and internal detail anonymised or confirmed with consent
+- [ ] At least 2 concrete specifics included (date, number, allowed name, quote, or specific context)
+- [ ] No AI/template phrase or engagement-bait ending from the Anti-Patterns list
+- [ ] No em dashes; formatting matches the Formatting section (short paragraphs, no hashtags, no links in the body)
+- [ ] Anonymised or removed details listed for the user after the draft

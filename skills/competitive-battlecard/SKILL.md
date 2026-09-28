@@ -1,6 +1,6 @@
 ---
 name: competitive-battlecard
-version: "1.4"
+version: "1.5"
 last_updated: 2026-09-28
 description: "Rapid, honest competitive positioning card (handbook ch. 20) against a named competitor, the status quo or an in-house build, in any B2B category: where you genuinely win, their real strengths, answers to their attacks, a SWOT, discovery questions, proof moments and a deal strategy. Use on \"battlecard for\", \"how do we beat\", \"positioning vs\", \"competitor is in the deal\", \"they want to build it themselves\". Siblings: do-nothing-buster (full diagnosis of a no-decision risk), pricing-positioning (competitor undercuts on price), demo-storyboard (build the demo around the proof moments). SKIP for research on a company that is not a competitor (/presales:account:brief)."
 triggers:
@@ -56,30 +56,10 @@ If you don't know the competitor's product well, say so and tag those claims �
 
 ## Status-quo card — "do nothing" or "build it ourselves" (handbook 20.1)
 
-When the real alternative is inertia or an internal build, there is no competitor product to compare.
-Build this shorter card instead of Steps 2–4, then continue with the SWOT (Step 5) and the rest.
-
-```
-STATUS-QUO CARD — [Account] | Alternative: Do nothing / Build in-house
-
-What the status quo genuinely offers (be honest):
-[Familiar workflows, no new spend, no disruption, full control for an in-house build]
-
-Cost of inaction (quantify where possible):
-[Time, money or risk lost each month the current process stays. Tag 🟢/🟡/🔴]
-
-Likely causes of the inertia (hypotheses — confirm in discovery):
-[e.g. fear of change, budget timing, decision paralysis, a past bad experience,
- an existing contract, stakeholder misalignment, integration worries]
-
-If they plan to build in-house — the true cost of the build:
-[Build effort, ongoing maintenance, time to value, opportunity cost of the team,
- key-person risk. Ask; don't assume they can't do it]
-
-Proof moment: [The one demo, reference or number that makes the cost of waiting visible]
-```
-
-For a full diagnosis of each inertia cause with counter-strategies, hand off to the `do-nothing-buster` skill.
+The most common competitor is doing nothing. Do not build the status-quo card here: hand off to the
+`do-nothing-buster` skill, which diagnoses the nine inertia causes, prices the cost of inaction and
+writes `08a_status-quo-plan.md`. Paste its one-line verdict into this battlecard's summary, then
+continue with Step 5 (SWOT) and Step 6.
 
 ---
 

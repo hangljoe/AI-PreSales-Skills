@@ -1,8 +1,8 @@
 ---
 name: discovery-transformer
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
-description: "Converts a meeting `.vtt` transcript (Teams, Zoom, most tools) into clean Markdown, files it in the right local deal folder behind a confirm gate, and for discovery calls builds the kit's shared discovery call summary plus a coverage check against the discovery-ftd question set. Use on \"process this vtt\", \"save my transcript\", \"convert this Teams transcript\", \"summarise this discovery call\". Siblings: /presales:discovery:summary (same summary from pasted notes, no filing), meeting-notes-structurer (non-discovery meetings), field-comms-writer (the follow-up email). SKIP for live call prep or question lists (discovery-ftd)."
+description: "Converts a meeting `.vtt` transcript (Teams, Zoom, most tools) into clean Markdown, files it in the right local deal folder behind a confirm gate, and for discovery calls builds the kit's shared discovery call summary plus a coverage check against the discovery-ftd question set. Use on \"process this vtt\", \"save my transcript\", \"convert this Teams transcript\", \"summarise this discovery call\". Siblings: /presales:discovery:summary (same summary from pasted notes, any meeting type, no filing), field-comms-writer (the follow-up email). SKIP for live call prep or question lists (discovery-ftd)."
 triggers:
   - "discovery transformer"
   - "save my transcript"
@@ -17,9 +17,18 @@ triggers:
   - "summarize this discovery transcript"
   - "discovery summary from transcript"
   - "what discovery questions did we miss"
+  - "structure these notes"
+  - "action items from this call"
+  - "tidy up my notes"
+  - "summarise this call"
+  - "format my call notes"
+  - "structure my notes"
 ---
 
 # Discovery Transformer
+
+Pasted notes rather than a `.vtt` file? Run `/presales:discovery:summary` — it handles any meeting
+type. This skill is for transcript files.
 
 Turn a Microsoft Teams `.vtt` transcript into a **clean Markdown file**, file it in the right
 customer deal folder, and — for discovery calls — build the kit's **discovery call summary**
@@ -232,8 +241,15 @@ Only after an explicit "yes" do you `Write` the document to the target path.
   the follow-up brief in section 8 carries the top <k>."*
 - Offer the natural next steps: *"Want me to run `/presales:discovery:golden-hours` (debrief, AE brief,
   CRM update after you confirm, 24-hour plan), draft the follow-up email with `field-comms-writer`, or
-  render the Word version via `discovery-ftd` Output C?"* For the next stage, hand the summary to
+  render the Word version via `docx-generator`?"* For the next stage, hand the summary to
   `osd-scoper` to build the Opportunity Scoping Document (OSD) scope.
+
+---
+
+## Handoff
+
+- **Lock in what you learned → `/presales:discovery:golden-hours`** — debrief, AE brief, CRM update, and the 24-hour plan.
+- **Scope the solution → `osd-scoper`** — hand the discovery summary off to build the OSD scope.
 
 ---
 

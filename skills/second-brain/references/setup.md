@@ -63,8 +63,8 @@ Step 2 and worked through 3-5 big rocks in Step 3, so keep each ask here light a
    updates surface first." No opinion → leave empty (real opt-out — nothing gets suppressed).
 3. **Training target, its own message:** recommend the handbook's standard and let the user
    adjust or decline. The PreSales Handbook asks SCs to spend 70% of their time on deals and the
-   remaining 30% on learning and upskilling (§2.6), and to protect that with dedicated weekly
-   learning slots in the calendar (§18.3). Ask: "Want me to track a weekly learning-time goal and
+   remaining 30% on learning and upskilling (ch. 2.6), and to protect that with dedicated weekly
+   learning slots in the calendar (ch. 18.3). Ask: "Want me to track a weekly learning-time goal and
    nudge you if you're short? I'd recommend the handbook's 70/30 rule: 30% of your working week
    (from your Step 2 hours that's about <n> h). If that isn't realistic yet, pick a smaller fixed
    weekly block and grow it. What number should I track, in minutes/week?" Compute `<n>` from the
@@ -164,8 +164,8 @@ per the modes reused above. Close with a one-line summary of what's now running 
 - [ ] Existing "Working hours" line offered a migration path, not left as a silent duplicate
 - [ ] Focus areas captured as the user's own free-text tags; empty/skipped is a real opt-out
       with no filtering, not a default
-- [ ] Training target recommendation anchored to the handbook's 70/30 rule (§2.6) and weekly
-      learning slots (§18.3); empty/skipped is a real opt-out — no silent default, no nudge ever
+- [ ] Training target recommendation anchored to the handbook's 70/30 rule (ch. 2.6) and weekly
+      learning slots (ch. 18.3); empty/skipped is a real opt-out — no silent default, no nudge ever
 - [ ] Automation offered only after confirming the `schedule` skill is actually available
 - [ ] Automation uses the durable `schedule` skill, never a session-bound scheduling primitive
 - [ ] Trigger id persisted to PROFILE.md immediately after creation, before other chat output

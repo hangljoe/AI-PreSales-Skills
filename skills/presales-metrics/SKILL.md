@@ -1,6 +1,6 @@
 ---
 name: presales-metrics
-version: "1.0"
+version: "1.1"
 last_updated: 2026-09-28
 description: "Builds a PreSales KPI scorecard for one SC or a whole team from a CRM export, CSV or typed-in numbers, using the handbook's KPI list (demo-to-close rate, competitive win rate, time to prepare, utilisation, follow-up effectiveness and more): definitions, formulas, targets, trends and three improvement actions, plus an optional HTML dashboard. Use on \"presales KPIs\", \"build my scorecard\", \"team metrics dashboard\", \"what is my demo-to-close rate\". Siblings: win-loss-analyzer (one closed deal), deal-prequal (pipeline readiness). SKIP for forecasting or single-deal reviews."
 triggers:
@@ -85,7 +85,7 @@ on track / watch / off track. Then read the KPIs *together*, as ch. 23 intends:
 - Rising customisation requests or follow-up questions → demos are generic or unclear.
 - Low utilisation with high admin time → process to streamline.
 - Low competitive win rate against one rival → a battlecard or demo gap for that rival.
-- Training hours well under the 70/30 share (§2.6, §18.4) → capacity problem, not motivation.
+- Training hours well under the 70/30 share (ch. 2.6, ch. 18.4) → capacity problem, not motivation.
 
 In leader mode, add the distribution across SCs (demos per rep, utilisation). Frame outliers as
 questions for a 1:1, never as a ranking. Use first names only if the leader asks; default to

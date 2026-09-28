@@ -1,6 +1,6 @@
 ---
 name: rfx-navigator-presales
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Entry point when an RFX document lands (RFI, RFP, RFQ, ITT or tender): identifies the type and what it means for workload and strategy, checks for late entry and procedural or price-benchmark RFXs (handbook ch. 14), runs a 10-minute fit scan and routes to the right /presales:rfp:* command. Use on \"we got an RFP\", \"received an RFI\", \"tender received\", \"an RFX arrived\", \"how do we handle this RFP\". Siblings: /presales:rfp:analyze (scored go/no-go), /presales:rfp:respond (write the response). SKIP for the bid/no-bid decision itself."
 triggers:
@@ -201,6 +201,14 @@ Emergency (< 5 days to deadline):
   Flag to AE: this response will be constrained — scope it honestly and prioritise mandatory requirements.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+---
+
+## Handoff
+
+- Bid decision needed → `/presales:rfp:analyze`
+- Bid confirmed, draft the response → `/presales:rfp:respond`
+- Shortlist presentation required → `/presales:rfp:present`
 
 ---
 

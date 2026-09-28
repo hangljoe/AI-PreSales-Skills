@@ -11,7 +11,7 @@ discovery call, score MEDDPICC, build a Tell-Show-Tell demo storyboard and write
 can also draft the RFP response and hand the deal over to delivery. It works for any B2B or SaaS
 product. You tell it what you sell, and it applies the handbook's methodology to your deal.
 
-**What's inside:** 43 skills · 41 slash commands · a condensed PreSales Handbook reference built in
+**What's inside:** 42 skills · 40 slash commands · a condensed PreSales Handbook reference built in
 
 ---
 
@@ -201,7 +201,6 @@ command.
 | Command | What it does |
 |---------|--------------|
 | `/presales:account:brief` | One-page company brief: firmographics, operational footprint, signals and hypotheses. |
-| `/presales:account:champion` | Quick champion brief: internal talking points, objection responses and proof points. |
 | `/presales:account:journey` | Places the buyer on the buying journey, maps your actions per stage and flags whether you engaged early enough. |
 | `/presales:account:map` | Builds the Mutual Action Plan (MAP), the mandatory post-call deliverable. |
 
@@ -289,7 +288,6 @@ Skills switch on when you say something like the phrase in the right-hand column
 | `discovery-sales` | Commercial discovery anchored on MEDDPICC. Decides whether the deal is real. | "sales discovery" |
 | `discovery-ftd` | Functional & Technical Discovery for any B2B product: research, opening framework, product-specific questions and a branded questionnaire or summary. | "FTD" |
 | `discovery-transformer` | Turns a meeting transcript (`.vtt`) into clean Markdown, files it in your deal folder and builds a Discovery Summary. | "discovery transformer" |
-| `meeting-notes-structurer` | Turns raw meeting notes into a summary with MEDDPICC updates, next steps and a follow-up email. | "structure these notes" |
 | `critical-business-issue-finder` | Finds the 2–4 critical business issues driving the deal, separated from symptoms and feature requests. | "find the CBIs" |
 | `tfq` | Technical & Functional Qualification: a gated Invest, Conditional or Pause decision, with an HTML dashboard. | "run the TFQ" |
 | `deal-prequal` | For PreSales leaders: a readiness sweep across one or many deals before the TFQ. | Leaders only. Run `/presales:deal-prequal` |

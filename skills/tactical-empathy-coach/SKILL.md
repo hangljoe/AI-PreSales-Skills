@@ -1,6 +1,6 @@
 ---
 name: tactical-empathy-coach
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
 description: "Coaches objection handling and difficult conversations: types the objection (latent, expressed, valid, smoke screen), then runs the handbook flow Listen, Empathise, Probe, Address, Confirm with tactical empathy (labels, mirrors, calibrated questions, spoken accusation audit) and NVC; three response options, a best move, optional role-play. Use on \"handle this objection\", \"they pushed back\", \"how do I respond to\", \"difficult conversation\". Siblings: /presales:deal:objection-drill (one pasted objection), pricing-positioning (price), competitive-battlecard (competitors), negotiation-prep (terms, concessions). SKIP for a full negotiation plan."
 triggers:
@@ -23,6 +23,17 @@ framework (ch. 15): type the objection, then **Listen → Empathise → Probe �
 Confirm resolution**. Tactical empathy (Chris Voss: labels, mirrors, calibrated questions,
 accusation audit) is the how-to inside Listen, Empathise and Probe. NVC is the repair tool
 when the relationship is strained.
+
+---
+
+## Connected Tools
+
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Pulls deal stage, stakeholder role, and prior objection history for context |
+| **Knowledge base (e.g. Confluence, Notion)** | Stores the objection-handling output in the deal folder for the account team |
+
+No connections? Paste the objection and deal context manually — same output quality.
 
 ---
 
@@ -215,6 +226,15 @@ Options A / B / C: [...]   Best first move: [A/B/C] because [...]
 If they still push back: [...]
 Handoff: [skill/command, if any]
 ```
+
+---
+
+## Handoff
+
+- Price or terms → `pricing-positioning`, then `negotiation-prep` for discounts and concessions.
+- A named competitor → `competitive-battlecard`.
+- A PoC request → `/presales:deal:poc-plan` (run its PoC gate first).
+- The ROI numbers → `/presales:value:roi-case`, then `business-case-stress-tester`.
 
 ---
 

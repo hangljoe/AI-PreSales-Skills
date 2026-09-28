@@ -1,16 +1,17 @@
 # Discovery Call Summary — the shared schema
 
-One schema for every **discovery** call summary in this kit. Three tools produce it and they all
-produce exactly this, section for section:
+One schema for every call summary in this kit, discovery calls or otherwise. Two tools produce it
+and they all produce exactly this, section for section:
 
 | Producer | Input | Adds |
 |----------|-------|------|
-| `/presales:discovery:summary` | Pasted notes or transcript text | Nothing (core schema) |
-| `discovery-ftd` Output C | Notes or transcript after an FTD call | A branded Word rendering of the same sections |
+| `/presales:discovery:summary` | Pasted notes or transcript, any meeting type | Core schema (discovery calls) or the lighter branch below (other meetings); `docx-generator` for a branded Word version on request |
 | `discovery-transformer` Step 6 | A `.vtt` transcript file | Extensions E1 (question coverage) and E2 (full transcript), plus deal-folder filing |
 
-Non-discovery meetings (demos, technical reviews, commercial calls, internal meetings) use
-`meeting-notes-structurer` instead. It is the sibling of this schema, not a variant of it.
+Non-discovery customer meetings (demos, technical reviews, commercial calls) use the command's
+demo / other-meeting branch instead: sections 1, 3, 4, 7 and 8 (follow-up email handoff), plus
+*What resonated* and *Red flags*. Internal meetings use sections 1, 4 and 7 plus *Red flags* only —
+no pains, no follow-up email handoff.
 
 Downstream tools read this schema as their input, so they never re-extract from raw notes:
 `/presales:discovery:golden-hours` (debrief, AE brief, CRM update, 24-hour plan),

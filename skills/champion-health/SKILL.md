@@ -1,8 +1,8 @@
 ---
 name: champion-health
-version: "1.2"
+version: "1.3"
 last_updated: 2026-09-28
-description: "Diagnoses the real strength of your champion in a live deal from observed behaviour (handbook ch. 4): a /25 score, red flags and development actions that separate friendly contacts from advocates who sell for you. It is the gate before any enablement work. Use on \"how strong is my champion\", \"is my champion real\", \"champion health check\", \"champion risk\". Siblings: /presales:account:champion (early 1-page brief across stakeholders), /presales:deal:champion-enable (full Economic Buyer kit, only after this check passes). SKIP for writing the enablement material itself."
+description: "Diagnoses the real strength of your champion in a live deal from observed behaviour (handbook ch. 4): a /25 score, red flags and development actions that separate friendly contacts from advocates who sell for you. It is the gate before any enablement work. Use on \"how strong is my champion\", \"is my champion real\", \"champion health check\", \"champion risk\". Siblings: /presales:deal:champion-enable in brief mode (early 1-page brief across stakeholders) or in kit mode (full Economic Buyer kit, only after this check passes). SKIP for writing the enablement material itself."
 triggers:
   - "how strong is my champion"
   - "is my champion real"
@@ -23,7 +23,7 @@ Run this mid-deal when you're uncertain, before committing SC resources to a PoC
 
 **This is the gate for the champion trio.** Score first, then invest. Enablement material handed to a contact who is not yet a champion is wasted, and it can leak to the competition. Grounded in *The PreSales Handbook* ch. 4 (Developing a Champion): a true champion believes in the solution *and* can influence the decision, directly or indirectly.
 
-**Siblings:** `/presales:account:champion` (early 1-page brief: who the champion must convince and what to say to each), `/presales:deal:champion-enable` (full kit for the Economic Buyer sell, run only after this check passes).
+**Siblings:** `/presales:deal:champion-enable` in brief mode (early 1-page brief: who the champion must convince and what to say to each), `/presales:deal:champion-enable` in kit mode (full kit for the Economic Buyer sell, run only after this check passes).
 
 ---
 
@@ -94,7 +94,7 @@ Score each dimension 1–5.
 | Band | Enablement decision |
 |------|---------------------|
 | **Strong (20–25)** | Go. Run `/presales:deal:champion-enable` for the full Economic Buyer kit. |
-| **Developing (13–19)** | Go with a plan. Start with `/presales:account:champion` (quick brief) and close the weakest dimension. Move to `champion-enable` once *Access to power* and *Actively selling* are both 3 or higher. |
+| **Developing (13–19)** | Go with a plan. Start with `/presales:deal:champion-enable` in brief mode (quick brief) and close the weakest dimension. Move to `/presales:deal:champion-enable` in kit mode once *Access to power* and *Actively selling* are both 3 or higher. |
 | **Weak or Contact-only (5–12)** | Stop. Build the relationship first (below). Re-score in 2–4 weeks. Meanwhile, look for a second champion. |
 
 **Below the Developing band: build the relationship first (handbook ch. 4: trust, regular touchpoints, appreciation; the action list is the kit's distillation).**
@@ -164,7 +164,7 @@ Next action: [One specific thing — with a date]
 ## Handoff
 
 - **Strong:** `/presales:deal:champion-enable` (full Economic Buyer kit).
-- **Developing:** `/presales:account:champion` now, `/presales:deal:champion-enable` once the gate condition is met.
+- **Developing:** `/presales:deal:champion-enable` in brief mode now, kit mode once the gate condition is met.
 - **Weak or Contact-only:** no enablement yet. Log the ch. 4 relationship actions in the deal folder or CRM next steps (internal, not in the customer-facing MAP) and re-run this check in 2–4 weeks.
 
 ---

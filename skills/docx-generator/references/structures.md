@@ -15,7 +15,7 @@ Word layout: cover, page breaks, which sections become tables or callouts.
 | ROI Business Case | `/presales:value:roi-case` | External |
 | Discovery Questionnaire | `discovery-ftd` skill (Output B) | External |
 | OSD / Solution Design | `osd-architect` skill renders its own Word file; use this entry only for a light solution-design memo | External |
-| Meeting Notes | `meeting-notes-structurer` skill | Internal |
+| Meeting Notes | `/presales:discovery:summary` (meeting branch) | Internal |
 | Letter | this skill | External |
 | Report / Analysis | this skill | Internal |
 
@@ -81,13 +81,14 @@ Use this skeleton only for a short solution memo:
 5. Assumptions and dependencies → numbered list
 6. Risks → table: Risk | Likelihood | Impact | Mitigation
 
-## Meeting Notes — content from `meeting-notes-structurer`
+## Meeting Notes — content from `/presales:discovery:summary` (meeting branch)
 
-1. Meeting details — date, objective; attendees table: Name | Company | Role
-2. Key findings → bullets
-3. MEDDPICC update → table: Element | Previous | Updated | Source
-4. Action items → table: Action | Owner | Due date
-5. Next steps → 3 bullets
+1. Attendees → table: Name | Title | Side | Role in deal
+2. Pains → bullets, 🟢/🟡 confidence only
+3. MEDDPICC delta → table: Element | New this call | Confidence | Still missing
+4. Next steps → table: Action | Owner | Date
+5. What resonated / what didn't → bullets
+6. Red flags → bullets
 
 ## Letter — owned here
 

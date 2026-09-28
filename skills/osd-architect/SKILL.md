@@ -1,6 +1,6 @@
 ---
 name: osd-architect
-version: "2.2"
+version: "2.3"
 last_updated: 2026-09-28
 description: "Generates the Opportunity Scoping Document (OSD, handbook ch. 8) as a branded Word file: 11-section skeleton built from your product scope, pre-filled from osd-scoper, discovery-ftd and the deal folder, with embedded flow and architecture diagrams, update-in-place, a customer-shareable copy, a PS scoping workbook and a gaps list. Every claim confidence-tagged. Use on \"draft the OSD\", \"update the OSD\", \"opportunity scoping document\", \"write up the solution\". Siblings: osd-scoper (first Markdown scope from raw discovery), /presales:handover:osd-draft (explicit workflow wrapper), /presales:handover:doc (the PS handover package). SKIP for discovery summaries of a single call."
 triggers:
@@ -89,21 +89,13 @@ discovery output → CRM → deal folder → web → ask. Pull, map to OSD secti
 **confidence-tag everything** (🟢 CRM/customer · 🟡 research · 🔴 gap).
 
 ### 2a — Locate the deal folder first (ask, don't guess)
-Before asking for links, check the **local deals library** — the same one
-`osd-scoper` / `discovery-transformer` use (see `discovery-transformer/references/folder-naming.md`):
-1. Resolve the deals root: `~/.claude/discovery-transformer.json` (`deals_root`) → **ask the user**.
-2. If the account/product isn't known, **ask for the company name** (and product), then match the deal folder:
-   ```bash
-   python3 "${CLAUDE_PLUGIN_ROOT}/skills/discovery-transformer/scripts/match_folder.py" --root "<deals root>" --deal "<account> <product>"
-   ```
-   One candidate → propose it; ambiguous → top 3; none → ask for the exact path.
-3. Scan the deal folder and pick up inputs in this priority (per `input-mapping.md`):
-   **`OSD-*-scoper.md` / `.docx` (Source 0 — use as the spine; legacy `*_osd-scope.*`; newest `-v<version>`)** → `*_discovery-summary.md` /
-   `discovery-ftd` post-call summary → `*_transcript.md` / notes → existing OSD → prior decks / RFX.
-   List what you found and let the user confirm before reading.
-
-If there is no local library or nothing is found, fall back to asking for the deal-folder link,
-CRM opportunity link, discovery doc path, and RFX folder link.
+Follow the shared discipline for the deals root, the folder match and the source priority:
+```
+Read: references/shared/deal-folder-discipline.md
+```
+Map what you find to OSD sections per `references/shared/input-mapping.md`; the OSD Scoper output is
+Source 0 and the spine. If there is no local library or nothing is found, fall back to asking for
+the deal-folder link, CRM opportunity link, discovery doc path and RFX folder link.
 
 **If an existing OSD is found → switch to update mode** (Step 5b), don't start fresh.
 
@@ -122,9 +114,7 @@ Build in the exact order of `osd-structure.md` (handbook chapter 8.2):
 5. **Sections 10–11** — Meeting Notes → Transition to Delivery (key players, order form/SOW/non-standard terms, services strategy).
 6. **Appendix** — only the relevant examples from `examples-library.md`, tailored (never verbatim).
 
-Discipline: reflection over regurgitation (handbook 8.3); not a dumping ground; label prospect
-collateral as such; cross-reference prospect vs your company's language; **no dates** in Project
-Prioritisation unless customer-confirmed.
+Discipline: section 4 of `references/shared/deal-folder-discipline.md` (handbook 8.3).
 
 ---
 
@@ -209,6 +199,13 @@ single-product.
 - A caveat banner sits on any section that is entirely proposed/inferred.
 
 Run the `confidence-tagger` skill over the draft if deeper tagging is needed.
+
+---
+
+## Handoff
+
+- Technical win reached → `/presales:handover:doc` (build the PS handover package)
+- Ready to price and present → `/presales:deal:proposal`
 
 ---
 

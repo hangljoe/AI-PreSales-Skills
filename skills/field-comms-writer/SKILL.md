@@ -1,8 +1,8 @@
 ---
 name: field-comms-writer
-version: "1.3"
+version: "1.4"
 last_updated: 2026-09-28
-description: "Writes 1:1 customer-facing comms after calls and deal moments (post-call recaps, next-step confirmations, meeting confirmations, chasers, executive outreach); tone-matched, no clichés, CRM-aware. Use on \"write a follow-up email\", \"send a recap\", \"follow up on today's call\", \"chase this prospect\", \"confirm the meeting\". Siblings: /presales:demo:post-followup (after a demo), /presales:demo:pre-invite (before a demo), linkedin-post (public posts). SKIP for internal notes to your own team (meeting-notes-structurer) and the post-deal write-up (win-loss-analyzer)."
+description: "Writes 1:1 customer-facing comms after calls and deal moments (post-call recaps, next-step confirmations, meeting confirmations, chasers, executive outreach); tone-matched, no clichés, CRM-aware. Use on \"write a follow-up email\", \"send a recap\", \"follow up on today's call\", \"chase this prospect\", \"confirm the meeting\". Siblings: /presales:demo:post-followup (after a demo), /presales:demo:pre-invite (before a demo), linkedin-post (public posts). SKIP for internal notes to your own team (/presales:discovery:summary) and the post-deal write-up (win-loss-analyzer)."
 triggers:
   - "write a follow-up email"
   - "send a recap"
@@ -25,7 +25,7 @@ triggers:
 Writes professional, specific follow-up emails and field communications after any customer
 interaction. No clichés, no waffle — every line earns its place.
 
-Write in your company's voice: outcome-first, qualified claims, and your product and company names spelled exactly as your brand requires. Ask the user for their company and product names if they are not in the deal folder. This skill covers 1:1 comms with customers only. It does not cover internal notes to your own team (use `meeting-notes-structurer`), internal announcements or marketing campaigns, and the internal post-deal write-up belongs to the `win-loss-analyzer` skill.
+Write in your company's voice: outcome-first, qualified claims, and your product and company names spelled exactly as your brand requires. Ask the user for their company and product names if they are not in the deal folder. This skill covers 1:1 comms with customers only. It does not cover internal notes to your own team (use `/presales:discovery:summary`), internal announcements or marketing campaigns, and the internal post-deal write-up belongs to the `win-loss-analyzer` skill.
 
 ---
 
@@ -184,6 +184,13 @@ Is [original next step] still on track for that, or has something changed on you
 
 [Your name]
 ```
+
+---
+
+## Handoff
+
+- **After a demo → `/presales:demo:post-followup`** — use the demo-specific follow-up instead of this skill's generic templates.
+- **Actions agreed on a call → `/presales:account:map`** — log them in the Mutual Action Plan, the mandatory post-call deliverable.
 
 ---
 

@@ -40,11 +40,11 @@ Team/Enterprise admins can enable it for everyone through managed settings (`ext
 
 ## Available Commands
 
-41 commands, invoked as `/presales:<phase>:<name>`:
+40 commands, invoked as `/presales:<phase>:<name>`:
 
 - **brain/**: setup, start, end, start-week, end-week, rocks, voice, learn (personal operating loop and learning plan)
 - **discovery/**: prep, questions, sales, summary, golden-hours, qualify, tfq
-- **account/**: brief, journey, champion, map, nurture
+- **account/**: brief, journey, map, nurture
 - **demo/**: pre-invite, storyboard, script, post-followup
 - **value/**: pain-to-value, roi-case, orc
 - **deal/**: poc-plan, poc-readout, objection-drill, champion-enable, exec-summary, proposal, close-plan, strategic-think
@@ -58,7 +58,7 @@ See `STACK.md` for the full command table.
 
 ## Skills (invoked by trigger phrase)
 
-43 skills. **The authoritative skills table with trigger phrases is in `STACK.md`**; don't duplicate it here. `deal-prequal` is a leader-only tool kept out of the user-facing tables and out of `/presales:guide`.
+42 skills. **The authoritative skills table with trigger phrases is in `STACK.md`**; don't duplicate it here. `deal-prequal` is a leader-only tool kept out of the user-facing tables and out of `/presales:guide`.
 
 Notable internal-dependency skills:
 - `brand` is the shared brand registry read by the output skills (pptx-generator, docx-generator, osd-architect, discovery-ftd). It is not user-invoked. The example brand is `presales-handbook`.
@@ -193,14 +193,14 @@ stricter than Claude Code's. Two rules keep every skill visible on all surfaces:
 commands/
 ├── brain/               ← setup, start, end, start-week, end-week, rocks, voice, learn
 ├── discovery/           ← prep, questions, sales, summary, golden-hours, qualify, tfq
-├── account/             ← brief, journey, champion, map, nurture
+├── account/             ← brief, journey, map, nurture
 ├── demo/                ← pre-invite, storyboard, script, post-followup
 ├── value/               ← pain-to-value, roi-case, orc
 ├── deal/                ← poc-plan, poc-readout, objection-drill, champion-enable, exec-summary, proposal, close-plan, strategic-think
 ├── rfp/                 ← analyze, respond, present + references/
 ├── handover/            ← osd-draft, doc
 └── guide.md             ← interactive router
-skills/                  ← 43 skills (each: SKILL.md + optional references/)
+skills/                  ← 42 skills (each: SKILL.md + optional references/)
 references/              ← shared library: condensed PreSales Handbook reference (V78), Pre-Sales Playbook, cheat sheets, BBiT study notes
 scripts/desc_budget.py   ← skill frontmatter auditor (stdlib only)
 DEAL_TEMPLATE.md         ← how to set up a deal folder / Claude Project, incl. the "About us" block

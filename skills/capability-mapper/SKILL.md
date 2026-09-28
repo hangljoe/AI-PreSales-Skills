@@ -1,6 +1,6 @@
 ---
 name: capability-mapper
-version: "1.3"
+version: "1.4"
 last_updated: 2026-09-28
 description: "Maps customer problems to your own capability list: a heat map across Technology and Operating Model dimensions with ranked recommendations and buyer personas, plus a requirement-level fit table (OOTB / Config / Dev / Gap, must-have, evidence) that feeds the TFQ Solution-Fit gate. Use on \"capability heat map\", \"map their problems to our capabilities\", \"which of our solutions fit\", \"capability mapping\". Siblings: /presales:value:pain-to-value (pain → capability → value table), critical-business-issue-finder (find the CBIs first), tfq (scored functional-fit gate). SKIP for requirement-by-requirement RFP compliance (/presales:rfp:respond)."
 triggers:
@@ -194,6 +194,17 @@ OPEN DATA GAPS (discovery questions to validate)
 
 ## Connected Tools
 
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Pulls account industry, opportunity stage, and prior notes to seed Step 1 context |
+| **Knowledge base (e.g. Confluence, Notion)** | Supplies your capability list, product fact sheets, and fit guidance instead of asking you to paste them |
+
+No connections? Paste the context.
+
+---
+
+## Works with
+
 | Tool | What it adds |
 |------|-------------|
 | **/presales:account:brief** | Account context feeds directly into Step 1 — no need to re-ask for company context |
@@ -201,7 +212,12 @@ OPEN DATA GAPS (discovery questions to validate)
 | **tfq** | Scores the Solution / Functional Fit gate from the Step 5b table |
 | **/presales:value:pain-to-value** | Takes the top recommendations into a pain → capability → value table |
 
-No connections? Paste discovery notes and your capability list, and the skill works identically.
+---
+
+## Handoff
+
+- **Top recommendations → `/presales:value:pain-to-value`** — take the ranked capability domains into a pain → capability → value table.
+- **Requirement fit table → `tfq`** — feeds the Solution / Functional Fit gate.
 
 ---
 

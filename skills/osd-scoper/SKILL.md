@@ -1,8 +1,8 @@
 ---
 name: osd-scoper
-version: "2.2"
+version: "2.3"
 last_updated: 2026-09-28
-description: "Turns discovery call summaries (/presales:discovery:summary, discovery-transformer or discovery-ftd, one shared schema) into a structured OSD scope (handbook ch. 8) mapped onto osd-architect Sections 1–11: module in-scope decisions against your product list, AS-IS / TO-BE, cited web enrichment and a prioritised scope-gap list. Living Markdown document only, re-run after each session. Use on \"scope from discovery\", \"OSD scope\", \"prep the OSD\", \"turn discovery into an OSD\". Siblings: osd-architect (renders the branded Word OSD), /presales:handover:osd-draft (explicit OSD workflow). SKIP for re-extracting MEDDPICC or pains (upstream skills own those)."
+description: "Turns discovery call summaries (/presales:discovery:summary or discovery-transformer) into a structured OSD scope (handbook ch. 8) mapped onto osd-architect Sections 1–11: module in-scope decisions against your product list, AS-IS / TO-BE, cited web enrichment and a prioritised scope-gap list. Living Markdown document only, re-run after each session. Use on \"scope from discovery\", \"OSD scope\", \"prep the OSD\", \"turn discovery into an OSD\". Siblings: osd-architect (renders the branded Word OSD), /presales:handover:osd-draft (explicit OSD workflow). SKIP for re-extracting MEDDPICC or pains (upstream skills own those)."
 triggers:
   - "scope from discovery"
   - "OSD scope"
@@ -29,9 +29,9 @@ can draft the Word OSD without rework.
 
 ```
 call summaries ──────────▶ OSD Scoper ──▶ osd-architect ──▶ branded Word OSD
- (/presales:discovery:summary,  (this skill:        (assembles, draws
-  discovery-transformer,         scope decisions,    diagrams, PS workbook,
-  discovery-ftd Output C)        enrichment, gaps)   shareable copy)
+ (/presales:discovery:summary    (this skill:        (assembles, draws
+  or discovery-transformer)       scope decisions,    diagrams, PS workbook,
+                                  enrichment, gaps)    shareable copy)
 ```
 
 **It consumes, it does not re-extract.** MEDDPICC, pains, metrics, stakeholders and next steps
@@ -83,48 +83,17 @@ the generic scoping checklist in `osd-structure.md` §9.2 — do not invent modu
 
 ## Step 2 — Locate the deal folder and its source material (consume, don't re-extract)
 
-**Always resolve the storage location and the company first — never guess.**
-
-### 2a — Resolve the deals root (ask before doing anything on disk)
-Same resolution as `discovery-transformer`, in order:
-1. Read `~/.claude/discovery-transformer.json` (Windows: `%USERPROFILE%\.claude\discovery-transformer.json`) — if it has `deals_root` (or the older `accounts_root`), use it.
-2. Else **ask the user for the path**, and offer to persist it to that config file.
-
-Never hardcode a username. If a sync client keeps the library online-only, ask the user to make it
-available offline (see `discovery-transformer/references/folder-naming.md`).
-
-### 2b — Match the deal folder by company name
-If the account/product wasn't given at intake, **ask for the company name** (and product). Then match:
-```bash
-python3 "${CLAUDE_PLUGIN_ROOT}/skills/discovery-transformer/scripts/match_folder.py" --root "<deals root>" --deal "<account> <product>"
+Follow the shared discipline for resolving the deals root, matching the folder and ranking sources:
 ```
-One strong candidate → propose it. Ambiguous → show the top 3 and let the user pick. None → ask for
-the exact deal-folder path. Echo the resolved deal folder before reading anything from it.
+Read: ${CLAUDE_PLUGIN_ROOT}/skills/osd-architect/references/shared/deal-folder-discipline.md
+```
+Scoper-specific rules on top of it:
+- A **prior `OSD-*-scoper.md`** (or an older `-scoper.docx`) means this skill ran before: switch to
+  **update/living mode**, read it as the spine and merge in what is new. Never start from scratch.
+- Only a raw `.vtt`? You may scope from it, but suggest a quick `discovery-transformer` pass first
+  for a clean filed copy. Do not re-implement transcript cleaning here.
 
-### 2c — Find the source material (priority order)
-Scan the matched deal folder (and its meetings / discovery sub-folders) and pick the richest
-source available — **the discovery-transformer summary is preferred, but it is NOT required**:
-
-1. **Prior `OSD-*-scoper.md`** (legacy `*_osd-scope.*` or an older `-scoper.docx`: read it, but write
-   Markdown) → this skill ran before. Switch to **update/living mode**: read it as the spine and merge
-   in what's new. Do not start from scratch.
-2. **Discovery call summaries in the shared schema** (`${CLAUDE_PLUGIN_ROOT}/references/call-summary-schema.md`)
-   → the primary source for attendees, pains and CBIs, MEDDPICC, requirements, systems, open
-   questions and next steps. They come from three producers, all in the same format:
-   - `/presales:discovery:summary` output, usually in `02_discovery-notes.md` (one entry per call) or pasted;
-   - `*_discovery-summary.md` from `discovery-transformer` (adds question coverage and the transcript);
-   - `discovery-ftd` Output C (Markdown or its Word rendering).
-3. **`capability-mapper` requirement fit table** (`04b_requirement-fit.md`) → supports the Section 9 module map.
-4. **`*_transcript.md`** or other cleaned notes → read directly. (No transformer run? Fine — read
-   what's there. Don't re-implement transcript cleaning; if only a raw `.vtt` exists, suggest a quick
-   `discovery-transformer` pass first for a clean filed copy, but you may still scope from it.)
-5. **Other artefacts** in the folder — prior decks, account brief, RFX, existing OSD, product
-   datasheets → fold in as supporting context; label prospect collateral as such.
-
-Always **list what you found and let the user confirm** which files to scope from before reading.
-If the folder is empty and nothing is pasted, ask the user to point you at the source.
-
-### 2d — CRM + tagging
+### CRM + tagging
 Pull CRM opportunity data if connected (Step 1 fields). **Confidence-tag everything** as you
 read: 🟢 confirmed in call / from CRM · 🟡 inferred · 🔴 unknown.
 
@@ -199,10 +168,7 @@ discovery findings using `input-mapping.md`. Every asserted value carries a conf
 | §4 MEDDPICC delta (accumulated) | Section 1 Opportunity Scope Analysis (internal) |
 | Call date, §1 attendees, §7 next steps | Section 10 Meeting Notes |
 
-Discipline (from the architect's `best-practices.md`): reflection over regurgitation; not a dumping
-ground; label prospect collateral as such; cross-reference prospect vs your company's language;
-**no dates** in Project Prioritisation unless customer-confirmed; commercial/competitive/MEDDPICC is
-internal-only.
+Writing discipline: see section 4 of `deal-folder-discipline.md` (read in Step 2).
 
 Sections the architect owns downstream (Section 4.2 Value Proposition detail, Section 11 Transition
 to Delivery) — populate what discovery evidences and leave the rest as 🔴 for the architect.
@@ -241,7 +207,7 @@ user wants a Word document, that is the OSD itself: hand off to `osd-architect` 
 
 ---
 
-## Step 8 — Handoff
+## Step 8 — Closing line
 
 End with the next step:
 > *"Scope is captured and filed. Run `osd-architect` next — it reads this as **Source 0** and drafts
@@ -274,6 +240,13 @@ providers, consultancies, agencies):
 - Web-enriched values always carry a source citation and a 🟡 tag; never present a public-record
   figure as if the customer said it.
 - Distinguish 🟢 confirmed / 🟡 inferred (research or sector norm) / 🔴 unknown throughout.
+
+---
+
+## Handoff
+
+- Scope filed, gaps listed → `osd-architect` (build the branded OSD)
+- Fit not yet confirmed → `/presales:discovery:tfq` (fit gate)
 
 ---
 

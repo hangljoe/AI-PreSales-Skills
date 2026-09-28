@@ -1,8 +1,8 @@
 ---
 name: critical-business-issue-finder
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
-description: "Surfaces the 2–4 Critical Business Issues (CBIs) in discovery notes, a call summary or an account brief, separating them from symptoms, feature requests and IT preferences. Each CBI gets an owner, a consequence, a compelling event and discovery gaps; issues without a confirmed event are flagged as candidate CBIs. Use on \"find the CBIs\", \"what's the real pain\", \"what's driving this deal\", \"critical business issues\". Siblings: /presales:value:pain-to-value (map the CBIs to capabilities and value), capability-mapper (capability heat map). SKIP for general note clean-up (meeting-notes-structurer)."
+description: "Surfaces the 2–4 Critical Business Issues (CBIs) in discovery notes, a call summary or an account brief, separating them from symptoms, feature requests and IT preferences. Each CBI gets an owner, a consequence, a compelling event and discovery gaps; issues without a confirmed event are flagged as candidate CBIs. Use on \"find the CBIs\", \"what's the real pain\", \"what's driving this deal\", \"critical business issues\". Siblings: /presales:value:pain-to-value (map the CBIs to capabilities and value), capability-mapper (capability heat map). SKIP for general note clean-up (/presales:discovery:summary)."
 triggers:
   - "find the CBIs"
   - "what are the critical business issues"
@@ -75,17 +75,15 @@ becomes a CBI only once the event is confirmed.
 
 Paste any of:
 - Raw discovery call notes
-- Structured call summary (from meeting-notes-structurer)
+- Structured call summary (from `/presales:discovery:summary`)
 - Account brief (from /presales:account:brief)
 - Prior emails or CRM notes (e.g. Salesforce, HubSpot)
 - Any combination
 
 The more context the better. Don't edit it first.
 
-**Also ask for your capability list** (products / modules and what they do) before Step 2, unless it
-is already in the conversation or the deal folder. The "How your solution addresses it" field is
-built only from that list. Never invent capabilities. If the user has none to hand, run the CBI
-extraction anyway and leave that field marked 🔴.
+This skill stops at the CBIs. It does not map them to your capabilities: that is
+`/presales:value:pain-to-value`'s job, and it needs the CBI list as input.
 
 ---
 
@@ -115,10 +113,6 @@ The compelling event that makes it urgent NOW:
 [Regulatory deadline / business expansion / audit / leadership change / competitive pressure]
 Confidence: 🟢 Confirmed / 🟡 Inferred / 🔴 Unknown
 
-How your solution addresses it:
-[Which of your products and which specific capability connects directly to this CBI — only from
-the capability list the user gave you; if you don't have one, ask for it before filling this in,
-or leave "🔴 capability list needed"]
 Value anchor: [Benchmark metric — tag 🟡 Inferred until confirmed with this customer]
 
 Gap: what we still need to confirm:
@@ -176,7 +170,7 @@ When to ask: [Next call / EB meeting / technical session]
 
 ---
 
-## Next steps
+## Handoff
 
 - **`/presales:value:pain-to-value`** — take the ranked CBIs into a pain → capability → value table.
 - **TFQ Pain gate** — confirmed CBIs (with a compelling event) are the evidence for the Pain gate in
@@ -187,7 +181,7 @@ When to ask: [Next call / EB meeting / technical session]
 ## Quality checklist
 
 - [ ] Each CBI passes all four tests (business outcome / measurable consequence / senior owner / compelling event); issues missing only the event are labelled candidate CBIs
-- [ ] "How your solution addresses it" built only from the user's capability list (asked for if missing)
+- [ ] No capability or product claims in this output — each CBI is handed to `/presales:value:pain-to-value` for the mapping
 - [ ] CBIs are stated in the customer's business language — not our product names
 - [ ] Symptoms and feature requests are explicitly separated from CBIs
 - [ ] Each CBI has a confidence tag — no inflated 🟢 without real evidence

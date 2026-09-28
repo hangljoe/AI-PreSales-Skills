@@ -1,6 +1,6 @@
 ---
 name: exec-briefing-prep
-version: "1.1"
+version: "1.2"
 last_updated: 2026-09-28
 description: "Prepares the SC and AE for an executive or C-suite meeting: meeting objective, tight agenda, talking points calibrated to CEO, CFO, COO or CIO/CPO (Chief Product Officer), and coaching for the economic buyer's sceptical questions. Use on \"exec briefing prep\", \"EBC prep\", \"C-level meeting prep\", \"meeting with the economic buyer\". Siblings: workshop-agenda-builder (multi-hour workshop or EBC agenda), /presales:deal:exec-summary (one-page deal summary for your own leadership). SKIP for demos to working-level users."
 triggers:
@@ -175,6 +175,13 @@ Fallback: [Minimum acceptable outcome to keep the deal moving]
 AE role in this meeting: [What the AE says vs. what the SC says]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+---
+
+## Handoff
+
+- **Update your own leadership → `/presales:deal:exec-summary`** — summarise the outcome and next step.
+- **Champion needs to sell this internally → `/presales:deal:champion-enable`** — build the enablement kit before the next EB touchpoint.
 
 ---
 

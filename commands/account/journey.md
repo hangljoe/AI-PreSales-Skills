@@ -4,13 +4,13 @@ argument-hint: "[account] [what you know about where they are]"
 ---
 
 Map where **$ARGUMENTS** sits on the buying journey and what Sales and PreSales should do about it.
-Ground every step in The PreSales Handbook ch. 3 (§3.1 buying journey, §3.2 personas, §3.3 selling
-journey, §3.4 bridging the two, §3.10 when to engage). Paraphrase; never quote at length.
+Ground every step in The PreSales Handbook ch. 3 (ch. 3.1 buying journey, ch. 3.2 personas, ch. 3.3 selling
+journey, ch. 3.4 bridging the two, ch. 3.10 when to engage). Paraphrase; never quote at length.
 
 If the account or the evidence of where they are is missing, ask once. If a deal folder exists,
 read `01_account-brief.md`, `02_discovery-notes.md` and `03_mutual-action-plan.md` first.
 
-## Step 1 — Place the buyer (§3.1)
+## Step 1 — Place the buyer (ch. 3.1)
 
 Pick the current buying stage and cite the evidence. The eight stages:
 
@@ -25,15 +25,15 @@ Pick the current buying stage and cite the evidence. The eight stages:
 | Retention & renewal | Periodic check-ins; renewal talks | Renewal date approaching |
 | Re-evaluation | Needs changed; exploring the market again | Competitor contact, "we are reviewing our tools" |
 
-Remind the user the journey is non-linear (§3.4). Buyers can jump back a stage. Tag the placement
+Remind the user the journey is non-linear (ch. 3.4). Buyers can jump back a stage. Tag the placement
 🟢 Confirmed (buyer said so or it is in the CRM), 🟡 Inferred, or 🔴 Unknown.
 
-## Step 2 — Match the selling phase and PreSales actions (§3.3)
+## Step 2 — Match the selling phase and PreSales actions (ch. 3.3)
 
 Map the buying stage to the selling phases that serve it. List the PreSales actions for those
 phases only.
 
-| Buying stage | Selling phases (§3.3.1–3.3.2) | Core PreSales actions |
+| Buying stage | Selling phases (ch. 3.3.1–3.3.2) | Core PreSales actions |
 |--------------|-------------------------------|-----------------------|
 | Awareness | Prospecting, Long-term development | Technical insight for campaigns; periodic insights and webinars for leads not ready yet |
 | Consideration | Initial contact, Sales discovery/qualification, Functional & technical discovery | Collateral for outreach; join qualification calls; lead FTD and document requirements |
@@ -45,7 +45,7 @@ phases only.
 
 Name the **next selling phase** and the one PreSales action that moves the buyer there.
 
-## Step 3 — Personas per stage (§3.2)
+## Step 3 — Personas per stage (ch. 3.2)
 
 For the current and next stage, list who from the decision board should be involved (finance,
 legal, IT security, IT, operations, purchasing). Add the persona types: member, sponsor, champion,
@@ -53,14 +53,14 @@ detractor, gatekeeper, advisor. For each, name what they need now: evidence for 
 for sponsors, ammunition for champions, transparent answers for detractors, paperwork for
 gatekeepers, benchmarks for advisors. Flag anyone who is missing.
 
-## Step 4 — Early-engagement timing and risks (§3.2, §3.4, §3.10)
+## Step 4 — Early-engagement timing and risks (ch. 3.2, ch. 3.4, ch. 3.10)
 
-- **Timing:** were we in before the buyer could name the problem (§3.10)? If we arrived in
+- **Timing:** were we in before the buyer could name the problem (ch. 3.10)? If we arrived in
   Decision, the criteria were probably shaped by someone else. Say so and name the recovery move
   (re-open discovery, reframe the criteria).
-- **Late departments:** legal, security, IT or purchasing not yet engaged. §3.2 warns that late
+- **Late departments:** legal, security, IT or purchasing not yet engaged. ch. 3.2 warns that late
   involvement slows the cycle and puts the deal at risk.
-- **Journey not shared:** the buyer buys rarely and we sell daily (§3.4). If they have not seen
+- **Journey not shared:** the buyer buys rarely and we sell daily (ch. 3.4). If they have not seen
   the steps and stakeholders ahead, offer to walk them through it. The MAP is the tool for that.
 - **Other risks:** stage skipped (e.g. demo before discovery), a champion not yet armed, a
   re-evaluation signal on an existing customer.
@@ -91,4 +91,4 @@ NEXT STEP: [one action, owner, date]
 - Consideration or early Decision with discovery still open → `/presales:discovery:prep`
 - Stuck between stages, or unsure what to do next → `presales-coach`
 - Stakeholders need a shared plan to a decision → `/presales:account:map`
-- Champion needs arming → `/presales:account:champion`
+- Champion needs arming → `/presales:deal:champion-enable` (brief mode)

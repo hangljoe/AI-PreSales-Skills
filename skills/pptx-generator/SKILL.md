@@ -1,6 +1,6 @@
 ---
 name: pptx-generator
-version: "2.1"
+version: "2.2"
 last_updated: 2026-09-28
 description: "Generates and edits on-brand PowerPoint decks (.pptx) with python-pptx via uv, in the presales-handbook example brand or your own brand, plus square LinkedIn carousels exported to PDF. Use on \"make a deck\", \"create a PowerPoint\", \"build a slide deck\", \"edit this PPTX\", \"create a carousel\". Siblings: /presales:rfp:present (RFP response deck content), demo-storyboard (demo flow before slides), linkedin-post (post text), docx-generator (Word documents). SKIP for Word documents, Excalidraw diagrams, or data charts on their own."
 triggers:
@@ -22,53 +22,45 @@ triggers:
 
 # PowerPoint Deck Creator (PPTX)
 
-Generate professional, on-brand presentation slides using python-pptx. Uses the **presales-handbook** example brand by default; to add your own company brand, see "Add Your Own Company Brand" below. Supports:
-- **Slide Generation** — Create presentations from deal notes, discovery outputs, ROI data
-- **Carousel Generation** — LinkedIn carousels (square format, exports to PDF)
-- **Slide Editing** — Modify existing PPTX files
+Generate professional, on-brand presentation slides using python-pptx. Uses the **presales-handbook** example brand by default; to add your own company brand, see "Add Your Own Company Brand" below. Supports slide generation from deal notes, discovery outputs, and ROI data; LinkedIn carousels (square format, exported to PDF); and editing existing PPTX files.
 
 **All skill resources are in `${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/`.** Glob starting from that path.
 
 ---
 
+## Connected Tools
+
+| Tool | What it does for you |
+|------|---------------------|
+| **Knowledge base** (e.g. Confluence, Notion) | Source decks to rebrand or extend, and a place to store the approved output slides |
+
+No connections? Paste the content.
+
+---
+
 ## CRITICAL: Batch Generation Rules
 
-**NEVER generate more than 5 slides at once.**
-
-| Rule | Details |
-|------|---------|
-| Max slides per batch | **5** |
-| After each batch | **STOP and validate output** |
-| After ALL batches | **COMBINE into single file and DELETE part files** |
+**Never generate more than 5 slides at once.** Stop and validate after each batch (Step 6); after all batches, combine into one file via `lib/combine_batches.py` and delete the part files (Step 7).
 
 ---
 
 ## PREREQUISITE: Brand Selection
 
-**Default brand: `presales-handbook`** (The PreSales Handbook — navy `#112D4E`, yellow `#FACF39`, Montserrat / Open Sans, white canvas).
+**Default brand: `presales-handbook`** (navy `#112D4E`, yellow `#FACF39`, Montserrat / Open Sans, white canvas). List the folders in `${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/`. Only `presales-handbook` exists? Use it and say so in one line. User added their own brand folder? Recommend it and confirm: *"I'll use your {brand} brand — say if you want the presales-handbook example instead."*
 
-List the folders in `${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/`. If only `presales-handbook` exists, use it and say so in one line. If the user has added their own brand folder, recommend it and confirm: *"I'll use your {brand} brand — say if you want the presales-handbook example instead."*
-
-Then load from the **central brand registry**:
+Load from the **central brand registry**:
 ```
 Read: ${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/{chosen-brand}/brand.json
 Read: ${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/brands/{chosen-brand}/config.json
 Read: ${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/brands/{chosen-brand}/tone-of-voice.md
 ```
-
-If the chosen brand has no `config.json` or `tone-of-voice.md` in this skill yet, use the presales-handbook ones and tell the user.
-
-Use `brand.json → formats.pptx` for slide-specific values (background, dimensions, footer text).
-Apply the brand's tone-of-voice rules to all generated copy, not just colors.
+No `config.json` or `tone-of-voice.md` for that brand yet? Use the presales-handbook ones and tell the user. Use `brand.json → formats.pptx` for slide-specific values (background, dimensions, footer text) and apply its tone-of-voice rules to all generated copy, not just colors.
 
 ---
 
 ## MANDATORY: Brand Helpers (`lib/brand_helpers.py`)
 
-Every generation and rebrand run **must** import and use the shared helper module.
-These are not optional polish — skipping them reproduces three known bugs (off-brand
-theme, missing footer, silently dropped text). Load it once at the top of the
-`uv run python` block:
+Every generation and rebrand run **must** import and use the shared helper module — skipping it reproduces three known bugs (off-brand theme, missing footer, silently dropped text). Load it once at the top of the `uv run python` block:
 
 ```python
 import importlib.util, os
@@ -104,7 +96,7 @@ missing = bh.validate_text_coverage(source_texts, FINAL_PPTX_PATH)
 # If `missing` is non-empty, FIX the affected slides and re-run before delivering.
 ```
 
-`apply_brand_theme` must be re-applied to the **combined** deck too — see Step 7.
+`lib/combine_batches.py` (Step 7) re-applies `apply_brand_theme` to the **combined** deck automatically.
 
 ---
 
@@ -119,22 +111,11 @@ Never put a brand.json or logo files inside this skill's `brands/` folder; it ho
 
 ### Step 1: Brand Loading
 
-Brand was already selected in the prerequisite step. Load all three files:
-1. `${CLAUDE_PLUGIN_ROOT}/skills/brand/brands/{chosen-brand}/brand.json` — colors and fonts (central registry — never a local copy)
-2. `${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/brands/{chosen-brand}/config.json` — output settings
-3. `${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/brands/{chosen-brand}/tone-of-voice.md` — copy rules and vocabulary
-
-Apply tone-of-voice guidance to every text element, not just slide titles.
+Brand was already selected in the prerequisite step; load the three files listed there (`brand.json` — colors/fonts, central registry, never a local copy; `config.json` — output settings; `tone-of-voice.md` — copy rules) and apply the tone-of-voice guidance to every text element, not just titles.
 
 ### Step 2: Layout Discovery
 
-**Read ALL layout frontmatters before selecting any layout.** Each `.py` file in `cookbook/` has a `# /// layout` frontmatter block with `purpose`, `best_for`, `avoid_when`, `max_*` limits, and `instructions`.
-
-```
-Glob: ${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/cookbook/*.py
-```
-
-Read the first 40 lines of every layout file to build a mental map before choosing.
+**Read ALL layout frontmatters before selecting any layout** — each `.py` file in `cookbook/` has a `# /// layout` block with `purpose`, `best_for`, `avoid_when`, `max_*` limits, and `instructions`. Glob `${CLAUDE_PLUGIN_ROOT}/skills/pptx-generator/cookbook/*.py` and read the first 40 lines of every file to build a mental map before choosing.
 
 The cookbook functions' default colour arguments are the presales-handbook palette. For any other brand, pass the values from `tok` (e.g. `bg=tok["background"], primary=tok["accent"]`) — never rely on the defaults for a non-default brand.
 
@@ -148,49 +129,26 @@ The cookbook functions' default colour arguments are the presales-handbook palet
 
 ### Step 3: Visual-First Layout Selection
 
-**DEFAULT TO VISUAL LAYOUTS. Content-slide (title + bullets) is the LAST RESORT.**
+**Default to visual layouts. Content-slide (title + bullets) is the last resort.** Ask in this order before reaching for content-slide: 3-5 equal items → multi-card-slide; 2-4 big numbers/metrics → stats-slide; comparing two things → two-column-slide; exactly 3 related items → multi-card-slide (3 cards); 1-3 words to emphasize → giant-focus-slide; a powerful quote → quote-slide; nothing else fits → now use content-slide.
 
-**Decision tree — ask IN ORDER before using content-slide:**
-
-```
-Do I have 3-5 equal items?          → multi-card-slide
-Do I have 2-4 big numbers/metrics?  → stats-slide
-Am I comparing two things?          → two-column-slide
-Do I have exactly 3 related items?  → multi-card-slide (3 cards)
-Do I have 1-3 words to emphasize?   → giant-focus-slide
-Do I have a powerful quote?         → quote-slide
-Is content-slide the ONLY option?   → NOW use content-slide
-```
-
-**Hard limits:**
-- Content-slide should be **<25% of total slides**
-- Visual layouts (cards, stats, columns, hero) should be **50%+**
-- Never use the same layout **3+ times consecutively**
+**Hard limits:** content-slide **<25%** of total slides; visual layouts (cards, stats, columns, hero) **50%+**; never the same layout **3+ times consecutively**.
 
 ### Step 4: Slide Planning (ALWAYS DO THIS)
 
 Create a slide plan table before generating a single line:
-
 ```markdown
 | # | Layout | Title | Key Content | Notes |
 |---|--------|-------|-------------|-------|
 | 1 | title-slide | ... | ... | ... |
 ```
 
-Checklist:
-- [ ] No duplicate titles
-- [ ] Logical flow
-- [ ] Content-slide <25%
-- [ ] Visual layouts 50%+
-- [ ] No 3+ consecutive same-layout slides
+Checklist: no duplicate titles; logical flow; content-slide <25%; visual layouts 50%+; no 3+ consecutive same-layout slides.
 
 ### Step 5: Batch Generation
 
 **Max 5 slides per batch.**
 
-**uv preflight (once per session).** Run `command -v uv`. If it prints nothing, stop and tell the user in one line: *"This skill needs uv — install it from https://docs.astral.sh/uv/getting-started/installation/ (one command, no admin rights), or I can give you the slide plan and copy as Markdown now."* Never fail silently; if they choose the fallback, deliver the Step 4 slide plan plus the full slide copy as a Markdown file in `output/{brand}/`.
-
-Execute via UV:
+**uv preflight (once per session).** Run `command -v uv`. If it prints nothing, stop and tell the user in one line: *"This skill needs uv — install it from https://docs.astral.sh/uv/getting-started/installation/ (one command, no admin rights), or I can give you the slide plan and copy as Markdown now."* Never fail silently; if they choose the fallback, deliver the Step 4 slide plan plus the full slide copy as a Markdown file in `output/{brand}/`. Execute via UV:
 
 ```bash
 uv run --with python-pptx==1.0.2 python << 'EOF'
@@ -220,90 +178,27 @@ add_section_slide(prs, "Section name", tok=tok,
 ```
 If `logo_path` returns `None` (the brand has no PNG for that canvas), skip the logo and say so in the handover message.
 
-**Also per slide (see MANDATORY Brand Helpers above):**
-- `bh.add_footer(slide, prs, tok["footer"])` when `tok["footer"]` is set
-- `bh.fit_text_frame(tf)` on every variable-length text frame
+**Also per slide (see MANDATORY Brand Helpers above):** `bh.add_footer(slide, prs, tok["footer"])` when set; `bh.fit_text_frame(tf)` on every variable-length text frame.
 
 ### Step 6: Validate Each Batch
 
-After every batch, check:
-- Every slide's background matches its slide type: `tok["background"]` for content slides, `tok["title_slide_bg"]` / `tok["section_slide_bg"]` for title and section slides. An unset background (PowerPoint's default) is the most common bug.
-- Title slide carries the registry logo for its canvas (white logo on navy)
-- No duplicate titles
-- No text overflow (use `bh.fit_text_frame` — #16)
-- Colors match brand
-- No trailing punctuation on titles/bullets
-- Brands with a `footer_text`: every slide carries the footer (#15)
-
-Fix before continuing.
+After every batch, check: every slide's background matches its slide type (`tok["background"]` for content, `tok["title_slide_bg"]` / `tok["section_slide_bg"]` for title/section — an unset background is the most common bug); the title slide carries the registry logo for its canvas; no duplicate titles; no text overflow (`bh.fit_text_frame` — #16); colors match brand; no trailing punctuation on titles/bullets; and brands with `footer_text` carry the footer on every slide (#15). Fix before continuing.
 
 ### Step 7: Combine Batches
 
-After all batches pass validation:
+After all batches pass validation, merge the part files with `lib/combine_batches.py` (carries each slide's background forward, re-bakes the brand theme — #21 — and deletes the part files). Load it like `brand_helpers.py` (see MANDATORY section above):
 
 ```python
-from pptx import Presentation
-from pptx.dml.color import RGBColor
-from pathlib import Path
-
-def hex_to_rgb(hex_color):
-    h = hex_color.lstrip("#")
-    return RGBColor(int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
-
-from io import BytesIO
-from pptx.enum.shapes import MSO_SHAPE_TYPE
-
-BRAND_BG = tok["background"]  # e.g., "FFFFFF" for presales-handbook
-
-output_dir = Path("output/{brand-name}")
-part_files = sorted(output_dir.glob("{name}-part*.pptx"))
-combined = Presentation(part_files[0])
-
-for part_file in part_files[1:]:
-    part_prs = Presentation(part_file)
-    for slide in part_prs.slides:
-        blank_layout = combined.slide_layouts[6]
-        new_slide = combined.slides.add_slide(blank_layout)
-        # CRITICAL: carry the source slide's own background (navy title/section
-        # slides stay navy); fall back to the content canvas.
-        new_slide.background.fill.solid()
-        try:
-            new_slide.background.fill.fore_color.rgb = slide.background.fill.fore_color.rgb
-        except (AttributeError, TypeError):
-            new_slide.background.fill.fore_color.rgb = hex_to_rgb(BRAND_BG)
-        for shape in slide.shapes:
-            if shape.shape_type == MSO_SHAPE_TYPE.PICTURE:
-                # Pictures (logos) reference an image part — re-add, don't copy XML
-                new_slide.shapes.add_picture(BytesIO(shape.image.blob), shape.left,
-                                             shape.top, shape.width, shape.height)
-            else:
-                new_slide.shapes._spTree.insert_element_before(shape.element, 'p:extLst')
-
-# #21 — the combined deck is built from part_files[0]'s master; re-bake the theme
-# so the FINAL file carries the brand palette + fonts (not just the part files).
-bh.apply_brand_theme(combined, brand)
-
-final_path = output_dir / "{name}-final.pptx"
-combined.save(final_path)
-for part_file in part_files:
-    part_file.unlink()
-
-# #16 — for rebrands, confirm no source text was silently dropped:
-# missing = bh.validate_text_coverage(source_texts, str(final_path))
-# if missing: fix the affected slides and regenerate before delivering.
+_spec = importlib.util.spec_from_file_location("combine_batches", os.path.join(_ROOT, "skills", "pptx-generator", "lib", "combine_batches.py"))
+cb = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(cb)
+final_path = cb.combine(sorted(output_dir.glob("{name}-part*.pptx")), brand, output_dir / "{name}-final.pptx")
 ```
 
 ---
 
 ## LinkedIn Carousels
 
-Square 1:1 format. 5-10 slides. Structure: hook → body points → CTA.
-
-**Dimensions:**
-```python
-prs.slide_width = Inches(7.5)
-prs.slide_height = Inches(7.5)
-```
+Square 1:1 format, 5-10 slides, hook → body points → CTA. Dimensions: `prs.slide_width = Inches(7.5)`; `prs.slide_height = Inches(7.5)`.
 
 **Export to PDF** — LibreOffice's binary is `soffice` on most installs (macOS, Windows) and sometimes only `libreoffice` on Linux:
 ```bash
@@ -333,9 +228,7 @@ No LibreOffice → deliver the `.pptx` and tell the user: *"Open carousel.pptx i
 
 ## Technical Reference
 
-**Slide dimensions (16:9):** Width 13.333", Height 7.5"
-
-**Always use:** `prs.slide_layouts[6]` (blank layout), `python-pptx==1.0.2`
+**Slide dimensions (16:9):** Width 13.333", Height 7.5". **Always use** `prs.slide_layouts[6]` (blank layout) and `python-pptx==1.0.2`.
 
 **Common imports:**
 ```python
@@ -353,9 +246,24 @@ from pptx.util import Inches, Pt
 | Title slide canvas | `formats.pptx.title_slide_bg` → `tok["title_slide_bg"]` (falls back to `background`) |
 | Section slide canvas | `formats.pptx.section_slide_bg` → `tok["section_slide_bg"]` (falls back to the title canvas) |
 | Logos | `assets.logo_white_png` (dark canvas), `assets.logo_wordmark_png` / `assets.logo_dark_png` (light) → `bh.logo_path(brand, on_dark)` |
-| `BRAND_TEXT` | `semantic.primary_text` |
-| `BRAND_ACCENT` | `semantic.accent` |
-| `BRAND_HEADING_FONT` | `fonts.heading` |
-| `BRAND_BODY_FONT` | `fonts.body` |
+| `BRAND_TEXT` / `BRAND_ACCENT` | `semantic.primary_text` / `semantic.accent` |
+| `BRAND_HEADING_FONT` / `BRAND_BODY_FONT` | `fonts.heading` / `fonts.body` |
 
 All color values in brand.json are hex **WITHOUT** the `#` prefix.
+
+---
+
+## Quality checklist
+
+- [ ] Brand theme applied via `bh.apply_brand_theme` — backgrounds, fonts, and logos match the resolved `tok` dict
+- [ ] Batch limits respected — max 5 slides per batch, combined via `lib/combine_batches.py`, part files deleted after
+- [ ] Every slide has a title; no duplicate titles across the deck
+- [ ] No vendor or competitor names in the copy — vendor-neutral throughout
+- [ ] Final `.pptx` opens cleanly and passes Step 6 validation (no clipped text, no unset backgrounds)
+
+---
+
+## Handoff
+
+- `docx-generator` — the Word-document twin of this deck (proposal, report version of the same content)
+- `/presales:demo:storyboard` — build the Tell-Show-Tell flow first if this deck is a demo

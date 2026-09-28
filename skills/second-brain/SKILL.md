@@ -1,6 +1,6 @@
 ---
 name: second-brain
-version: "2.1"
+version: "2.2"
 last_updated: 2026-09-28
 description: "Personal daily/weekly operating loop for SCs, stored as markdown in your own folder: guided setup, morning and week-ahead briefs from your journal, big rocks and an optional calendar/mail sweep (e.g. Outlook or Google), end-of-day journal, weekly rollup with a learning-time nudge (handbook 70/30 rule), quarterly big rocks, and a personal writing-voice guide. Use on \"set up my second brain\", \"start my day\", \"end my day\", \"start my week\", \"big rocks\", \"learn my voice\". Siblings: learning-plan (build the monthly or quarterly learning plan behind the training target). SKIP for deal-specific prep (route to the presales skills)."
 triggers:
@@ -42,7 +42,7 @@ also schedule the daily/weekly modes to run automatically via a scheduled routin
 Cowork, where the `schedule` skill is available).
 
 The learning-time nudge follows The PreSales Handbook: 70% of your time on deals, 30% on learning
-and upskilling (§2.6), protected by dedicated weekly learning slots (§18.3). Setup offers that as
+and upskilling (ch. 2.6), protected by dedicated weekly learning slots (ch. 18.3). Setup offers that as
 the recommended training target; you can pick a different number or opt out.
 
 ---
@@ -105,6 +105,14 @@ inside the second-brain folder.
 Each mode defines its output: the morning brief (chat), the journal/rollup files, BIG-ROCKS.md,
 or VOICE.md. Files always land in the user's second-brain folder — never in a repo, never
 shared.
+
+---
+
+## Handoff
+
+- Start the day → `/presales:brain:start`
+- Weekly rollup and learning-time nudge → `/presales:brain:end-week`
+- Build the learning plan behind the training target → `learning-plan`
 
 ---
 

@@ -57,7 +57,7 @@ Invoked as `/presales:<phase>:<name>`.
 | Command | Purpose |
 |---------|---------|
 | `/presales:account:brief [account]` | Research-backed one-pager before first contact |
-| `/presales:account:champion [name] [account]` | Quick champion brief — talking points, objection responses, proof points |
+| `/presales:deal:champion-enable [account] [champion name/title] brief` | Quick champion brief — talking points, objection responses, proof points |
 | `/presales:account:journey [account]` | Buying-journey stage, your actions per stage, early-engagement check |
 | `/presales:account:nurture [account]` | Post-close plan — check-ins, feedback, references, expansion |
 | `/presales:account:map [account]` | Mutual Action Plan (MAP) — the mandatory post-call deliverable |
@@ -86,7 +86,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:deal:objection-drill [objection]` | Structured objection handling using tactical empathy |
 | `/presales:deal:poc-plan [deal] [use cases]` | PoC plan with success criteria, timeline, out-of-scope, governance |
 | `/presales:deal:exec-summary [deal]` | Executive summary of deal status for the Economic Buyer |
-| `/presales:deal:champion-enable [champion] [deal]` | Champion enablement kit — internal selling language and EB coaching |
+| `/presales:deal:champion-enable [account] [champion] [brief|kit]` | Champion enablement kit — internal selling language and EB coaching |
 | `/presales:deal:proposal [deal]` | Formal commercial proposal — cover letter to next step |
 | `/presales:deal:poc-readout [deal]` | PoC check-ins, scorecard against success criteria, findings readout |
 | `/presales:deal:close-plan [deal]` | Pick and script one of the four closes, set the stage, plan a fallback |
@@ -134,7 +134,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 | "demo prep" / "build a demo flow" / "Tell-Show-Tell" | `demo-storyboard` |
 | "dry run my demo" / "demo rehearsal" / "coach me through the demo" | `demo-dryrun-coach` |
 | "write a follow-up email" / "post-call email" / "draft a recap" | `field-comms-writer` |
-| "structure these notes" / "meeting summary" / "action items from this call" | `meeting-notes-structurer` |
+| "structure these notes" / "tidy up my notes" / "action items from this call" | `discovery-transformer` → `/presales:discovery:summary` |
 
 ### Deal Health
 
@@ -244,7 +244,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 
 ### Closing and handing over
 ```
-/presales:deal:champion-enable [champion] [deal] ← enable your champion
+/presales:deal:champion-enable [account] [champion] [brief|kit] ← enable your champion
 /presales:deal:proposal [deal]            ← formal commercial proposal
 /presales:handover:osd-draft [deal]       ← draft the OSD
 /presales:handover:doc [deal]             ← full handover package

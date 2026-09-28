@@ -1,6 +1,6 @@
 ---
 name: tfq
-version: "2.2"
+version: "2.3"
 last_updated: 2026-09-28
 description: "Technical & Functional Qualification (TFQ, handbook ch. 9): the internal Invest / Conditional / Pause gate before committing significant SC time (demo prep, PoC, OSD); run early as a provisional read, re-run on the OSD. Rolls up strategic, functional-fit, technical and discovery feeders through three hard gates, weighted contributors and a kill-list into one verdict, with an HTML dashboard and Markdown fallback. Use on \"run the TFQ\", \"should we invest SC time\", \"technically qualify this\", \"pre-investment gate\". Siblings: /presales:discovery:qualify (MEDDPICC score, feeds the TFQ), /presales:rfp:analyze (bid / no-bid on an RFP). SKIP for commercial-only qualification (discovery-sales)."
 triggers:
@@ -29,6 +29,17 @@ below are the kit's own scoring of those two sides.
 
 > **Internal-only.** Neutral professional styling, **no brand skin**. It is a **living scorecard** —
 > re-run as discovery closes gaps.
+
+---
+
+## Connected Tools
+
+| Tool | What it does for you |
+|------|---------------------|
+| **CRM (e.g. Salesforce, HubSpot)** | Confirm-gated write-back of the verdict and gate scores to the opportunity (Step 4) |
+| **Knowledge base (e.g. Confluence, Notion)** | Stores the HTML dashboard and markdown scorecard in the deal folder for the account team |
+
+No connections? Score from pasted feeder-skill outputs and CRM fields you paste in manually; the dashboard still renders.
 
 ---
 
@@ -210,10 +221,23 @@ opportunity; never write silently.
 
 ---
 
-## Chain
+## Handoff
 
 Feeders upstream: `/presales:account:brief` (strategic) → `/presales:discovery:summary` (pains, requirements) →
 **`capability-mapper`** requirement fit table (functional) → `integration-complexity` (technical/workflow) →
 **provisional TFQ** → `osd-scoper` / `osd-architect` (the OSD) → **TFQ re-run on the OSD** (handbook 9.1) →
 demo, PoC, `/presales:rfp:respond` or proposal. For an RFP, `rfx-navigator-presales` and `/presales:rfp:analyze` come first.
 Re-run the TFQ after each discovery step — it is a living scorecard and unknowns should close over time.
+
+---
+
+## Quality checklist
+
+- [ ] Authoritative model files read for this run (`scoring-model.md`, `tfq-question-bank.md`, `orchestrator-dashboard.md`) — no number echoed here without checking them
+- [ ] Kill-list checked before scoring; any true item stopped the run at Auto-PAUSE (Step 1)
+- [ ] Every gate and contributor scored from the question bank (rating → points × weight), never estimated (Step 2)
+- [ ] Every input confidence-tagged 🟢/🟡/🔴, and a category resting mostly on 🔴/🟡 did not return Invest
+- [ ] Multiple product areas each scored their own Solution-Fit gate — no averaging across areas
+- [ ] Verdict applied the first-matching-rule order from Step 3, naming the binding gate or disqualifier
+- [ ] Both outputs rendered: the HTML orchestrator dashboard and the markdown fallback (Step 4)
+- [ ] CRM write-back, if offered, was confirm-gated and never silent
