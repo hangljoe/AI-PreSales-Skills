@@ -51,6 +51,7 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:discovery:summary` | Structure call notes into pains, stakeholders, MEDDPICC, next steps |
 | `/presales:discovery:tfq [account] [product]` | Technical & Functional Qualification — gated Invest/Conditional/Pause pre-investment gate (hard gates + kill-list) |
 | `/presales:discovery:golden-hours [account]` | 24-hour plan after a key call, from the call summary — debrief, AE brief, CRM update, action plan |
+| `/presales:discovery:orc [deal name]` | Opportunity Review Call (ORC) — cross-department agenda: MEDDPICC, PS readiness, qualify in/out |
 
 ### Account & Stakeholder Intelligence
 
@@ -59,7 +60,6 @@ Invoked as `/presales:<phase>:<name>`.
 | `/presales:account:brief [account]` | Research-backed one-pager before first contact |
 | `/presales:deal:champion-enable [account] [champion name/title] brief` | Quick champion brief — talking points, objection responses, proof points |
 | `/presales:account:journey [account]` | Buying-journey stage, your actions per stage, early-engagement check |
-| `/presales:account:nurture [account]` | Post-close plan — check-ins, feedback, references, expansion |
 | `/presales:account:map [account]` | Mutual Action Plan (MAP) — the mandatory post-call deliverable |
 
 ### Demo Preparation & Follow-Up
@@ -77,7 +77,6 @@ Invoked as `/presales:<phase>:<name>`.
 |---------|---------|
 | `/presales:value:pain-to-value [discovery notes or pain statements]` | Map customer pains to your product's capabilities and measurable value |
 | `/presales:value:roi-case [deal]` | ROI business case — 3+ value drivers, Risk Factor, hard vs. soft value |
-| `/presales:value:orc [deal name]` | Opportunity Review Call (ORC) — cross-department agenda: MEDDPICC, PS readiness, qualify in/out |
 
 ### Deal Execution
 
@@ -106,6 +105,7 @@ Invoked as `/presales:<phase>:<name>`.
 |---------|---------|
 | `/presales:handover:osd-draft [deal]` | Draft the Opportunity Scoping Document (OSD) |
 | `/presales:handover:doc [deal]` | Complete PreSales → Professional Services handover package |
+| `/presales:handover:nurture [account]` | Post-close plan — check-ins, feedback, references, expansion |
 
 ---
 
@@ -195,10 +195,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 | "build my scorecard" / "team metrics dashboard" | `presales-metrics` |
 | "capture this for the team" | `knowledge-capture` |
 | "set up my second brain" | `second-brain` |
-| "grill me" | `grill-me` |
-| "create a handoff" | `handoff` |
 | "RAG ready markdown" | `rag-markdown` |
-| "write a skill" | `write-a-skill` |
 
 ---
 
@@ -231,7 +228,7 @@ Skills activate automatically when you say the right phrase. No slash needed.
 ← say "stress test this business case"       ← pressure-test before the CFO meeting
 /presales:deal:exec-summary [deal]            ← exec-level summary
 ← say "exec briefing prep"                   ← agenda and coaching for C-suite meeting
-/presales:value:orc [deal]                    ← cross-department Opportunity Review Call
+/presales:discovery:orc [deal]                ← cross-department Opportunity Review Call
 ← say "champion health check"                ← diagnose champion strength
 ```
 

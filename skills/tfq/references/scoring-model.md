@@ -68,7 +68,7 @@ confidence gate (§5) — it is *not* silently scored as a middling pass.
 | **MEDDPICC commercial** *(kit; extends the handbook's BANT, ch. 5)* | 0.5 | **`/presales:discovery:qualify`** | BANT summary (→ renamed) |
 
 > **Deal-worth** ("is the deal worth pursuing?", from a deal review — the handbook's Opportunity Review
-> Call, 9.3, run via `/presales:value:orc`) is an **optional low-weight signal** when a review has run —
+> Call, 9.3, run via `/presales:discovery:orc`) is an **optional low-weight signal** when a review has run —
 > provisional weight **0.5**. It is a contributor, never a gate.
 
 **Weighted composite (0–1):**

@@ -88,7 +88,7 @@ Use my project documents as context. Never invent facts about this account.
 (say "they might do nothing")          → 08a_status-quo-plan.md
 /presales:handover:doc [deal]          → 09_handover-package.md
 /presales:deal:close-plan              → 10_close-plan.md
-/presales:account:nurture              → 11_nurture-plan.md
+/presales:handover:nurture             → 11_nurture-plan.md
 ```
 
 ## Lifecycle commands (run at each stage)
@@ -101,8 +101,8 @@ Post-call:   /presales:discovery:summary          Structured notes → 02_discov
 Post-call:   /presales:discovery:golden-hours     Debrief, AE brief, CRM update, 24-h plan
 Pre-demo:    /presales:demo:pre-invite            Agenda email to customer (24-48h before)
 Post-demo:   /presales:demo:post-followup         Recap + next step email
-Internal:    /presales:value:orc                  Opportunity Review Call [ORC] — cross-team qualify in / out
+Internal:    /presales:discovery:orc              Opportunity Review Call [ORC] — cross-team qualify in / out
 Close:       /presales:deal:close-plan            Pick and script the close
 Handover:    /presales:handover:doc               PreSales → PS handover package
-Post-close:  /presales:account:nurture            Check-ins, feedback, references
+Post-close:  /presales:handover:nurture           Check-ins, feedback, references
 ```

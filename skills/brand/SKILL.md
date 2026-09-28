@@ -1,8 +1,8 @@
 ---
 name: brand
-version: "2.1"
+version: "2.2"
 last_updated: 2026-09-28
-description: "Shared brand registry (colour tokens, fonts, logo paths, PPTX/DOCX/HTML/Excalidraw settings) read by pptx-generator, docx-generator, osd-architect and other branded output. Ships the presales-handbook example brand (navy #112D4E, yellow #FACF39) and holds the one walkthrough for adding your own company brand. Use on \"add my company brand\", \"set up our brand colours\", \"swap in our logo\", \"use our fonts in the decks\". Siblings: pptx-generator, docx-generator (they render using this registry). SKIP for generating a deck or document itself."
+description: "Shared brand registry (colour tokens, fonts, logo paths, PPTX/DOCX/HTML/Excalidraw settings) read by pptx-generator, docx-generator, osd-architect and other branded output. Ships the presales-handbook example brand (navy #112D4E, yellow #FACF39). Not user-invoked: pptx-generator, docx-generator, osd-architect and discovery-ftd read it when they render (diagram deliberately does not). A company adds its own brand as brands/<slug>/brand.json following the *Add your own company brand* section of this skill; the README's *Make it yours* section shows the same steps."
 user-invocable: false
 ---
 

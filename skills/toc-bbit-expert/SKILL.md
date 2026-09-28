@@ -83,7 +83,7 @@ Read the relevant BBiT module before using a specific tool.
 | You need to write what "done" looks like for a goal or step | — |
 | You need to analyse or change individual or group behaviour | — |
 
-Both use the same TOC + BBiT foundation. This skill goes deeper and produces diagrams; `strategic-think` offers to hand off here when the analysis needs more depth. Neither one scores MEDDPICC or prepares an Opportunity Review Call: for a deal-level MEDDPICC diagnosis start with the `presales-coach` skill, and for an ORC agenda use `/presales:value:orc`.
+Both use the same TOC + BBiT foundation. This skill goes deeper and produces diagrams; `strategic-think` offers to hand off here when the analysis needs more depth. Neither one scores MEDDPICC or prepares an Opportunity Review Call: for a deal-level MEDDPICC diagnosis start with the `presales-coach` skill, and for an ORC agenda use `/presales:discovery:orc`.
 
 **This skill also handles standalone requests for:**
 - **Done Statements** — writing outcome-focused descriptions for any goal, deliverable, or step
@@ -303,7 +303,7 @@ The step-by-step guide for each phase lives in this skill's `references/` folder
 ## Handoff
 
 - The situation is a specific, fast-moving deal rather than a system-level constraint → `/presales:deal:strategic-think` for a single-pass version instead.
-- A deal-level MEDDPICC gap surfaced during framing → `presales-coach` for the diagnosis, or `/presales:value:orc` for the review agenda.
+- A deal-level MEDDPICC gap surfaced during framing → `presales-coach` for the diagnosis, or `/presales:discovery:orc` for the review agenda.
 - Injections and NCN nodes are ready to execute → hand the Done Statements to the plan owner; diagrams generated via the `diagram` skill slot into `pptx-generator` or `docx-generator`.
 
 ---

@@ -154,6 +154,6 @@ Save the Markdown scorecard next to it as `<scope>_<period>.md` after the user c
 
 - Low demo-to-close rate → `demo-storyboard` or `demo-dryrun-coach`
 - Low competitive win rate → `competitive-battlecard`; pattern across losses → `win-loss-analyzer`
-- Loose qualification → `/presales:discovery:qualify`; leaders → `/presales:deal-prequal`
+- Loose qualification → `/presales:discovery:qualify`; leaders → `/presales:leader:prequal`
 - Low training hours → `learning-plan` (`/presales:brain:learn`)
 - Reuse what works in winning deals → `knowledge-capture`

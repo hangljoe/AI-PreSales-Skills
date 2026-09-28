@@ -40,16 +40,17 @@ Team/Enterprise admins can enable it for everyone through managed settings (`ext
 
 ## Available Commands
 
-40 commands, invoked as `/presales:<phase>:<name>`:
+42 commands, invoked as `/presales:<phase>:<name>`:
 
 - **brain/**: setup, start, end, start-week, end-week, rocks, voice, learn (personal operating loop and learning plan)
-- **discovery/**: prep, questions, sales, summary, golden-hours, qualify, tfq
-- **account/**: brief, journey, map, nurture
+- **discovery/**: prep, questions, sales, summary, golden-hours, qualify, tfq, orc
+- **account/**: brief, journey, map
 - **demo/**: pre-invite, storyboard, script, post-followup
-- **value/**: pain-to-value, roi-case, orc
+- **value/**: pain-to-value, roi-case
 - **deal/**: poc-plan, poc-readout, objection-drill, champion-enable, exec-summary, proposal, close-plan, strategic-think
 - **rfp/**: analyze, respond, present (answer library kept in the user's own folder; see `references/rfp-library/README.md`)
-- **handover/**: osd-draft, doc
+- **handover/**: osd-draft, doc, nurture
+- **leader/**: prequal, metrics (leader-only; not routed by `/presales:guide`)
 - **guide**: interactive router to the right skill or command
 
 See `STACK.md` for the full command table.
@@ -58,7 +59,7 @@ See `STACK.md` for the full command table.
 
 ## Skills (invoked by trigger phrase)
 
-42 skills. **The authoritative skills table with trigger phrases is in `STACK.md`**; don't duplicate it here. `deal-prequal` is a leader-only tool kept out of the user-facing tables and out of `/presales:guide`.
+39 skills. **The authoritative skills table with trigger phrases is in `STACK.md`**; don't duplicate it here. `deal-prequal` is a leader-only tool kept out of the user-facing tables and out of `/presales:guide`.
 
 Notable internal-dependency skills:
 - `brand` is the shared brand registry read by the output skills (pptx-generator, docx-generator, osd-architect, discovery-ftd). It is not user-invoked. The example brand is `presales-handbook`.
@@ -192,15 +193,16 @@ stricter than Claude Code's. Two rules keep every skill visible on all surfaces:
 └── marketplace.json     ← marketplace manifest (presales-handbook)
 commands/
 ├── brain/               ← setup, start, end, start-week, end-week, rocks, voice, learn
-├── discovery/           ← prep, questions, sales, summary, golden-hours, qualify, tfq
-├── account/             ← brief, journey, map, nurture
+├── discovery/           ← prep, questions, sales, summary, golden-hours, qualify, tfq, orc
+├── account/             ← brief, journey, map
 ├── demo/                ← pre-invite, storyboard, script, post-followup
-├── value/               ← pain-to-value, roi-case, orc
+├── value/               ← pain-to-value, roi-case
 ├── deal/                ← poc-plan, poc-readout, objection-drill, champion-enable, exec-summary, proposal, close-plan, strategic-think
 ├── rfp/                 ← analyze, respond, present + references/
-├── handover/            ← osd-draft, doc
+├── handover/            ← osd-draft, doc, nurture
+├── leader/              ← prequal, metrics (leader-only)
 └── guide.md             ← interactive router
-skills/                  ← 42 skills (each: SKILL.md + optional references/)
+skills/                  ← 39 skills (each: SKILL.md + optional references/)
 references/              ← shared library: condensed PreSales Handbook reference (V78), Pre-Sales Playbook, cheat sheets, BBiT study notes
 scripts/desc_budget.py   ← skill frontmatter auditor (stdlib only)
 DEAL_TEMPLATE.md         ← how to set up a deal folder / Claude Project, incl. the "About us" block

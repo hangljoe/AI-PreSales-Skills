@@ -63,7 +63,7 @@ Ask: "What kind of call?"
 - C-suite or exec meeting → `exec-briefing-prep` skill
 - Customer workshop or EBC (Executive Briefing Center visit) → `workshop-agenda-builder` skill
 - Demo session → `/presales:demo:storyboard` + `/presales:demo:pre-invite`
-- Opportunity Review Call (internal qualify in / out) → `/presales:value:orc`
+- Opportunity Review Call (internal qualify in / out) → `/presales:discovery:orc`
 - Pricing or negotiation meeting → `pricing-positioning` skill (introducing price) or `negotiation-prep` skill (terms and concessions)
 - Post-call — need to capture and follow up → `/presales:discovery:golden-hours`
 - Have a meeting recording transcript (`.vtt`, e.g. from Teams or Zoom) to file and summarise → `discovery-transformer` skill (then `osd-scoper`)
@@ -81,7 +81,7 @@ Ask: "Where is the deal stuck or what's the next milestone?"
 - Need to build the value case → `/presales:value:pain-to-value` + `/presales:value:roi-case`
 - CFO or finance pushing back on the numbers → `business-case-stress-tester` skill
 - Pricing or negotiation → `pricing-positioning` skill (value before price) + `negotiation-prep` skill (terms, walk-away, concessions)
-- Opportunity Review Call needed → `/presales:value:orc`
+- Opportunity Review Call needed → `/presales:discovery:orc`
 - Planning a PoC → `/presales:deal:poc-plan`
 - PoC is running — need a health check → `presales-coach` skill ("is my PoC at risk")
 - PoC in flight — weekly check-in or final readout → `/presales:deal:poc-readout`
@@ -134,7 +134,7 @@ Ask: "What are you writing?"
 - Internal post-deal write-up for the team → `win-loss-analyzer` skill (Step 7)
 - Opportunity Scoping Document (OSD) → `/presales:handover:osd-draft`
 - Handover to professional services → `/presales:handover:doc`
-- After signature — adoption, reference and expansion touchpoints → `/presales:account:nurture`
+- After signature — adoption, reference and expansion touchpoints → `/presales:handover:nurture`
 - A win, demo flow or answer worth reusing → `knowledge-capture` skill (say "capture this for the team")
 - Patterns across many deals, your KPIs or the team's → `presales-metrics` skill (say "build my scorecard")
 
@@ -184,7 +184,7 @@ Follows the flow of *The PreSales Handbook*. Real deals loop back and skip phase
 | 2 | Qualify (ch. 4, 6) | Qualify early, qualify hard | `/presales:discovery:qualify` · `champion-health` · `/presales:account:map` |
 | 3 | Functional & technical discovery (ch. 7) | Deep-dive into needs and landscape | `discovery-ftd` skill · `/presales:discovery:prep` · `/presales:discovery:summary` · `/presales:discovery:golden-hours` · `discovery-transformer` · `critical-business-issue-finder` · `workshop-agenda-builder` |
 | 4 | Discovery summary / OSD (ch. 8) | Scoping the solution | `osd-scoper` → `osd-architect` · `/presales:handover:osd-draft` · `capability-mapper` · `integration-complexity` |
-| 5 | TFQ + ORC (ch. 9) | Invest SC time? Qualify in or out | `/presales:discovery:tfq` (`tfq` skill) · `/presales:value:orc` |
+| 5 | TFQ + ORC (ch. 9) | Invest SC time? Qualify in or out | `/presales:discovery:tfq` (`tfq` skill) · `/presales:discovery:orc` |
 | 6 | Value & ROI (ch. 10) | Quantifying the case | `/presales:value:pain-to-value` · `/presales:value:roi-case` · `business-case-stress-tester` |
 | 7 | Demo and demo automation (ch. 11–12) | Telling the story | `/presales:demo:storyboard` · `/presales:demo:script` · `demo-dryrun-coach` · `/presales:demo:pre-invite` · `/presales:demo:post-followup` · `video-demo-creator` |
 | 8 | PoC (ch. 13) | Proving it in their world | `/presales:deal:poc-plan` · `presales-coach` (PoC health) · `/presales:deal:poc-readout` (check-ins and readout) |
@@ -192,7 +192,7 @@ Follows the flow of *The PreSales Handbook*. Real deals loop back and skip phase
 | 10 | Objections (ch. 15) | Pushback and concerns | `tactical-empathy-coach` · `/presales:deal:objection-drill` · `competitive-battlecard` (ch. 20) · `pricing-positioning` |
 | 11 | Closing (ch. 16) | Proposal, price, negotiation, sign-off | `/presales:deal:proposal` · `/presales:deal:close-plan` · `pricing-positioning` · `negotiation-prep` · `exec-briefing-prep` · `/presales:deal:champion-enable` · `/presales:deal:exec-summary` |
 | 12 | Win / loss (ch. 17) | Learning from the decision | `win-loss-analyzer` |
-| 13 | Handover and nurture (ch. 16) | Handing over to delivery, then staying close | `/presales:handover:osd-draft` · `/presales:handover:doc` · `/presales:account:nurture` |
+| 13 | Handover and nurture (ch. 16) | Handing over to delivery, then staying close | `/presales:handover:osd-draft` · `/presales:handover:doc` · `/presales:handover:nurture` |
 | ⚡ | Any phase | Stuck, conflicted, or complex | `presales-coach` → `/presales:deal:strategic-think` → `toc-bbit-expert` |
 | ⚔ | Any phase | A competitor is in the deal | `competitive-battlecard` |
 | ⏸ | Any phase (ch. 20) | The status quo is the real competitor | `do-nothing-buster` |

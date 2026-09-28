@@ -11,7 +11,7 @@ discovery call, score MEDDPICC, build a Tell-Show-Tell demo storyboard and write
 can also draft the RFP response and hand the deal over to delivery. It works for any B2B or SaaS
 product. You tell it what you sell, and it applies the handbook's methodology to your deal.
 
-**What's inside:** 42 skills · 40 slash commands · a condensed PreSales Handbook reference built in
+**What's inside:** 39 skills · 42 slash commands · a condensed PreSales Handbook reference built in
 
 ---
 
@@ -23,9 +23,10 @@ product. You tell it what you sell, and it applies the handbook's methodology to
 4. [The deal journey at a glance](#the-deal-journey-at-a-glance)
 5. [All commands](#all-commands)
 6. [All skills](#all-skills)
-7. [Make it yours](#make-it-yours)
-8. [Troubleshooting](#troubleshooting)
-9. [About](#about)
+7. [Leader-only tools](#leader-only-tools)
+8. [Make it yours](#make-it-yours)
+9. [Troubleshooting](#troubleshooting)
+10. [About](#about)
 
 ---
 
@@ -170,7 +171,7 @@ Each stage follows a chapter of The PreSales Handbook (V78 numbering).
 | Qualify hard | 6 · Qualify Early, Qualify Hard | `/presales:discovery:qualify` |
 | Functional & technical discovery | 7 · FTD | *"FTD"* → `/presales:discovery:prep` → `/presales:discovery:summary` |
 | Scope the opportunity | 8 · Opportunity Scoping Document | *"scope from discovery"* → `/presales:handover:osd-draft` |
-| Decide whether to invest | 9 · TFQ | `/presales:discovery:tfq` · `/presales:value:orc` |
+| Decide whether to invest | 9 · TFQ | `/presales:discovery:tfq` · `/presales:discovery:orc` |
 | Build the value case | 10 · ROI and Value | `/presales:value:pain-to-value` → `/presales:value:roi-case` |
 | Tell the story | 11 · The Demo | `/presales:demo:storyboard` → `/presales:demo:script` |
 | Demo videos and click-throughs | 12 · Demo Automation | *"create a demo video"* |
@@ -180,7 +181,7 @@ Each stage follows a chapter of The PreSales Handbook (V78 numbering).
 | Beat "do nothing" | 20 · Competition | *"they might do nothing"* · *"battlecard for [Competitor]"* |
 | Close | 16 · Closing | `/presales:deal:proposal` → `/presales:deal:close-plan` · *"negotiation prep"* |
 | Learn from the outcome | 17 · Lessons Learned | *"debrief this win"* / *"why did we lose"* → *"capture this for the team"* |
-| Hand over to delivery | 8 · OSD | `/presales:handover:doc` → `/presales:account:nurture` |
+| Hand over to delivery | 8 · OSD | `/presales:handover:doc` → `/presales:handover:nurture` |
 | Grow yourself and your team | 18, 19, 23 · Staying updated, knowledge sharing, metrics | `/presales:brain:learn` · *"capture this for the team"* · *"build my scorecard"* |
 
 ---
@@ -215,6 +216,7 @@ command.
 | `/presales:discovery:golden-hours` | The 24-hour plan after a key call: debrief, AE brief, CRM update and action plan, built from your call summary. |
 | `/presales:discovery:qualify` | Scores the opportunity on MEDDPICC (out of 40) with gaps and next actions. |
 | `/presales:discovery:tfq` | Technical & Functional Qualification: a gated Invest, Conditional or Pause decision before you commit SC time. |
+| `/presales:discovery:orc` | Agenda for the Opportunity Review Call, the cross-department call to qualify in or out. |
 
 ### Demo
 
@@ -231,7 +233,6 @@ command.
 |---------|--------------|
 | `/presales:value:pain-to-value` | Maps customer pains to your product's capabilities and measurable outcomes, with confidence tags. |
 | `/presales:value:roi-case` | Value and ROI business case with three or more value drivers and an explicit risk factor. |
-| `/presales:value:orc` | Agenda for the Opportunity Review Call, the cross-department call to qualify in or out. |
 
 ### Deal & closing
 
@@ -260,7 +261,7 @@ command.
 |---------|--------------|
 | `/presales:handover:osd-draft` | Drafts the Opportunity Scoping Document (OSD), structured as in handbook chapter 8. |
 | `/presales:handover:doc` | The PreSales-to-Professional-Services handover package, drafted at technical win and finalised at signature, plus a handover-call agenda. |
-| `/presales:account:nurture` | Post-close plan: check-ins, feedback, references and expansion signals. |
+| `/presales:handover:nurture` | Post-close plan: check-ins, feedback, references and expansion signals. |
 
 ### Second brain (your personal operating loop)
 
@@ -290,7 +291,6 @@ Skills switch on when you say something like the phrase in the right-hand column
 | `discovery-transformer` | Turns a meeting transcript (`.vtt`) into clean Markdown, files it in your deal folder and builds a Discovery Summary. | "discovery transformer" |
 | `critical-business-issue-finder` | Finds the 2–4 critical business issues driving the deal, separated from symptoms and feature requests. | "find the CBIs" |
 | `tfq` | Technical & Functional Qualification: a gated Invest, Conditional or Pause decision, with an HTML dashboard. | "run the TFQ" |
-| `deal-prequal` | For PreSales leaders: a readiness sweep across one or many deals before the TFQ. | Leaders only. Run `/presales:deal-prequal` |
 
 ### Scoping & solution
 
@@ -357,13 +357,21 @@ Skills switch on when you say something like the phrase in the right-hand column
 | `presales-metrics` | KPI scorecard for you or your team from a CRM export or your own numbers, with three improvement actions. | "build my scorecard" |
 | `knowledge-capture` | Turns a win, demo flow or RFP answer into a reusable asset in your own knowledge folder. | "capture this for the team" |
 | `second-brain` | Your personal daily and weekly loop: morning brief, journal, big rocks, writing voice. | "set up my second brain" |
-| `grill-me` | Interviews you relentlessly to stress-test a plan or decision. | "grill me" |
-| `handoff` | Compacts the current session into a handoff document for another agent. | "create a handoff" |
 | `rag-markdown` | Converts any source (PDF, slides, Word, web page) into one clean Markdown file. | "RAG ready markdown" |
-| `write-a-skill` | Guides you through writing a new skill for this library. | "write a skill" |
 
 `brand` is a behind-the-scenes skill. It holds the colours, fonts and logos that the Word,
-PowerPoint and diagram skills use.
+PowerPoint and OSD skills use (the diagram skill keeps its own semantic palette).
+
+---
+
+## Leader-only tools
+
+For PreSales leaders (handbook ch. 22). Not routed by `/presales:guide`; ask for them by name.
+
+| Tool | What it does | How to invoke |
+|------|-------------|---------------|
+| `deal-prequal` | For PreSales leaders: a readiness sweep across one or many deals before the TFQ. | `/presales:leader:prequal [deals]` |
+| `presales-metrics` (leader mode) | Team KPI scorecard: distribution across SCs framed as 1:1 questions, never a ranking. | `/presales:leader:metrics [export] [period]` |
 
 ---
 

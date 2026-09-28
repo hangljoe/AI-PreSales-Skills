@@ -26,7 +26,7 @@ Never assume a specific vendor's portfolio.
 ## Skills (`skills/`)
 
 Skills are invoked by natural language. Each skill has a `SKILL.md` in `skills/<name>/`.
-42 skills on disk: 40 user-facing skills below, the internal `brand` registry, and the
+39 skills on disk: 37 user-facing skills below, the internal `brand` registry, and the
 leader-only `deal-prequal` (see **Leader-only tools**).
 
 | Skill | What it does | Key trigger phrases |
@@ -67,10 +67,7 @@ leader-only `deal-prequal` (see **Leader-only tools**).
 | `presales-metrics` | KPI scorecard (ch. 23) for one SC or a team: definitions, formulas, targets, trends, three actions; optional HTML dashboard. | "build my scorecard", "team metrics dashboard" |
 | `knowledge-capture` | Turns a win, demo, RFP answer or objection into a reusable asset (ch. 19) in the user's own knowledge folder; wiki writes confirm-gated. | "capture this for the team" |
 | `second-brain` | Personal daily/weekly operating loop: morning brief, journal, big rocks, writing voice. Backs `/presales:brain:*`. | "set up my second brain" |
-| `grill-me` | Relentless interview to stress-test a plan or decision. | "grill me" |
-| `handoff` | Compacts the session into a handoff document for another agent. | "create a handoff" |
 | `rag-markdown` | Any source → one clean, RAG-ready Markdown file. | "RAG ready markdown" |
-| `write-a-skill` | Guides authoring a new skill for this library. | "write a skill" |
 
 **Internal skill (not user-invoked):** `brand` is the shared brand registry (colours, fonts,
 logos, per-format settings) read by `pptx-generator`, `docx-generator`, `osd-architect`,
@@ -87,7 +84,8 @@ logos, per-format settings) read by `pptx-generator`, `docx-generator`, `osd-arc
 
 | Tool | What it does | How to invoke |
 |------|-------------|---------------|
-| `deal-prequal` | Readiness sweep across one or many deals before the TFQ: checks whether the MEDDPICC foundation justifies SC time, reads deal momentum, returns a 3-band readiness call (🟢 Ready / 🟡 A few gaps / 🔵 Too early) plus ready-to-send AE follow-ups. Hands 🟢 deals to the TFQ. | `/presales:deal-prequal` |
+| `deal-prequal` | Readiness sweep across one or many deals before the TFQ: checks whether the MEDDPICC foundation justifies SC time, reads deal momentum, returns a 3-band readiness call (🟢 Ready / 🟡 A few gaps / 🔵 Too early) plus ready-to-send AE follow-ups. Hands 🟢 deals to the TFQ. | `/presales:leader:prequal [deals]` |
+| `presales-metrics` (leader mode) | Team KPI scorecard: distribution across SCs framed as 1:1 questions, never a ranking. | `/presales:leader:metrics [export] [period]` |
 
 ---
 
@@ -129,14 +127,14 @@ with `skills/discovery-transformer/scripts/match_folder.py`. Without step 2, `os
 
 The TFQ's Pain gate is fed by `discovery-ftd`, `discovery-sales` and
 `critical-business-issue-finder`. Its MEDDPICC contributor is fed by `/presales:discovery:qualify`.
-The optional deal-worth signal comes from `/presales:value:orc`. Any input with no feeder yet
+The optional deal-worth signal comes from `/presales:discovery:orc`. Any input with no feeder yet
 scores 🔴 Unknown.
 
 ---
 
 ## Commands (`commands/`)
 
-Invoked as `/presales:<phase>:<name>`. 40 commands.
+Invoked as `/presales:<phase>:<name>`. 42 commands.
 
 | Command | What it does |
 |---------|-------------|
@@ -151,13 +149,13 @@ Invoked as `/presales:<phase>:<name>`. 40 commands.
 | `/presales:discovery:golden-hours` | 24-hour plan after a key call, built from the call summary: debrief, AE brief, CRM update, action plan |
 | `/presales:discovery:qualify` | MEDDPICC score (/40) with gaps and next actions |
 | `/presales:discovery:tfq` | Technical & Functional Qualification gate |
+| `/presales:discovery:orc` | Opportunity Review Call (ch. 9.3) agenda: cross-department qualify in / out |
 | `/presales:demo:pre-invite` | Pre-demo invite email: agenda, recording notice, webcam ask |
 | `/presales:demo:storyboard` | Tell-Show-Tell + PCV (Pain-Capability-Value) storyboard from discovery pains |
 | `/presales:demo:script` | Verbatim demo script from a storyboard |
 | `/presales:demo:post-followup` | Post-demo follow-up email within 24 hours |
 | `/presales:value:pain-to-value` | Pains → your capabilities → value outcomes, confidence-tagged |
 | `/presales:value:roi-case` | ROI business case with 3+ value drivers and a risk factor |
-| `/presales:value:orc` | Opportunity Review Call (ch. 9.3) agenda: cross-department qualify in / out |
 | `/presales:deal:poc-plan` | PoC gate (13.1) and plan: use cases, success criteria, data handling, owners, timeline |
 | `/presales:deal:poc-readout` | PoC check-ins, scorecard, findings readout (ch. 13.5–13.8) → `06a_poc-readout.md` |
 | `/presales:deal:objection-drill` | Objection handling with tactical empathy |
@@ -171,7 +169,7 @@ Invoked as `/presales:<phase>:<name>`. 40 commands.
 | `/presales:rfp:present` | RFX response presentation deck |
 | `/presales:handover:osd-draft` | Draft the Opportunity Scoping Document via `osd-architect` |
 | `/presales:handover:doc` | PreSales → Professional Services handover package and handover-call agenda |
-| `/presales:account:nurture` | Post-close plan: check-ins, feedback, references, expansion (ch. 16.4) → `11_nurture-plan.md` |
+| `/presales:handover:nurture` | Post-close plan: check-ins, feedback, references, expansion (ch. 16.4) → `11_nurture-plan.md` |
 | `/presales:brain:setup` | Guided second-brain setup |
 | `/presales:brain:start` | Morning brief |
 | `/presales:brain:end` | End-of-day journal entry |
@@ -224,7 +222,7 @@ a model.
 | **FTD** | Functional & Technical Discovery (handbook ch. 7) | `discovery-ftd` |
 | **OSD** | Opportunity Scoping Document (handbook ch. 8) | `osd-scoper`, `osd-architect`, `handover:osd-draft` |
 | **TFQ** | Technical & Functional Qualification: Invest / Conditional / Pause gate (ch. 9) | `tfq`, `discovery:tfq` |
-| **ORC** | Opportunity Review Call: cross-department qualify in / out (ch. 9.3) | `value:orc` |
+| **ORC** | Opportunity Review Call: cross-department qualify in / out (ch. 9.3) | `discovery:orc` |
 | **MAP** | Mutual Action Plan | `account:map` |
 | **CBI** | Critical Business Issue | `critical-business-issue-finder` |
 | **MEDDPICC** | Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify (Implicate) Pain, Champion, Competition | All discovery and deal commands |

@@ -5,6 +5,25 @@ Format: [Keep a Changelog](https://keepachangelog.com) | Versioning: [Semantic V
 
 ---
 
+## [2.4.0] — 2026-09-28
+
+### Added
+- **Leader phase.** `/presales:leader:prequal` (wraps `deal-prequal`) and `/presales:leader:metrics` (wraps `presales-metrics` in leader mode). Listed only under "Leader-only tools" in STACK.md and README.md; `/presales:guide` does not route to them. The phaseless `/presales:deal-prequal` pointer is retired.
+
+### Renamed
+- `/presales:account:nurture` → `/presales:handover:nurture` (post-close belongs to handover).
+- `/presales:value:orc` → `/presales:discovery:orc` (the ORC is a qualification review, not a value tool).
+
+### Changed
+- Every command, skill and reference that reads deal-folder files carries the kit's untrusted-input notice: 38 files gained one this release, two slice-1 notices (`discovery:qualify`, `account:map`) moved above the read they guard, and the RFP pair's notice now names the deal folder and answer library.
+- `brand` describes itself as the internal registry it is (read by the output skills; not user-invoked).
+- README gains a "Leader-only tools" block; skill/command counts 39 / 42.
+
+### Removed
+- `handoff`, `grill-me`, `write-a-skill` skills (generic developer utilities, not presales tools).
+
+---
+
 ## [2.3.0] — 2026-09-28
 
 ### Changed
