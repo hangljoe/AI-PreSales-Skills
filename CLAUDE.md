@@ -203,7 +203,7 @@ commands/
 ├── leader/              ← prequal, metrics, pipeline-review, one-on-one, capacity, onboarding, hiring (leader-only)
 └── guide.md             ← interactive router
 skills/                  ← 42 skills (each: SKILL.md + optional references/)
-references/              ← shared library: condensed PreSales Handbook reference (V78), Pre-Sales Playbook, cheat sheets, BBiT study notes
+references/              ← shared library: condensed PreSales Handbook reference, Pre-Sales Playbook, cheat sheets, BBiT study notes
 scripts/desc_budget.py   ← skill frontmatter auditor (stdlib only)
 DEAL_TEMPLATE.md         ← how to set up a deal folder / Claude Project, incl. the "About us" block
 docs/wiki/               ← source of the GitHub wiki (user manual); one flat page per topic, [[Page-Name]] links

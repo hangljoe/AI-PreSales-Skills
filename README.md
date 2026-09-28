@@ -4,7 +4,8 @@
 > *Discover, Qualify Hard, Tell the Story, Listen and Stay Honest*
 
 An AI co-pilot for PreSales professionals and Solution Consultants (SCs), built on
-**[The PreSales Handbook](https://www.presales-handbook.com)** by Dr. Johannes Hangl.
+**[The PreSales Handbook](https://www.presales-handbook.com)** by Dr. Johannes Hangl
+(the book's own site is open source: [github.com/hangljoe/presales-handbook.com](https://github.com/hangljoe/presales-handbook.com)).
 
 It turns Claude into a PreSales colleague who knows the whole deal cycle. Claude can prepare your
 discovery call, score MEDDPICC, build a Tell-Show-Tell demo storyboard and write the ROI case. It
@@ -162,7 +163,7 @@ there. Without connections, they simply ask you and the output quality is the sa
 
 ## The deal journey at a glance
 
-Each stage follows a chapter of The PreSales Handbook (V78 numbering).
+Each stage follows a chapter of [The PreSales Handbook](https://www.presales-handbook.com); the chapter numbers below are the book's.
 
 | Stage | Handbook chapter | Start with |
 |-------|------------------|------------|
@@ -438,11 +439,11 @@ To test locally, run `/plugin marketplace add /path/to/your/copy` and install fr
 covers everything from discovery and qualification to the demo, value, RFX, closing and
 PreSales leadership. Learn more at [www.presales-handbook.com](https://www.presales-handbook.com).
 
-The `references/` folder holds a condensed reference to the handbook (V78 edition), cheat sheets
-for sales discovery, FTD and demos, the Pre-Sales Playbook, interview insights from PreSales
-practitioners, and short study notes on TOC/BBiT and Extreme Ownership. The skills draw on these
-automatically and cite handbook chapters by their V78 numbers. For the full book, see
-[www.presales-handbook.com](https://www.presales-handbook.com).
+The `references/` folder holds a condensed reference to the handbook, cheat sheets for sales
+discovery, FTD and demos, the Pre-Sales Playbook, interview insights from PreSales practitioners,
+and short study notes on TOC/BBiT and Extreme Ownership. The skills draw on these automatically and
+cite the book's chapters. Read the full book at [www.presales-handbook.com](https://www.presales-handbook.com)
+or browse the [book repository on GitHub](https://github.com/hangljoe/presales-handbook.com).
 
 Changes are listed in [`CHANGELOG.md`](CHANGELOG.md).
 The user manual lives in the [project wiki](https://github.com/hangljoe/AI-PreSales-Skills/wiki); its source is `docs/wiki/`.

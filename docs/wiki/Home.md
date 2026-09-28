@@ -1,6 +1,6 @@
 # AI PreSales Skills
 
-**AI PreSales Skills by The PreSales Handbook** is a Claude plugin that turns Claude into a PreSales colleague who knows the whole deal cycle: discovery, qualification, the demo, the value case, the RFP response, closing, and the handover to delivery. It follows the methodology in *The PreSales Handbook* by Dr. Johannes Hangl, and it is vendor-neutral. Every skill asks what you sell, who you compete against, and what makes you different, instead of assuming any one company's product line.
+**AI PreSales Skills by The PreSales Handbook** is a Claude plugin that turns Claude into a PreSales colleague who knows the whole deal cycle: discovery, qualification, the demo, the value case, the RFP response, closing, and the handover to delivery. It follows the methodology in [The PreSales Handbook](https://www.presales-handbook.com) by Dr. Johannes Hangl (site source: [book repository on GitHub](https://github.com/hangljoe/presales-handbook.com)), and it is vendor-neutral. Every skill asks what you sell, who you compete against, and what makes you different, instead of assuming any one company's product line.
 
 It's built for two audiences. Most of the kit is for the Solution Consultant (SC) running an individual deal. A small set of leader-only tools (readiness sweeps, pipeline reviews, one-on-ones, capacity math, onboarding and hiring) is there for the PreSales leader running a team.
 

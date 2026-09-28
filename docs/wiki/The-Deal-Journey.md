@@ -1,4 +1,4 @@
-The kit follows the flow of *The PreSales Handbook* (V78 numbering). Real deals loop back and skip
+The kit follows the flow of [The PreSales Handbook](https://www.presales-handbook.com) (site source: [book repository on GitHub](https://github.com/hangljoe/presales-handbook.com)). Real deals loop back and skip
 phases; RFX can start at any point. Each phase below names the handbook chapter, the question it
 answers, the command or skill to run first, what it reads from and writes to the deal folder, and
 the hand-off to the next phase. File numbers are the [[Deal-Folder]] convention; the full command
